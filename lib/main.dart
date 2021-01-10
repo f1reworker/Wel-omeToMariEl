@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:photo_view/photo_view.dart';
+import 'package:welcome_to_mari_el/searchBar.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +17,11 @@ class MyApp extends StatelessWidget {
         //  Theme.of(context).textTheme,
         // ),
       ),
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/second': (context) => SearchList(),
+      },
     );
   }
 }
@@ -31,7 +35,7 @@ class HomePage extends StatelessWidget {
       body: Container(
         child: Column(
           children: <Widget>[
-            SearchBar(),
+            SearchButton(),
             Flexible(child: Map()),
             Buttons(),
           ],
@@ -41,30 +45,31 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class SearchBar extends StatelessWidget {
-  final void Function(String) onTextChange;
-
-  SearchBar({this.onTextChange});
-
+class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-          color: PrimaryColor,
-        ),
-        height: 50,
-        padding: EdgeInsets.all(8),
-        child: TextField(
-            onChanged: onTextChange,
-            decoration: InputDecoration(
-                fillColor: Colors.black.withOpacity(0.1),
-                filled: true,
-                prefixIcon: Icon(Icons.search),
-                hintText: 'Поиск ...',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none),
-                contentPadding: EdgeInsets.zero)));
+      height: 40,
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 10,
+      ),
+      decoration: BoxDecoration(
+        color: PrimaryColor,
+      ),
+      child: RaisedButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/second');
+        },
+        shape: RoundedRectangleBorder(
+            borderRadius: new BorderRadius.circular(40.0)),
+        child: Row(children: [
+          Icon(Icons.search),
+          Text("      Поиск..."),
+        ]),
+      ),
+    );
   }
 }
 
@@ -76,7 +81,7 @@ class Map extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       color: Colors.amber[50],
       child: ListView(
-        scrollDirection: Axis.horizontal, // <-- Like so
+        scrollDirection: Axis.horizontal,
         children: <Widget>[
           new Image.asset(
             'assets/images/map.png',
@@ -106,6 +111,7 @@ class Buttons extends StatelessWidget {
             width: 80,
             margin: EdgeInsets.only(bottom: 20),
             child: FloatingActionButton(
+              heroTag: null,
               child: Icon(Icons.settings),
               onPressed: () {},
             ),
@@ -118,6 +124,7 @@ class Buttons extends StatelessWidget {
             width: 80,
             margin: EdgeInsets.only(bottom: 20),
             child: FloatingActionButton(
+              heroTag: null,
               child: Icon(Icons.navigation),
               onPressed: () {},
             ),
@@ -130,6 +137,7 @@ class Buttons extends StatelessWidget {
             width: 80,
             margin: EdgeInsets.only(bottom: 20),
             child: FloatingActionButton(
+              heroTag: null,
               child: Icon(Icons.star),
               onPressed: () {},
             ),
