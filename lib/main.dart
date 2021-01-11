@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_to_mari_el/favorite.dart';
+import 'package:welcome_to_mari_el/navigation.dart';
 import 'package:welcome_to_mari_el/searchBar.dart';
+import 'package:welcome_to_mari_el/settings.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +23,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
-        '/second': (context) => SearchList(),
+        '/search': (context) => SearchList(),
+        '/favorite': (context) => FavoritePage(),
+        '/settings': (context) => SettingsPage(),
+        '/navigation': (context) => NavigationPage(),
       },
     );
   }
@@ -60,7 +66,7 @@ class SearchButton extends StatelessWidget {
       ),
       child: RaisedButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/second');
+          Navigator.pushNamed(context, '/search');
         },
         shape: RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(40.0)),
@@ -77,7 +83,7 @@ class Map extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 150,
+      height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       color: Colors.amber[50],
       child: ListView(
@@ -107,41 +113,46 @@ class Buttons extends StatelessWidget {
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 80,
-            width: 80,
-            margin: EdgeInsets.only(bottom: 20),
-            child: FloatingActionButton(
-              heroTag: null,
-              child: Icon(Icons.settings),
-              onPressed: () {},
-            ),
+            height: 100,
+            width: 100,
+            child: FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/settings');
+                },
+                child: Image.asset(
+                  'assets/images/settings.png',
+                  fit: BoxFit.cover,
+                )),
           ),
           Container(
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 80,
-            width: 80,
-            margin: EdgeInsets.only(bottom: 20),
+            height: 70,
+            width: 70,
             child: FloatingActionButton(
               heroTag: null,
               child: Icon(Icons.navigation),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/navigation');
+              },
             ),
           ),
           Container(
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 80,
-            width: 80,
-            margin: EdgeInsets.only(bottom: 20),
-            child: FloatingActionButton(
-              heroTag: null,
-              child: Icon(Icons.star),
-              onPressed: () {},
-            ),
-          )
+            height: 100,
+            width: 100,
+            child: FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/favorite');
+                },
+                child: Image.asset(
+                  'assets/images/favorite.png',
+                  fit: BoxFit.cover,
+                )),
+          ),
         ],
       ),
     );
