@@ -53,7 +53,7 @@ flutter:
     - assets/
     - assets/images/map.png
     - assets/images/settings.png
-    - assets/images/settings.svg
+    - assets/images/favorite.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
