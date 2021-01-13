@@ -3,6 +3,10 @@ import 'package:welcome_to_mari_el/favorite.dart';
 import 'package:welcome_to_mari_el/navigation.dart';
 import 'package:welcome_to_mari_el/searchBar.dart';
 import 'package:welcome_to_mari_el/settings.dart';
+import 'package:welcome_to_mari_el/custom_icons.dart';
+
+const PrimaryColor = Color(0xFFFFFEFC);
+const MyRed = Color(0xFFFF6860);
 
 void main() => runApp(MyApp());
 
@@ -13,9 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mari El Travel book',
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-        backgroundColor: PrimaryColor,
+      theme: new ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFFFFEFC),
         //textTheme: GoogleFonts.marmeladTextTheme(
         //  Theme.of(context).textTheme,
         // ),
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         '/search': (context) => SearchList(),
         '/favorite': (context) => FavoritePage(),
         '/settings': (context) => SettingsPage(),
-        '/navigation': (context) => NavigationPage(),
+        '/route': (context) => NavigationPage(),
       },
     );
   }
@@ -103,6 +106,7 @@ class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         color: PrimaryColor,
       ),
@@ -113,50 +117,49 @@ class Buttons extends StatelessWidget {
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 100,
-            width: 100,
-            child: FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/settings');
-                },
-                child: Image.asset(
-                  'assets/images/settings.png',
-                  fit: BoxFit.cover,
-                )),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: PrimaryColor,
-            ),
-            height: 70,
-            width: 70,
+            height: 80,
+            width: 80,
             child: FloatingActionButton(
               heroTag: null,
-              child: Icon(Icons.navigation),
+              child: Icon(CustomIcons.cog),
               onPressed: () {
-                Navigator.pushNamed(context, '/navigation');
+                Navigator.pushNamed(context, '/settings');
               },
+              backgroundColor: MyRed,
             ),
           ),
           Container(
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 100,
-            width: 100,
-            child: FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/favorite');
-                },
-                child: Image.asset(
-                  'assets/images/favorite.png',
-                  fit: BoxFit.cover,
-                )),
+            height: 80,
+            width: 80,
+            child: FloatingActionButton(
+              heroTag: null,
+              child: Icon(CustomIcons.route),
+              onPressed: () {
+                Navigator.pushNamed(context, '/route');
+              },
+              backgroundColor: MyRed,
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: PrimaryColor,
+            ),
+            height: 80,
+            width: 80,
+            child: FloatingActionButton(
+              heroTag: null,
+              child: Icon(CustomIcons.star_empty),
+              onPressed: () {
+                Navigator.pushNamed(context, '/favorite');
+              },
+              backgroundColor: MyRed,
+            ),
           ),
         ],
       ),
     );
   }
 }
-
-const PrimaryColor = Color(0xFFFFFEFC);

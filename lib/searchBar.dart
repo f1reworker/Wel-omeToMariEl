@@ -12,7 +12,7 @@ class SearchList extends StatelessWidget {
         color: PrimaryColor,
         child: Column(children: <Widget>[
           SearchBar(),
-          MyStatefulWidget(),
+          Filter(),
         ]),
       ),
     );
@@ -51,41 +51,61 @@ class SearchBar extends StatelessWidget {
 //     );
 //   }
 // }
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
-
-  @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-/// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  String dropdownValue = 'One';
-
+class Filter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: Icon(Icons.arrow_downward),
-      iconSize: 24,
-      elevation: 16,
-      style: TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
+    return Container(
+      height: 40,
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 10,
       ),
-      onChanged: (String newValue) {
-        setState(() {
-          dropdownValue = newValue;
-        });
-      },
-      items: <String>['One', 'Two', 'Free', 'Four']
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
+      decoration: BoxDecoration(
+        color: PrimaryColor,
+      ),
+      child: RaisedButton(
+        onPressed: () => {OpenFilter()},
+        child: Row(
+          children: [
+            Icon(Icons.arrow_drop_down),
+            Text("Фильтры"),
+          ],
+        ),
+      ),
     );
+  }
+}
+
+class OpenFilter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 10,
+      ),
+      decoration: BoxDecoration(
+        color: PrimaryColor,
+      ),
+      child: RaisedButton(
+        onPressed: () => {OpenFilterDistricts()},
+        child: Row(
+          children: [
+            Icon(Icons.arrow_drop_down),
+            Text("      Районы"),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class OpenFilterDistricts extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(child: Text("Медведевский"));
   }
 }
