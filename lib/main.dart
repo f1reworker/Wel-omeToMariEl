@@ -117,11 +117,14 @@ class Buttons extends StatelessWidget {
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 80,
-            width: 80,
+            height: 70,
+            width: 70,
             child: FloatingActionButton(
               heroTag: null,
-              child: Icon(CustomIcons.cog),
+              child: Icon(
+                CustomIcons.cog,
+                size: 50,
+              ),
               onPressed: () {
                 Navigator.pushNamed(context, '/settings');
               },
@@ -132,11 +135,11 @@ class Buttons extends StatelessWidget {
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 80,
-            width: 80,
+            height: 70,
+            width: 70,
             child: FloatingActionButton(
               heroTag: null,
-              child: Icon(CustomIcons.route),
+              child: Icon(CustomIcons.route, size: 40),
               onPressed: () {
                 Navigator.pushNamed(context, '/route');
               },
@@ -147,11 +150,11 @@ class Buttons extends StatelessWidget {
             decoration: BoxDecoration(
               color: PrimaryColor,
             ),
-            height: 80,
-            width: 80,
+            height: 70,
+            width: 70,
             child: FloatingActionButton(
               heroTag: null,
-              child: Icon(CustomIcons.star_empty),
+              child: Icon(CustomIcons.star_empty, size: 55),
               onPressed: () {
                 Navigator.pushNamed(context, '/favorite');
               },
