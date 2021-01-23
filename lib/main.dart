@@ -68,6 +68,7 @@ class SearchButton extends StatelessWidget {
         color: PrimaryColor,
       ),
       child: RaisedButton(
+        color: MyRed,
         onPressed: () {
           Navigator.pushNamed(context, '/search');
         },
