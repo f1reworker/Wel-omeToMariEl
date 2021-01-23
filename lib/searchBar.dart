@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_to_mari_el/DistrictsFilter.dart';
+import 'dart:core';
 
 const PrimaryColor = Color(0xFFFFFEFC);
+const MyRed = Color(0xFFFF6860);
 
-class SearchList extends StatelessWidget {
-  SearchList({Key key}) : super(key: key);
+class SearchList extends StatefulWidget {
+  @override
+  SearchListState createState() => new SearchListState();
+}
 
+class SearchListState extends State<SearchList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +19,7 @@ class SearchList extends StatelessWidget {
         child: Column(children: <Widget>[
           SearchBar(),
           Filter(),
+          Fil(),
         ]),
       ),
     );
@@ -43,69 +50,27 @@ class SearchBar extends StatelessWidget {
   }
 }
 
-// class Filters extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-
-//     );
-//   }
-// }
 class Filter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      width: MediaQuery.of(context).size.width,
-      margin: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 10,
-      ),
-      decoration: BoxDecoration(
-        color: PrimaryColor,
-      ),
-      child: RaisedButton(
-        onPressed: () => {OpenFilter()},
-        child: Row(
-          children: [
-            Icon(Icons.arrow_drop_down),
-            Text("Фильтры"),
-          ],
-        ),
-      ),
-    );
+        height: 40,
+        margin: EdgeInsets.all(10),
+        child: RaisedButton(
+          onPressed: () {
+            showAlertDialog(context);
+          },
+        ));
   }
 }
 
-class OpenFilter extends StatelessWidget {
+class Fil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      width: MediaQuery.of(context).size.width,
-      margin: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 10,
-      ),
-      decoration: BoxDecoration(
-        color: PrimaryColor,
-      ),
-      child: RaisedButton(
-        onPressed: () => {OpenFilterDistricts()},
-        child: Row(
-          children: [
-            Icon(Icons.arrow_drop_down),
-            Text("      Районы"),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class OpenFilterDistricts extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(child: Text("Медведевский"));
+    if (gornVal == true) {
+      return Text("Горн");
+    } else {
+      return Text("No");
+    }
   }
 }
