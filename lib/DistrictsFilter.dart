@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 bool urVal = true;
 bool mariVal = true;
@@ -14,21 +15,28 @@ bool zvenVal = true;
 bool medvVal = true;
 bool kilVal = true;
 bool gornVal = true;
+var districtsCheck = [];
+String districtsString;
 
-showAlertDialog(BuildContext context) {
+showAlertDialogDistricts(BuildContext context) {
   // set up the button
   Widget okButton = FlatButton(
     child: Text("OK"),
     onPressed: () {
-      districtsCheckFunc();
+      //districtsCheckFunc();
       Navigator.of(context).pop();
     },
   );
 
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
+    shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(30))),
     title: Text("Выберите районы:"),
-    content: Districts(),
+    content: Container(
+        height: MediaQuery.of(context).size.height - 200,
+        width: MediaQuery.of(context).size.width - 100,
+        child: Districts()),
     actions: [
       okButton,
     ],
@@ -230,4 +238,5 @@ void districtsCheckFunc() {
   if (gornVal == true) {
     districtsCheck.add("Горномарийский");
   }
+  districtsString = jsonEncode(districtsCheck);
 }
