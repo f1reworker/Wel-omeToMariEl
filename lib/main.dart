@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'dart:async';
+
 import 'package:welcome_to_mari_el/favorite.dart';
 import 'package:welcome_to_mari_el/navigation.dart';
 import 'package:welcome_to_mari_el/searchBar.dart';
@@ -83,22 +86,40 @@ class SearchButton extends StatelessWidget {
   }
 }
 
-class Map extends StatelessWidget {
+class Map extends StatefulWidget {
   @override
+  MapState createState() => MapState();
+}
+
+class MapState extends State<Map> {
+  Completer<GoogleMapController> _controller = Completer();
+
+  static const LatLng _center = const LatLng(56.6388, 47.8908);
+
+  final Set<Marker> _markers = {};
+
+  LatLng _lastMapPosition = _center;
+
+  MapType _currentMapType = MapType.normal;
+
+  void _onCameraMove(CameraPosition position) {
+    _lastMapPosition = position.target;
+  }
+
+  void _onMapCreated(GoogleMapController controller) {
+    _controller.complete(controller);
+  }
+
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      color: Colors.amber[50],
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          new Image.asset(
-            'assets/images/map.png',
-            fit: BoxFit.cover,
-          ),
-        ],
+    return GoogleMap(
+      onMapCreated: _onMapCreated,
+      initialCameraPosition: CameraPosition(
+        target: _center,
+        zoom: 11.0,
       ),
+      mapType: _currentMapType,
+      markers: _markers,
+      onCameraMove: _onCameraMove,
     );
   }
 }
