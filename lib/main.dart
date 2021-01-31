@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
-
+import 'package:geolocator/geolocator.dart';
 import 'package:welcome_to_mari_el/favorite.dart';
 import 'package:welcome_to_mari_el/navigation.dart';
 import 'package:welcome_to_mari_el/searchBar.dart';
@@ -47,9 +47,8 @@ class HomePage extends StatelessWidget {
       body: Container(
         child: Column(
           children: <Widget>[
-            SearchButton(),
             Flexible(child: Map()),
-            Buttons(),
+            Geolocation(),
           ],
         ),
       ),
@@ -60,27 +59,27 @@ class HomePage extends StatelessWidget {
 class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      width: MediaQuery.of(context).size.width,
-      margin: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 10,
-      ),
-      decoration: BoxDecoration(
-        color: PrimaryColor,
-      ),
-      child: RaisedButton(
-        color: MyRed,
-        onPressed: () {
-          Navigator.pushNamed(context, '/search');
-        },
-        shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(40.0)),
-        child: Row(children: [
-          Icon(Icons.search),
-          Text("      Поиск..."),
-        ]),
+    return Align(
+      alignment: Alignment.topCenter,
+      child: Container(
+        height: 40,
+        width: MediaQuery.of(context).size.width,
+        margin: const EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: 10,
+        ),
+        child: RaisedButton(
+          color: MyRed,
+          onPressed: () {
+            Navigator.pushNamed(context, '/search');
+          },
+          shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(40.0)),
+          child: Row(children: [
+            Icon(Icons.search),
+            Text("      Поиск..."),
+          ]),
+        ),
       ),
     );
   }
@@ -98,28 +97,57 @@ class MapState extends State<Map> {
 
   final Set<Marker> _markers = {};
 
-  LatLng _lastMapPosition = _center;
-
   MapType _currentMapType = MapType.normal;
-
-  void _onCameraMove(CameraPosition position) {
-    _lastMapPosition = position.target;
-  }
 
   void _onMapCreated(GoogleMapController controller) {
     _controller.complete(controller);
   }
 
+  void _onMapTypeButtonPressed() {
+    setState(() {
+      _currentMapType =
+          _currentMapType == MapType.normal ? MapType.hybrid : MapType.normal;
+    });
+  }
+
   Widget build(BuildContext context) {
-    return GoogleMap(
-      onMapCreated: _onMapCreated,
-      initialCameraPosition: CameraPosition(
-        target: _center,
-        zoom: 11.0,
-      ),
-      mapType: _currentMapType,
-      markers: _markers,
-      onCameraMove: _onCameraMove,
+    return Stack(
+      children: <Widget>[
+        GoogleMap(
+          onMapCreated: _onMapCreated,
+          initialCameraPosition: CameraPosition(
+            target: _center,
+            zoom: 11.0,
+          ),
+          mapType: _currentMapType,
+          markers: _markers,
+          myLocationEnabled: true,
+          myLocationButtonEnabled: true,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Align(
+            alignment: Alignment.topRight,
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 50),
+                Container(
+                  height: 60,
+                  width: 60,
+                  child: FloatingActionButton(
+                    onPressed: _onMapTypeButtonPressed,
+                    materialTapTargetSize: MaterialTapTargetSize.padded,
+                    backgroundColor: MyRed,
+                    child: const Icon(Icons.map, size: 45.0),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Buttons(),
+        SearchButton(),
+      ],
     );
   }
 }
@@ -127,64 +155,124 @@ class MapState extends State<Map> {
 class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 20),
-      decoration: BoxDecoration(
-        color: PrimaryColor,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: PrimaryColor,
-            ),
-            height: 70,
-            width: 70,
-            child: FloatingActionButton(
-              heroTag: null,
-              child: Icon(
-                CustomIcons.cog,
-                size: 50,
+    return Align(
+      alignment: Alignment.topRight,
+      child: Container(
+        padding: const EdgeInsets.all(16.0),
+        //margin: EdgeInsets.only(bottom: 20),
+        child: Column(
+          children: [
+            SizedBox(height: 130),
+            Container(
+              height: 60,
+              width: 60,
+              child: FloatingActionButton(
+                heroTag: null,
+                child: Icon(
+                  CustomIcons.cog,
+                  size: 45,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/settings');
+                },
+                backgroundColor: MyRed,
               ),
-              onPressed: () {
-                Navigator.pushNamed(context, '/settings');
-              },
-              backgroundColor: MyRed,
             ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: PrimaryColor,
+            SizedBox(height: 20),
+            Container(
+              height: 60,
+              width: 60,
+              child: FloatingActionButton(
+                heroTag: null,
+                child: Icon(CustomIcons.route, size: 35),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/route');
+                },
+                backgroundColor: MyRed,
+              ),
             ),
-            height: 70,
-            width: 70,
-            child: FloatingActionButton(
-              heroTag: null,
-              child: Icon(CustomIcons.route, size: 40),
-              onPressed: () {
-                Navigator.pushNamed(context, '/route');
-              },
-              backgroundColor: MyRed,
+            SizedBox(height: 20),
+            Container(
+              height: 60,
+              width: 60,
+              child: FloatingActionButton(
+                heroTag: null,
+                child: Icon(CustomIcons.star_empty, size: 50),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/favorite');
+                },
+                backgroundColor: MyRed,
+              ),
             ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: PrimaryColor,
-            ),
-            height: 70,
-            width: 70,
-            child: FloatingActionButton(
-              heroTag: null,
-              child: Icon(CustomIcons.star_empty, size: 55),
-              onPressed: () {
-                Navigator.pushNamed(context, '/favorite');
-              },
-              backgroundColor: MyRed,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
+  }
+}
+
+class Geolocation extends StatefulWidget {
+  @override
+  GeolocationState createState() => new GeolocationState();
+}
+
+class GeolocationState extends State {
+  Geolocator _geolocator;
+  Position _position;
+
+  void checkPermission() {
+    _geolocator.checkGeolocationPermissionStatus().then((status) {
+      print('status: $status');
+    });
+    _geolocator
+        .checkGeolocationPermissionStatus(
+            locationPermission: GeolocationPermission.locationAlways)
+        .then((status) {
+      print('always status: $status');
+    });
+    _geolocator.checkGeolocationPermissionStatus(
+        locationPermission: GeolocationPermission.locationWhenInUse)
+      ..then((status) {
+        print('whenInUse status: $status');
+      });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _geolocator = Geolocator();
+    LocationOptions locationOptions =
+        LocationOptions(accuracy: LocationAccuracy.high, distanceFilter: 1);
+
+    checkPermission();
+    updateLocation();
+
+    StreamSubscription positionStream = _geolocator
+        .getPositionStream(locationOptions)
+        .listen((Position position) {
+      setState(() {
+        _position = position;
+      });
+    });
+  }
+
+  void updateLocation() async {
+    try {
+      Position newPosition = await Geolocator()
+          .getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
+          .timeout(new Duration(seconds: 5));
+
+      setState(() {
+        _position = newPosition;
+      });
+    } catch (e) {
+      print('Error: ${e.toString()}');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

@@ -31,6 +31,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   google_maps_flutter: ^1.1.1  
+  location: ^3.2.4
+  geolocator: ^5.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,9 +55,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
-    - assets/images/map.png
-    - assets/images/settings.png
-    - assets/images/favorite.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
