@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:welcome_to_mari_el/DistrictsFilter.dart';
-import 'package:welcome_to_mari_el/searchFilter.dart';
+import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
+import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
 const MyRed = Color(0xFFFF6860);
