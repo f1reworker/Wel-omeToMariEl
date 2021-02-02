@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
-import 'package:welcome_to_mari_el/routePage/navigation.dart';
+import 'package:welcome_to_mari_el/routePage/route.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:welcome_to_mari_el/settingsPage/settings.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
@@ -35,9 +35,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key key}) : super(key: key);
 
+  @override
+  HomePageState createState() => HomePageState();
+}
+
+class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +50,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Flexible(child: Map()),
-            Geolocation(),
+            //Geolocation(),
           ],
         ),
       ),

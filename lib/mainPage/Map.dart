@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
+import 'package:location/location.dart';
 
-Geolocator _geolocator;
-Position _position;
+// Geolocator _geolocator;
+// Position _position;
 LatLng _center = LatLng(56.6388, 47.8908);
 
 class Map extends StatefulWidget {
@@ -31,10 +31,23 @@ class MapState extends State<Map> {
     });
   }
 
-  void goToMyPosition() {
-    setState(() {
-      _center = LatLng(_position.latitude, _position.longitude);
-    });
+  void _currentLocation() async {
+    final GoogleMapController controller = await _controller.future;
+    LocationData currentLocation;
+    var location = new Location();
+    try {
+      currentLocation = await location.getLocation();
+    } on Exception {
+      currentLocation = null;
+    }
+
+    controller.animateCamera(CameraUpdate.newCameraPosition(
+      CameraPosition(
+        bearing: 0,
+        target: LatLng(currentLocation.latitude, currentLocation.longitude),
+        zoom: 17.0,
+      ),
+    ));
   }
 
   Widget build(BuildContext context) {
@@ -49,12 +62,12 @@ class MapState extends State<Map> {
           mapType: _currentMapType,
           markers: _markers,
           myLocationEnabled: true,
-          myLocationButtonEnabled: true,
+          zoomControlsEnabled: false,
         ),
-        Padding(
+        Container(
           padding: const EdgeInsets.all(16.0),
           child: Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.bottomRight,
             child: Column(
               children: <Widget>[
                 SizedBox(height: 50),
@@ -75,8 +88,7 @@ class MapState extends State<Map> {
                   width: 60,
                   child: FloatingActionButton(
                     heroTag: null,
-                    onPressed: goToMyPosition,
-                    materialTapTargetSize: MaterialTapTargetSize.padded,
+                    onPressed: _currentLocation,
                     backgroundColor: MyRed,
                     child: const Icon(Icons.my_location, size: 45.0),
                   ),
@@ -89,68 +101,5 @@ class MapState extends State<Map> {
         SearchButton(),
       ],
     );
-  }
-}
-
-class Geolocation extends StatefulWidget {
-  @override
-  GeolocationState createState() => new GeolocationState();
-}
-
-class GeolocationState extends State {
-  void checkPermission() {
-    _geolocator.checkGeolocationPermissionStatus().then((status) {
-      print('status: $status');
-    });
-    _geolocator
-        .checkGeolocationPermissionStatus(
-            locationPermission: GeolocationPermission.locationAlways)
-        .then((status) {
-      print('always status: $status');
-    });
-    _geolocator.checkGeolocationPermissionStatus(
-        locationPermission: GeolocationPermission.locationWhenInUse)
-      ..then((status) {
-        print('whenInUse status: $status');
-      });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-
-    _geolocator = Geolocator();
-    LocationOptions locationOptions =
-        LocationOptions(accuracy: LocationAccuracy.high, distanceFilter: 1);
-
-    checkPermission();
-    updateLocation();
-
-    StreamSubscription positionStream = _geolocator
-        .getPositionStream(locationOptions)
-        .listen((Position position) {
-      setState(() {
-        _position = position;
-      });
-    });
-  }
-
-  void updateLocation() async {
-    try {
-      Position newPosition = await Geolocator()
-          .getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
-          .timeout(new Duration(seconds: 5));
-
-      setState(() {
-        _position = newPosition;
-      });
-    } catch (e) {
-      print('Error: ${e.toString()}');
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

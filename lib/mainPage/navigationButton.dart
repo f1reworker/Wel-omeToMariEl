@@ -36,21 +36,22 @@ class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.topRight,
+      alignment: Alignment.bottomCenter,
       child: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         //margin: EdgeInsets.only(bottom: 20),
-        child: Column(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(height: 210),
+            //SizedBox(height: 210),
             Container(
-              height: 60,
-              width: 60,
+              height: 70,
+              width: 70,
               child: FloatingActionButton(
                 heroTag: null,
                 child: Icon(
                   CustomIcons.cog,
-                  size: 45,
+                  size: 50,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/settings');
@@ -58,26 +59,26 @@ class Buttons extends StatelessWidget {
                 backgroundColor: MyRed,
               ),
             ),
-            SizedBox(height: 20),
+            //SizedBox(height: 20),
             Container(
-              height: 60,
-              width: 60,
+              height: 70,
+              width: 70,
               child: FloatingActionButton(
                 heroTag: null,
-                child: Icon(CustomIcons.route, size: 35),
+                child: Icon(CustomIcons.route, size: 40),
                 onPressed: () {
                   Navigator.pushNamed(context, '/route');
                 },
                 backgroundColor: MyRed,
               ),
             ),
-            SizedBox(height: 20),
+            //SizedBox(height: 20),
             Container(
-              height: 60,
-              width: 60,
+              height: 70,
+              width: 70,
               child: FloatingActionButton(
                 heroTag: null,
-                child: Icon(CustomIcons.star_empty, size: 50),
+                child: Icon(CustomIcons.star_empty, size: 55),
                 onPressed: () {
                   Navigator.pushNamed(context, '/favorite');
                 },
