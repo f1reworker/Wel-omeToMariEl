@@ -125,67 +125,62 @@ class DistrictsState extends State<Districts> {
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Row(children: <Widget>[
-                    checkbox("Юринский", urVal),
-                    Text("Юринский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Мари-Турекский", mariVal),
-                    Text("Мари-Турекский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Параньгинский", paranVal),
-                    Text("Параньгинский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Сернурский", sernVal),
-                    Text("Сернурский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Куженерский", kugVal),
-                    Text("Куженерский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Новоторъяльский", novVal),
-                    Text("Новоторъяльский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Волжский", volgVal),
-                    Text("Волжский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Моркинский", morkVal),
-                    Text("Моркинский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Советский", sovVal),
-                    Text("Советский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Оршанский", orshVal),
-                    Text("Оршанский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Звениговский", zvenVal),
-                    Text("Звениговский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Медведевский", medvVal),
-                    Text("Медведевский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Килемарский", kilVal),
-                    Text("Килемарский")
-                  ]),
-                  Row(children: <Widget>[
-                    checkbox("Горномарийский", gornVal),
-                    Text("Горномарийский")
-                  ]),
-                ],
-              ),
+              Row(children: <Widget>[
+                checkbox("Юринский", urVal),
+                Text("Юринский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Мари-Турекский", mariVal),
+                Text("Мари-Турекский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Параньгинский", paranVal),
+                Text("Параньгинский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Сернурский", sernVal),
+                Text("Сернурский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Куженерский", kugVal),
+                Text("Куженерский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Новоторъяльский", novVal),
+                Text("Новоторъяльский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Волжский", volgVal),
+                Text("Волжский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Моркинский", morkVal),
+                Text("Моркинский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Советский", sovVal),
+                Text("Советский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Оршанский", orshVal),
+                Text("Оршанский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Звениговский", zvenVal),
+                Text("Звениговский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Медведевский", medvVal),
+                Text("Медведевский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Килемарский", kilVal),
+                Text("Килемарский")
+              ]),
+              Row(children: <Widget>[
+                checkbox("Горномарийский", gornVal),
+                Text("Горномарийский")
+              ]),
             ],
           ),
         ],

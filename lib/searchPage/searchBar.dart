@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
+import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
-const MyRed = Color(0xFFFF6860);
+LatLng markerPosition = LatLng(56.63011039048471, 47.918735914174235);
+final Set<Marker> markers = {};
 
 class SearchList extends StatefulWidget {
   @override
@@ -21,6 +24,9 @@ class SearchListState extends State<SearchList> {
           DistrictsFilter(),
           SearchFilter(),
           Fil(),
+          Flexible(
+            child: PlaceList(),
+          ),
         ]),
       ),
     );
@@ -132,5 +138,31 @@ class FilState extends State<Fil> {
         ],
       ),
     );
+  }
+}
+
+class PlaceList extends StatefulWidget {
+  PlaceList({Key key}) : super(key: key);
+
+  @override
+  _PlaceListState createState() => _PlaceListState();
+}
+
+class _PlaceListState extends State<PlaceList> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(children: [
+      Column(
+        children: <Widget>[
+          Row(children: <Widget>[
+            Text("Place 1"),
+            RaisedButton(
+              onPressed: MapState().onAddMarkerButtonPressed,
+              child: Icon(Icons.add),
+            ),
+          ]),
+        ],
+      ),
+    ]);
   }
 }

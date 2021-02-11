@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
+import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:location/location.dart';
 
 // Geolocator _geolocator;
 // Position _position;
 LatLng _center = LatLng(56.6388, 47.8908);
+//final Set<Marker> markers = {};
 
 class Map extends StatefulWidget {
   @override
@@ -15,8 +17,6 @@ class Map extends StatefulWidget {
 
 class MapState extends State<Map> {
   Completer<GoogleMapController> _controller = Completer();
-
-  final Set<Marker> _markers = {};
 
   MapType _currentMapType = MapType.normal;
 
@@ -50,6 +50,20 @@ class MapState extends State<Map> {
     ));
   }
 
+  void onAddMarkerButtonPressed() {
+    setState(() {
+      markers.add(Marker(
+        markerId: MarkerId(markerPosition.toString()),
+        position: markerPosition,
+        infoWindow: InfoWindow(
+          title: 'Really cool place',
+          snippet: '5 Star Rating',
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      ));
+    });
+  }
+
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
@@ -60,9 +74,10 @@ class MapState extends State<Map> {
             zoom: 11.0,
           ),
           mapType: _currentMapType,
-          markers: _markers,
+          markers: markers,
           myLocationEnabled: true,
           zoomControlsEnabled: false,
+          myLocationButtonEnabled: false,
         ),
         Container(
           padding: const EdgeInsets.all(16.0),

@@ -7,7 +7,7 @@ import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
 const MyRed = Color(0xFFFF6860);
-
+String mP;
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -50,10 +50,31 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             Flexible(child: Map()),
-            //Geolocation(),
+            //Fff(),
           ],
         ),
       ),
     );
   }
 }
+
+// class Fff extends StatefulWidget {
+//   @override
+//   FffState createState() => FffState();
+// }
+
+// class FffState extends State<Fff> {
+//   void gfgf() {
+//     setState(() {
+//       mP = markerPosition.toString();
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: 40,
+//       child: Text(markers.toString()),
+//     );
+//   }
+// }
