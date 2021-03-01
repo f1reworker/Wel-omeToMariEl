@@ -8,12 +8,7 @@ class SettingsPage extends StatelessWidget {
         title: Text("Настройки"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Обратно!'),
-        ),
+        child: Text('Обратно!'),
       ),
     );
   }

@@ -8,12 +8,7 @@ class NavigationPage extends StatelessWidget {
         title: Text("Навигация"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Обратно!'),
-        ),
+        child: Text('Обратно!'),
       ),
     );
   }

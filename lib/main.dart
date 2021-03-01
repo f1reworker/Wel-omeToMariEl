@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:welcome_to_mari_el/custom_icons.dart';
+import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
+import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/routePage/route.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:welcome_to_mari_el/settingsPage/settings.dart';
-import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
 const MyRed = Color(0xFFFF6860);
@@ -19,6 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Mari El Travel book',
       theme: new ThemeData(
         scaffoldBackgroundColor: const Color(0xFFFFFEFC),
+        accentColor: MyRed,
         //textTheme: GoogleFonts.marmeladTextTheme(
         //  Theme.of(context).textTheme,
         // ),
@@ -43,38 +47,110 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  // int _selectedIndex = 0;
+  // void _onItemTap(int index) {
+  //   setState(() {
+  //     if (_selectedIndex != index) {
+  //       _selectedIndex = index;
+
+  //       switch (index) {
+  //         case 0:
+  //           Navigator.pushNamed(context, '/');
+  //           break;
+  //         case 1:
+  //           Navigator.of(context)
+  //               .push(MaterialPageRoute(builder: (context) => FavoritePage()));
+
+  //           break;
+  //         case 2:
+  //           Navigator.pushNamed(context, '/route');
+  //           break;
+  //         case 3:
+  //           Navigator.pushNamed(context, '/settings');
+  //           break;
+  //       }
+  //     }
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            Flexible(child: Map()),
-            //Fff(),
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        body: TabBarView(
+          children: [
+            Map(),
+            FavoritePage(),
+            NavigationPage(),
+            SettingsPage(),
           ],
         ),
+        bottomNavigationBar: TabBar(
+          tabs: [
+            Tab(
+              icon: Icon(
+                Icons.map_outlined,
+                size: 27,
+                color: Colors.white,
+              ),
+            ),
+            Tab(
+              icon: Icon(
+                CustomIcons.star_empty,
+                size: 27,
+                color: Colors.white,
+              ),
+            ),
+            Tab(
+              icon: Icon(
+                CustomIcons.route,
+                color: Colors.white,
+              ),
+            ),
+            Tab(
+              icon: Icon(
+                CustomIcons.cog,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: MyRed,
+        // bottomNavigationBar: BottomNavigationBar(
+        //   backgroundColor: MyRed,
+        //   items: [
+
+        //   BottomNavigationBarItem(
+        //       icon: Icon(
+        //         Icons.map_outlined,
+        //         size: 27,
+        //         color: Colors.white,
+        //       ),
+        //       label: 'Карта',
+        //       backgroundColor: MyRed),
+        //   BottomNavigationBarItem(
+        //       icon: Icon(
+        //         CustomIcons.star_empty,
+        //         size: 27,
+        //         color: Colors.white,
+        //       ),
+        //       label: 'Избранное',
+        //       backgroundColor: MyRed),
+        //   BottomNavigationBarItem(
+        //       icon: Icon(
+        //         CustomIcons.route,
+        //         color: Colors.white,
+        //       ),
+        //       label: 'Маршруты',
+        //       backgroundColor: MyRed),
+        // ],
+        // unselectedItemColor: Colors.white,
+        // selectedItemColor: Colors.blue,
+        // onTap: _onItemTap,
+        // currentIndex: _selectedIndex,
+        //   ),
       ),
     );
   }
 }
-
-// class Fff extends StatefulWidget {
-//   @override
-//   FffState createState() => FffState();
-// }
-
-// class FffState extends State<Fff> {
-//   void gfgf() {
-//     setState(() {
-//       mP = markerPosition.toString();
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       height: 40,
-//       child: Text(markers.toString()),
-//     );
-//   }
-// }

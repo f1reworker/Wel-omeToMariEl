@@ -8,12 +8,7 @@ class FavoritePage extends StatelessWidget {
         title: Text("Избранное"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Обратно!'),
-        ),
+        child: Text('Обратно!'),
       ),
     );
   }

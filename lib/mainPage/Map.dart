@@ -85,7 +85,7 @@ class MapState extends State<Map> {
             alignment: Alignment.bottomRight,
             child: Column(
               children: <Widget>[
-                SizedBox(height: 50),
+                SizedBox(height: 80),
                 Container(
                   height: 60,
                   width: 60,
@@ -112,7 +112,7 @@ class MapState extends State<Map> {
             ),
           ),
         ),
-        Buttons(),
+        //Buttons(),
         SearchButton(),
       ],
     );
