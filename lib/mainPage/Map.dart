@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:location/location.dart';
+import 'package:welcome_to_mari_el/data.dart';
 
 // Geolocator _geolocator;
 // Position _position;
@@ -19,6 +21,20 @@ class MapState extends State<Map> {
   Completer<GoogleMapController> _controller = Completer();
 
   MapType _currentMapType = MapType.normal;
+
+  void onAddMarkerButtonPressed() {
+    setState(() {
+      markers.add(Marker(
+        markerId: MarkerId(markerPosition.toString()),
+        position: markerPosition,
+        infoWindow: InfoWindow(
+          title: 'Really cool place',
+          snippet: '5 Star Rating',
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      ));
+    });
+  }
 
   void _onMapCreated(GoogleMapController controller) {
     _controller.complete(controller);
@@ -48,20 +64,6 @@ class MapState extends State<Map> {
         zoom: 17.0,
       ),
     ));
-  }
-
-  void onAddMarkerButtonPressed() {
-    setState(() {
-      markers.add(Marker(
-        markerId: MarkerId(markerPosition.toString()),
-        position: markerPosition,
-        infoWindow: InfoWindow(
-          title: 'Really cool place',
-          snippet: '5 Star Rating',
-        ),
-        icon: BitmapDescriptor.defaultMarker,
-      ));
-    });
   }
 
   Widget build(BuildContext context) {

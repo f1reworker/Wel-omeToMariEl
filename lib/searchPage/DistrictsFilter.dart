@@ -1,5 +1,8 @@
-import 'package:flutter/material.dart';
 import 'dart:convert';
+import 'package:welcome_to_mari_el/data.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+//import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 
 bool urVal = true;
 bool mariVal = true;
@@ -16,14 +19,16 @@ bool medvVal = true;
 bool kilVal = true;
 bool gornVal = true;
 var districtsCheck = [];
-String districtsString;
+String districtsString = "";
+String searchString = "";
 
 showAlertDialogDistricts(BuildContext context) {
   // set up the button
   Widget okButton = FlatButton(
     child: Text("OK"),
     onPressed: () {
-      //districtsCheckFunc();
+      districtsCheckFunc();
+      context.read<DistrictsFil>().changeString(districtsString);
       Navigator.of(context).pop();
     },
   );

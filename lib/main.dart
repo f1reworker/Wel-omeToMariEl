@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+//import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
-import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
+//import 'package:welcome_to_mari_el/data.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/routePage/route.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Mari El Travel book',
       theme: new ThemeData(
         scaffoldBackgroundColor: const Color(0xFFFFFEFC),
-        accentColor: MyRed,
+        primaryColor: MyRed,
         //textTheme: GoogleFonts.marmeladTextTheme(
         //  Theme.of(context).textTheme,
         // ),
@@ -47,38 +48,13 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  // int _selectedIndex = 0;
-  // void _onItemTap(int index) {
-  //   setState(() {
-  //     if (_selectedIndex != index) {
-  //       _selectedIndex = index;
-
-  //       switch (index) {
-  //         case 0:
-  //           Navigator.pushNamed(context, '/');
-  //           break;
-  //         case 1:
-  //           Navigator.of(context)
-  //               .push(MaterialPageRoute(builder: (context) => FavoritePage()));
-
-  //           break;
-  //         case 2:
-  //           Navigator.pushNamed(context, '/route');
-  //           break;
-  //         case 3:
-  //           Navigator.pushNamed(context, '/settings');
-  //           break;
-  //       }
-  //     }
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
         body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           children: [
             Map(),
             FavoritePage(),

@@ -1,5 +1,8 @@
-import 'package:flutter/material.dart';
 import 'dart:convert';
+import 'package:provider/provider.dart';
+import 'package:welcome_to_mari_el/data.dart';
+import 'package:flutter/material.dart';
+//import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 
 bool museumVal = true;
 bool galeryVal = true;
@@ -10,14 +13,15 @@ bool restVal = true;
 bool hotelVal = true;
 bool hostelVal = true;
 var searchCheck = [];
-String searchString;
-
+String searchString = "";
+String districtsString = "";
 showAlertDialogSearch(BuildContext context) {
   // set up the button
   Widget okButton = FlatButton(
     child: Text("OK"),
     onPressed: () {
-      //districtsCheckFunc();
+      searchCheckFunc();
+      context.read<DistrictsFil>().changeString(searchString);
       Navigator.of(context).pop();
     },
   );
