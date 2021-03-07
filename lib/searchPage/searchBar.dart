@@ -5,6 +5,7 @@ import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'package:welcome_to_mari_el/data.dart';
+import 'package:welcome_to_mari_el/placeList.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
 LatLng markerPosition = LatLng(56.63011039048471, 47.918735914174235);
@@ -30,6 +31,10 @@ class SearchList extends StatelessWidget {
             Flexible(
               child: PlaceList(),
             ),
+            Text(lakeKumyary["what"]),
+            Text(lakeKumyary["description"]),
+            Text(lakeKumyary["district"]),
+            Text(lakeKumyary["id"]),
           ]),
         ),
       ),

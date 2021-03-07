@@ -1,24 +1,5 @@
-// import 'package:flutter/widgets.dart';
-
-// class DistrictsFil with ChangeNotifier {
-//   String _data1 = "";
-//   String _data2 = "";
-//   String get getData1 => _data1;
-//   String get getData2 => _data2;
-//   void changeString(districtsString, searchString) {
-//     if (districtsString != null) {
-//       _data1 = districtsString;
-//     }
-//     if (searchString != null) {
-//       _data2 = searchString;
-//     }
-//     notifyListeners();
-//   }
-// }
-
 import 'package:flutter/widgets.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
 class DistrictsFil with ChangeNotifier {
   String _data = "";
