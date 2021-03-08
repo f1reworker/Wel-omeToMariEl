@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,9 +17,22 @@ bool zvenVal = true;
 bool medvVal = true;
 bool kilVal = true;
 bool gornVal = true;
-var districtsCheck = [];
-String districtsString = "";
-String searchString = "";
+List districtsCheck = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+];
 
 showAlertDialogDistricts(BuildContext context) {
   // set up the button
@@ -28,12 +40,11 @@ showAlertDialogDistricts(BuildContext context) {
     child: Text("OK"),
     onPressed: () {
       districtsCheckFunc();
-      context.read<DistrictsFil>().changeString(districtsString);
+      context.read<DistrictsFil>().changeString1(districtsCheck);
       Navigator.of(context).pop();
     },
   );
 
-  // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -47,7 +58,6 @@ showAlertDialogDistricts(BuildContext context) {
     ],
   );
 
-  // show the dialog
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -195,48 +205,47 @@ class DistrictsState extends State<Districts> {
 }
 
 void districtsCheckFunc() {
-  var districtsCheck = [];
+  districtsCheck = [];
   if (urVal == true) {
-    districtsCheck.add("Юринский");
+    districtsCheck.add("1");
   }
   if (mariVal == true) {
-    districtsCheck.add("Мари-Турекский");
+    districtsCheck.add("2");
   }
   if (paranVal == true) {
-    districtsCheck.add("Параньгинский");
+    districtsCheck.add("3");
   }
   if (sernVal == true) {
-    districtsCheck.add("Сернурский");
+    districtsCheck.add("4");
   }
   if (kugVal == true) {
-    districtsCheck.add("Куженерский");
+    districtsCheck.add("5");
   }
   if (novVal == true) {
-    districtsCheck.add("Новоторъяльский");
+    districtsCheck.add("6");
   }
   if (volgVal == true) {
-    districtsCheck.add("Волжский");
+    districtsCheck.add("7");
   }
   if (morkVal == true) {
-    districtsCheck.add("Моркинский");
+    districtsCheck.add("8");
   }
   if (sovVal == true) {
-    districtsCheck.add("Советский");
+    districtsCheck.add("9");
   }
   if (orshVal == true) {
-    districtsCheck.add("Оршанский");
+    districtsCheck.add("A");
   }
   if (zvenVal == true) {
-    districtsCheck.add("Звениговский");
+    districtsCheck.add("B");
   }
   if (medvVal == true) {
-    districtsCheck.add("Медведевский");
+    districtsCheck.add("C");
   }
   if (kilVal == true) {
-    districtsCheck.add("Килемарский");
+    districtsCheck.add("D");
   }
   if (gornVal == true) {
-    districtsCheck.add("Горномарийский");
+    districtsCheck.add("E");
   }
-  districtsString = jsonEncode(districtsCheck);
 }

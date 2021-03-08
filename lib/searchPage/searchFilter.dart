@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
@@ -12,16 +11,25 @@ bool cafeVal = true;
 bool restVal = true;
 bool hotelVal = true;
 bool hostelVal = true;
-var searchCheck = [];
-String searchString = "";
-String districtsString = "";
+bool sightVal = true;
+List searchCheck = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+];
 showAlertDialogSearch(BuildContext context) {
   // set up the button
   Widget okButton = FlatButton(
     child: Text("OK"),
     onPressed: () {
       searchCheckFunc();
-      context.read<DistrictsFil>().changeString(searchString);
+      context.read<DistrictsFil>().changeString2(searchCheck);
       Navigator.of(context).pop();
     },
   );
@@ -57,12 +65,10 @@ class Search extends StatefulWidget {
 class SearchState extends State<Search> {
   Widget checkbox(String title, bool boolValue) {
     return Column(
-      //mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Checkbox(
           value: boolValue,
           onChanged: (bool value) {
-            /// manage the state of each value
             setState(() {
               switch (title) {
                 case "Музеи":
@@ -88,6 +94,9 @@ class SearchState extends State<Search> {
                   break;
                 case "Хостелы":
                   hostelVal = value;
+                  break;
+                case "Достопримечательности":
+                  sightVal = value;
                   break;
               }
             });
@@ -129,6 +138,10 @@ class SearchState extends State<Search> {
                     Text("Кафе")
                   ]),
                   Row(children: <Widget>[
+                    checkbox("Достопримечательности", sightVal),
+                    Text("Достопримечательности")
+                  ]),
+                  Row(children: <Widget>[
                     checkbox("Рестораны", restVal),
                     Text("Рестораны")
                   ]),
@@ -151,30 +164,32 @@ class SearchState extends State<Search> {
 }
 
 void searchCheckFunc() {
-  var searchCheck = [];
+  searchCheck = [];
   if (museumVal == true) {
-    searchCheck.add("Музеи");
+    searchCheck.add("1");
   }
   if (galeryVal == true) {
-    searchCheck.add("Галереи");
+    searchCheck.add("2");
   }
   if (naturalVal == true) {
-    searchCheck.add("Природные места");
+    searchCheck.add("3");
   }
   if (holyVal == true) {
-    searchCheck.add("Святые места");
+    searchCheck.add("4");
+  }
+  if (sightVal == true) {
+    searchCheck.add("5");
   }
   if (cafeVal == true) {
-    searchCheck.add("Кафе");
+    searchCheck.add("6");
   }
   if (restVal == true) {
-    searchCheck.add("Рестораны");
+    searchCheck.add("7");
   }
   if (hotelVal == true) {
-    searchCheck.add("Отели");
+    searchCheck.add("8");
   }
   if (hostelVal == true) {
-    searchCheck.add("Хостелы");
+    searchCheck.add("9");
   }
-  searchString = jsonEncode(searchCheck);
 }

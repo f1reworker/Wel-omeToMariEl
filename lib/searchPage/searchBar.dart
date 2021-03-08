@@ -17,7 +17,6 @@ class SearchList extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
-        ChangeNotifierProvider<SearchFil>(create: (_) => SearchFil()),
       ],
       child: Scaffold(
         body: Container(
@@ -27,14 +26,9 @@ class SearchList extends StatelessWidget {
             DistrictsFilter(),
             SearchFilter(),
             Fil(),
-            Fil2(),
             Flexible(
               child: PlaceList(),
             ),
-            Text(lakeKumyary["what"]),
-            Text(lakeKumyary["description"]),
-            Text(lakeKumyary["district"]),
-            Text(lakeKumyary["id"]),
           ]),
         ),
       ),
@@ -120,7 +114,8 @@ class Fil extends StatelessWidget {
       child: Container(
         child: Column(
           children: <Widget>[
-            Text(context.watch<DistrictsFil>().getData),
+            Text(context.watch<DistrictsFil>().getData1.toString()),
+            Text(context.watch<DistrictsFil>().getData2.toString()),
           ],
         ),
       ),
@@ -128,30 +123,7 @@ class Fil extends StatelessWidget {
   }
 }
 
-class Fil2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider<SearchFil>(
-      create: (context) => SearchFil(),
-      child: Container(
-        child: Column(
-          children: <Widget>[
-            Text(context.watch<SearchFil>().getData),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class PlaceList extends StatefulWidget {
-  PlaceList({Key key}) : super(key: key);
-
-  @override
-  _PlaceListState createState() => _PlaceListState();
-}
-
-class _PlaceListState extends State<PlaceList> {
+class PlaceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -163,6 +135,7 @@ class _PlaceListState extends State<PlaceList> {
               onPressed: MapState().onAddMarkerButtonPressed,
               child: Icon(Icons.add),
             ),
+            Container(child: Text(""))
           ]),
         ],
       ),

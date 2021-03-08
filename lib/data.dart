@@ -1,21 +1,21 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
+import 'package:welcome_to_mari_el/searchPage/SearchFilter.dart';
+
+List _data1 = districtsCheck;
+List _data2 = searchCheck;
 
 class DistrictsFil with ChangeNotifier {
-  String _data = "";
-  String get getData => _data;
-  void changeString(districtsString) {
-    _data = districtsString;
-
+  List get getData1 => _data1;
+  List get getData2 => _data2;
+  void changeString1(districtsCheck) {
+    _data1 = districtsCheck;
     notifyListeners();
   }
-}
 
-class SearchFil with ChangeNotifier {
-  String _data = "";
-  String get getData => _data;
-  void changeString(searchString) {
-    _data = searchString;
+  void changeString2(searchCheck) {
+    _data2 = searchCheck;
     notifyListeners();
   }
 }

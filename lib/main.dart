@@ -93,39 +93,6 @@ class HomePageState extends State<HomePage> {
           ],
         ),
         backgroundColor: MyRed,
-        // bottomNavigationBar: BottomNavigationBar(
-        //   backgroundColor: MyRed,
-        //   items: [
-
-        //   BottomNavigationBarItem(
-        //       icon: Icon(
-        //         Icons.map_outlined,
-        //         size: 27,
-        //         color: Colors.white,
-        //       ),
-        //       label: 'Карта',
-        //       backgroundColor: MyRed),
-        //   BottomNavigationBarItem(
-        //       icon: Icon(
-        //         CustomIcons.star_empty,
-        //         size: 27,
-        //         color: Colors.white,
-        //       ),
-        //       label: 'Избранное',
-        //       backgroundColor: MyRed),
-        //   BottomNavigationBarItem(
-        //       icon: Icon(
-        //         CustomIcons.route,
-        //         color: Colors.white,
-        //       ),
-        //       label: 'Маршруты',
-        //       backgroundColor: MyRed),
-        // ],
-        // unselectedItemColor: Colors.white,
-        // selectedItemColor: Colors.blue,
-        // onTap: _onItemTap,
-        // currentIndex: _selectedIndex,
-        //   ),
       ),
     );
   }
