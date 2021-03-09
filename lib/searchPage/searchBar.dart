@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:provider/provider.dart';
-import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
-import 'package:welcome_to_mari_el/data.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
@@ -14,24 +11,26 @@ final Set<Marker> markers = {};
 class SearchList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
-      ],
-      child: Scaffold(
-        body: Container(
-          color: PrimaryColor,
-          child: Column(children: <Widget>[
-            SearchBar(),
-            DistrictsFilter(),
-            SearchFilter(),
-            Fil(),
-            Flexible(
-              child: PlaceList(),
-            ),
-          ]),
-        ),
+    return
+        //MultiProvider(
+        //providers: [
+        //  ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
+        //],
+        //child:
+        Scaffold(
+      body: Container(
+        color: PrimaryColor,
+        child: Column(children: <Widget>[
+          SearchBar(),
+          DistrictsFilter(),
+          SearchFilter(),
+          Fil(),
+          Flexible(
+            child: PlaceList(),
+          ),
+        ]),
       ),
+      //    ),
     );
   }
 }
@@ -109,36 +108,19 @@ class SearchFilter extends StatelessWidget {
 class Fil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<DistrictsFil>(
-      create: (context) => DistrictsFil(),
-      child: Container(
-        child: Column(
-          children: <Widget>[
-            Text(context.watch<DistrictsFil>().getData1.toString()),
-            Text(context.watch<DistrictsFil>().getData2.toString()),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class PlaceList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(children: [
-      Column(
+    return
+        //ChangeNotifierProvider<DistrictsFil>(
+        //create: (context) => DistrictsFil(),
+        //child:
+        Container(
+      child: Column(
         children: <Widget>[
-          Row(children: <Widget>[
-            Text("Place 1"),
-            RaisedButton(
-              onPressed: MapState().onAddMarkerButtonPressed,
-              child: Icon(Icons.add),
-            ),
-            Container(child: Text(""))
-          ]),
+          //Text(context.watch<DistrictsFil>().getData1.toString()),
+          //Text(context.watch<DistrictsFil>().getData2.toString()),
+          Text(id),
         ],
       ),
-    ]);
+      //  ),
+    );
   }
 }
