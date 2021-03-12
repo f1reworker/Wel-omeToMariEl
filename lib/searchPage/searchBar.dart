@@ -3,6 +3,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
+import 'package:provider/provider.dart';
+import 'package:welcome_to_mari_el/data.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
 LatLng markerPosition = LatLng(56.63011039048471, 47.918735914174235);
@@ -11,26 +13,25 @@ final Set<Marker> markers = {};
 class SearchList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-        //MultiProvider(
-        //providers: [
-        //  ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
-        //],
-        //child:
-        Scaffold(
-      body: Container(
-        color: PrimaryColor,
-        child: Column(children: <Widget>[
-          SearchBar(),
-          DistrictsFilter(),
-          SearchFilter(),
-          Fil(),
-          Flexible(
-            child: PlaceList(),
-          ),
-        ]),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<FilteredPlace>(create: (_) => FilteredPlace()),
+        ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
+      ],
+      child: Scaffold(
+        body: Container(
+          color: PrimaryColor,
+          child: Column(children: <Widget>[
+            SearchBar(),
+            DistrictsFilter(),
+            SearchFilter(),
+            Fil(),
+            Flexible(
+              child: PlaceList(),
+            ),
+          ]),
+        ),
       ),
-      //    ),
     );
   }
 }
@@ -75,7 +76,6 @@ class DistrictsFilter extends StatelessWidget {
             Text("     Добавить фильтры районов"),
           ]),
           onPressed: () {
-            districtsCheckFunc();
             showAlertDialogDistricts(context);
           },
         ));
@@ -98,7 +98,6 @@ class SearchFilter extends StatelessWidget {
             Text("     Добавить фильтры поиска"),
           ]),
           onPressed: () {
-            searchCheckFunc();
             showAlertDialogSearch(context);
           },
         ));
@@ -108,19 +107,8 @@ class SearchFilter extends StatelessWidget {
 class Fil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-        //ChangeNotifierProvider<DistrictsFil>(
-        //create: (context) => DistrictsFil(),
-        //child:
-        Container(
-      child: Column(
-        children: <Widget>[
-          //Text(context.watch<DistrictsFil>().getData1.toString()),
-          //Text(context.watch<DistrictsFil>().getData2.toString()),
-          Text(id),
-        ],
-      ),
-      //  ),
+    return Container(
+      child: Text(""),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:provider/provider.dart';
-import 'package:welcome_to_mari_el/data.dart';
+//import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
-//import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
+import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
+import 'package:welcome_to_mari_el/placeList.dart';
 
 bool museumVal = true;
 bool galeryVal = true;
@@ -29,7 +30,9 @@ showAlertDialogSearch(BuildContext context) {
     child: Text("OK"),
     onPressed: () {
       searchCheckFunc();
-      context.read<DistrictsFil>().changeString2(searchCheck);
+      districtsCheckFunc();
+      filterPlace(districtsCheck, searchCheck);
+      context.read<FilteredPlace>().changeFinalPlace(finalPlace);
       Navigator.of(context).pop();
     },
   );

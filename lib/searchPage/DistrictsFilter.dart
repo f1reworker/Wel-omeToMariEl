@@ -1,6 +1,8 @@
 import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
+import 'package:welcome_to_mari_el/placeList.dart';
 //import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 
 bool urVal = true;
@@ -17,7 +19,7 @@ bool zvenVal = true;
 bool medvVal = true;
 bool kilVal = true;
 bool gornVal = true;
-List districtsCheck = [
+var districtsCheck = [
   "1",
   "2",
   "3",
@@ -40,7 +42,10 @@ showAlertDialogDistricts(BuildContext context) {
     child: Text("OK"),
     onPressed: () {
       districtsCheckFunc();
+      searchCheckFunc();
       context.read<DistrictsFil>().changeString1(districtsCheck);
+      filterPlace(districtsCheck, searchCheck);
+      context.read<FilteredPlace>().changeFinalPlace(finalPlace);
       Navigator.of(context).pop();
     },
   );
