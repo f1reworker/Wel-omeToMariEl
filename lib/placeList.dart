@@ -44,89 +44,88 @@ class PlaceList extends StatelessWidget {
             itemCount: context.watch<FilteredPlace>().getData.length,
             itemBuilder: (context, index) {
               return new Container(
-                height: 80,
-                child: Row(children: <Widget>[
-                  Container(
-                    width: MediaQuery.of(context).size.width - 80,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.white, onPrimary: Colors.black),
-                      child: Row(
-                        children: <Widget>[
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Container(
-                              width: 70,
-                              decoration: BoxDecoration(shape: BoxShape.circle),
-                              child:
-                                  Image.network(finalPlace[index]["photo"][0]),
-                            ),
-                          ),
-                          Column(children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                SizedBox(width: 10),
-                                Text(
-                                  finalPlace[index]["id"],
-                                  textAlign: TextAlign.left,
-                                  style: new TextStyle(
-                                    fontSize: 20.0,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              finalPlace[index]["district"],
-                              textAlign: TextAlign.left,
-                              style: new TextStyle(
-                                color: Colors.black54,
+                  height: 80,
+                  child: Row(children: <Widget>[
+                    Container(
+                      width: MediaQuery.of(context).size.width - 80,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.white, onPrimary: Colors.black),
+                        child: Row(
+                          children: <Widget>[
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Container(
+                                width: 70,
+                                decoration:
+                                    BoxDecoration(shape: BoxShape.circle),
+                                child: Image.network(
+                                    finalPlace[index]["photo"][0]),
                               ),
                             ),
-                            Row(
-                              children: <Widget>[
-                                //SizedBox(width: 10),
-                                Text(
-                                  finalPlace[index]["what"],
-                                  textAlign: TextAlign.left,
-                                  style: new TextStyle(
-                                    color: Colors.black54,
+                            Column(children: <Widget>[
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  SizedBox(width: 10),
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width - 192,
+                                    child: Text(
+                                      finalPlace[index]["name"],
+                                      softWrap: true,
+                                      textAlign: TextAlign.left,
+                                      style: new TextStyle(
+                                        fontSize: 15.0,
+                                      ),
+                                    ),
                                   ),
+                                ],
+                              ),
+                              Text(
+                                finalPlace[index]["district"],
+                                textAlign: TextAlign.left,
+                                style: new TextStyle(
+                                  color: Colors.black54,
                                 ),
-                              ],
-                            ),
-                          ]),
-                        ],
+                              ),
+                            ]),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Align(
-                      alignment: Alignment.centerRight,
-                      child: Container(
-                          width: 40,
-                          child: Center(
-                            child: RaisedButton(
-                              onPressed: () {
-                                context
-                                    .read<FavoritePlace>()
-                                    .changeFavoritePlace(finalPlace, index);
-                              },
-                              child: Icon(CustomIcons.star_empty),
+                    Stack(children: <Widget>[
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              width: 25,
+                              child: IconButton(
+                                onPressed: () {
+                                  context
+                                      .read<FavoritePlace>()
+                                      .changeFavoritePlace(finalPlace, index);
+                                },
+                                icon: Icon(CustomIcons.star_empty),
+                              ),
                             ),
-                          ))),
-                  Align(
-                      alignment: Alignment.centerRight,
-                      child: Container(
-                          width: 40,
-                          child: Center(
-                            child: RaisedButton(
-                              onPressed: () {},
-                              child: Icon(CustomIcons.route),
+                            SizedBox(width: 5),
+                            Container(
+                              width: 25,
+                              child: Center(
+                                child: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(CustomIcons.route),
+                                ),
+                              ),
                             ),
-                          ))),
-                ]),
-              );
+                          ],
+                        ),
+                      ),
+                    ]),
+                  ]));
             },
           )),
     );

@@ -76,7 +76,7 @@ class FavoritePage extends StatelessWidget {
                       child: Container(
                           width: 40,
                           child: Center(
-                            child: RaisedButton(
+                            child: ElevatedButton(
                               onPressed: () {},
                               child: Icon(CustomIcons.star_empty),
                             ),
@@ -86,7 +86,7 @@ class FavoritePage extends StatelessWidget {
                       child: Container(
                           width: 40,
                           child: Center(
-                            child: RaisedButton(
+                            child: ElevatedButton(
                               onPressed: () {},
                               child: Icon(CustomIcons.route),
                             ),
