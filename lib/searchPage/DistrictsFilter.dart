@@ -38,7 +38,7 @@ var districtsCheck = [
 
 showAlertDialogDistricts(BuildContext context) {
   // set up the button
-  Widget okButton = FlatButton(
+  Widget okButton = TextButton(
     child: Text("OK"),
     onPressed: () {
       districtsCheckFunc();

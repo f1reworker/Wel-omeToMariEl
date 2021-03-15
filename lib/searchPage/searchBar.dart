@@ -25,7 +25,6 @@ class SearchList extends StatelessWidget {
             SearchBar(),
             DistrictsFilter(),
             SearchFilter(),
-            Fil(),
             Flexible(
               child: PlaceList(),
             ),
@@ -68,12 +67,19 @@ class DistrictsFilter extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(color: PrimaryColor),
         margin: EdgeInsets.all(10),
-        child: RaisedButton(
-          shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(40.0)),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: PrimaryColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(40.0)),
+          ),
           child: Row(children: [
-            Icon(Icons.add),
-            Text("     Добавить фильтры районов"),
+            Icon(
+              Icons.add,
+              color: Colors.black,
+            ),
+            Text("     Добавить фильтры районов",
+                style: new TextStyle(fontSize: 15.0, color: Colors.black)),
           ]),
           onPressed: () {
             showAlertDialogDistricts(context);
@@ -90,25 +96,22 @@ class SearchFilter extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(color: PrimaryColor),
         margin: EdgeInsets.all(10),
-        child: RaisedButton(
-          shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(40.0)),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: PrimaryColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(40.0)),
+          ),
           child: Row(children: [
-            Icon(Icons.add),
-            Text("     Добавить фильтры поиска"),
+            Icon(Icons.add, color: Colors.black),
+            Text(
+              "     Добавить фильтры поиска",
+              style: new TextStyle(fontSize: 15.0, color: Colors.black),
+            ),
           ]),
           onPressed: () {
             showAlertDialogSearch(context);
           },
         ));
-  }
-}
-
-class Fil extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text(""),
-    );
   }
 }

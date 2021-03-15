@@ -14,13 +14,15 @@ class SearchButton extends StatelessWidget {
           horizontal: 10,
           vertical: 30,
         ),
-        child: RaisedButton(
-          color: MyRed,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: MyRed,
+            shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(40.0)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/search');
           },
-          shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(40.0)),
           child: Row(children: [
             Icon(
               Icons.search,

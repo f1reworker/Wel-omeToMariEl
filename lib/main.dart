@@ -1,41 +1,63 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
-//import 'package:welcome_to_mari_el/data.dart';
+import 'package:welcome_to_mari_el/data.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/routePage/route.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:welcome_to_mari_el/settingsPage/settings.dart';
+import 'dart:io';
+import 'placeList.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
 const MyRed = Color(0xFFFF6860);
 String mP;
-void main() => runApp(MyApp());
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
+
+void main() {
+  HttpOverrides.global = new MyHttpOverrides();
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Mari El Travel book',
-      theme: new ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFFFFEFC),
-        primaryColor: MyRed,
-        //textTheme: GoogleFonts.marmeladTextTheme(
-        //  Theme.of(context).textTheme,
-        // ),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<FilteredPlace>(create: (_) => FilteredPlace()),
+        ChangeNotifierProvider<FavoritePlace>(create: (_) => FavoritePlace()),
+        ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
+      ],
+      child: MaterialApp(
+        title: 'Mari El Travel book',
+        theme: new ThemeData(
+          scaffoldBackgroundColor: const Color(0xFFFFFEFC),
+          primaryColor: MyRed,
+          //textTheme: GoogleFonts.marmeladTextTheme(
+          //  Theme.of(context).textTheme,
+          // ),
+        ),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => HomePage(),
+          '/search': (context) => SearchList(),
+          '/favorite': (context) => FavoritePage(),
+          '/settings': (context) => SettingsPage(),
+          '/route': (context) => NavigationPage(),
+        },
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/search': (context) => SearchList(),
-        '/favorite': (context) => FavoritePage(),
-        '/settings': (context) => SettingsPage(),
-        '/route': (context) => NavigationPage(),
-      },
     );
   }
 }

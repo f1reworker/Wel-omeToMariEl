@@ -26,7 +26,7 @@ List searchCheck = [
 ];
 showAlertDialogSearch(BuildContext context) {
   // set up the button
-  Widget okButton = FlatButton(
+  Widget okButton = TextButton(
     child: Text("OK"),
     onPressed: () {
       searchCheckFunc();

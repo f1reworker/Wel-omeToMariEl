@@ -3,6 +3,7 @@ import 'package:welcome_to_mari_el/custom_icons.dart';
 //import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
 import 'placeListTab.dart';
+import 'package:webdav/webdav.dart';
 
 //import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 //import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
@@ -29,8 +30,6 @@ class FilteredPlace with ChangeNotifier {
 }
 
 class PlaceList extends StatelessWidget {
-  const PlaceList({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -40,15 +39,18 @@ class PlaceList extends StatelessWidget {
       ],
       child: Container(
           width: MediaQuery.of(context).size.width,
-          child: new ListView.builder(
+          child: new ListView.separated(
             itemCount: context.watch<FilteredPlace>().getData.length,
+            separatorBuilder: (context, index) => Divider(
+              color: Colors.black,
+            ),
             itemBuilder: (context, index) {
               return new Container(
-                  height: 80,
+                  height: 90,
                   child: Row(children: <Widget>[
                     Container(
                       width: MediaQuery.of(context).size.width - 80,
-                      child: ElevatedButton(
+                      child: TextButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                             primary: Colors.white, onPrimary: Colors.black),
@@ -71,7 +73,7 @@ class PlaceList extends StatelessWidget {
                                   SizedBox(width: 10),
                                   Container(
                                     width:
-                                        MediaQuery.of(context).size.width - 192,
+                                        MediaQuery.of(context).size.width - 176,
                                     child: Text(
                                       finalPlace[index]["name"],
                                       softWrap: true,
@@ -102,22 +104,32 @@ class PlaceList extends StatelessWidget {
                           children: <Widget>[
                             Container(
                               width: 25,
+                              height: 70,
                               child: IconButton(
                                 onPressed: () {
                                   context
                                       .read<FavoritePlace>()
                                       .changeFavoritePlace(finalPlace, index);
                                 },
-                                icon: Icon(CustomIcons.star_empty),
+                                icon: Icon(
+                                    context
+                                                .watch<FavoritePlace>()
+                                                .getData
+                                                .indexOf(finalPlace[index]) !=
+                                            -1
+                                        ? Icons.star_outlined
+                                        : Icons.star_outline_sharp,
+                                    color: Colors.amber,
+                                    size: 35),
                               ),
                             ),
-                            SizedBox(width: 5),
+                            SizedBox(width: 10),
                             Container(
                               width: 25,
                               child: Center(
                                 child: IconButton(
                                   onPressed: () {},
-                                  icon: Icon(CustomIcons.route),
+                                  icon: Icon(CustomIcons.route, size: 25),
                                 ),
                               ),
                             ),
@@ -135,7 +147,9 @@ class PlaceList extends StatelessWidget {
 class FavoritePlace with ChangeNotifier {
   List get getData => favoritePlace;
   void changeFavoritePlace(finalPlace, index) {
-    favoritePlace.add(finalPlace[index]);
+    favoritePlace.indexOf(finalPlace[index]) != -1
+        ? favoritePlace.remove(finalPlace[index])
+        : favoritePlace.add(finalPlace[index]);
     notifyListeners();
   }
 }
