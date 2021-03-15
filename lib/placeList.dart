@@ -2,6 +2,7 @@ import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
 //import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'placeListTab.dart';
 import 'package:webdav/webdav.dart';
 
@@ -112,10 +113,7 @@ class PlaceList extends StatelessWidget {
                                       .changeFavoritePlace(finalPlace, index);
                                 },
                                 icon: Icon(
-                                    context
-                                                .watch<FavoritePlace>()
-                                                .getData
-                                                .indexOf(finalPlace[index]) !=
+                                    duplicateItems.indexOf(finalPlace[index]) !=
                                             -1
                                         ? Icons.star_outlined
                                         : Icons.star_outline_sharp,
@@ -150,6 +148,7 @@ class FavoritePlace with ChangeNotifier {
     favoritePlace.indexOf(finalPlace[index]) != -1
         ? favoritePlace.remove(finalPlace[index])
         : favoritePlace.add(finalPlace[index]);
+    duplicateItems = favoritePlace;
     notifyListeners();
   }
 }

@@ -4,6 +4,9 @@ import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:webdav/webdav.dart';
 
+List duplicateItems;
+bool search = false;
+
 class FavoritePage extends StatefulWidget {
   @override
   FavoritePageState createState() => FavoritePageState();
@@ -11,15 +14,15 @@ class FavoritePage extends StatefulWidget {
 
 class FavoritePageState extends State<FavoritePage> {
   TextEditingController editingController = TextEditingController();
-  Icon _searchIcon = new Icon(Icons.search);
+  Icon _searchIcon = search ? new Icon(Icons.close) : new Icon(Icons.search);
   Widget _appBarTitle = new Text('Поиск...');
-  List duplicateItems;
-
+  String query;
   void _searchPressed() {
     setState(() {
       if (this._searchIcon.icon == Icons.search) {
-        duplicateItems = favoritePlace;
-        print(duplicateItems);
+        search = true;
+        duplicateItems.clear();
+        duplicateItems.addAll(favoritePlace);
         this._searchIcon = new Icon(Icons.close);
         this._appBarTitle = new TextField(
           onChanged: (value) {
@@ -30,26 +33,32 @@ class FavoritePageState extends State<FavoritePage> {
               prefixIcon: new Icon(Icons.search), hintText: 'Поиск...'),
         );
       } else {
+        search = false;
         this._appBarTitle = new Text('Поиск...');
         editingController.clear();
         this._searchIcon = new Icon(Icons.search);
-        favoritePlace = duplicateItems;
+        favoritePlace.clear();
+        favoritePlace.addAll(duplicateItems);
       }
     });
   }
 
   void filterSearchResults(value) {
-    setState(() {
-      for (int i = 0; i < favoritePlace.length; i++) {
-        if (favoritePlace[i]["name"]
-                .toLowerCase()
-                .contains(value.toLowerCase()) ==
-            false) {
-          favoritePlace.removeAt(i);
-          i--;
-        }
+    List _searchPlace = [];
+    favoritePlace.clear();
+    favoritePlace.addAll(duplicateItems);
+    for (int i = 0; i < favoritePlace.length; i++) {
+      if (favoritePlace[i]["name"]
+              .toLowerCase()
+              .contains(value.toLowerCase()) ==
+          true) {
+        _searchPlace.add(favoritePlace[i]);
       }
-    });
+    }
+    favoritePlace.clear();
+    favoritePlace.addAll(_searchPlace);
+    print(value);
+    setState(() {});
   }
 
   @override
