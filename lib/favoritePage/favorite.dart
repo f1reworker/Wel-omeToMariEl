@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
-import 'package:webdav/webdav.dart';
-
-List duplicateItems;
-bool search = false;
+//import 'package:webdav/webdav.dart';
 
 class FavoritePage extends StatefulWidget {
   @override
   FavoritePageState createState() => FavoritePageState();
 }
 
+bool search = false;
+var favOrSearch = favoritePlace;
+
 class FavoritePageState extends State<FavoritePage> {
+  List duplicateItems = [];
   TextEditingController editingController = TextEditingController();
   Icon _searchIcon = search ? new Icon(Icons.close) : new Icon(Icons.search);
   Widget _appBarTitle = new Text('Поиск...');
@@ -23,6 +24,7 @@ class FavoritePageState extends State<FavoritePage> {
         search = true;
         duplicateItems.clear();
         duplicateItems.addAll(favoritePlace);
+        favOrSearch = duplicateItems;
         this._searchIcon = new Icon(Icons.close);
         this._appBarTitle = new TextField(
           onChanged: (value) {
@@ -33,31 +35,31 @@ class FavoritePageState extends State<FavoritePage> {
               prefixIcon: new Icon(Icons.search), hintText: 'Поиск...'),
         );
       } else {
+        favOrSearch = favoritePlace;
         search = false;
         this._appBarTitle = new Text('Поиск...');
         editingController.clear();
         this._searchIcon = new Icon(Icons.search);
-        favoritePlace.clear();
-        favoritePlace.addAll(duplicateItems);
       }
     });
   }
 
   void filterSearchResults(value) {
     List _searchPlace = [];
-    favoritePlace.clear();
-    favoritePlace.addAll(duplicateItems);
-    for (int i = 0; i < favoritePlace.length; i++) {
-      if (favoritePlace[i]["name"]
+    duplicateItems.clear();
+    duplicateItems.addAll(favoritePlace);
+    for (int i = 0; i < duplicateItems.length; i++) {
+      if (duplicateItems[i]["name"]
               .toLowerCase()
               .contains(value.toLowerCase()) ==
           true) {
-        _searchPlace.add(favoritePlace[i]);
+        _searchPlace.add(duplicateItems[i]);
       }
     }
-    favoritePlace.clear();
-    favoritePlace.addAll(_searchPlace);
     print(value);
+    duplicateItems.clear();
+    duplicateItems.addAll(_searchPlace);
+    favOrSearch = duplicateItems;
     setState(() {});
   }
 
@@ -76,7 +78,7 @@ class FavoritePageState extends State<FavoritePage> {
         color: PrimaryColor,
         width: MediaQuery.of(context).size.width,
         child: new ListView.separated(
-          itemCount: favoritePlace.length,
+          itemCount: favOrSearch.length,
           separatorBuilder: (context, index) => Divider(
             color: Colors.black,
           ),
@@ -97,8 +99,8 @@ class FavoritePageState extends State<FavoritePage> {
                             child: Container(
                               width: 70,
                               decoration: BoxDecoration(shape: BoxShape.circle),
-                              child: Image.network(
-                                  favoritePlace[index]["photo"][0]),
+                              child:
+                                  Image.network(favOrSearch[index]["photo"][0]),
                             ),
                           ),
                           Column(children: <Widget>[
@@ -110,7 +112,7 @@ class FavoritePageState extends State<FavoritePage> {
                                   width:
                                       MediaQuery.of(context).size.width - 176,
                                   child: Text(
-                                    favoritePlace[index]["name"],
+                                    favOrSearch[index]["name"],
                                     softWrap: true,
                                     textAlign: TextAlign.left,
                                     style: new TextStyle(
@@ -121,7 +123,7 @@ class FavoritePageState extends State<FavoritePage> {
                               ],
                             ),
                             Text(
-                              favoritePlace[index]["district"],
+                              favOrSearch[index]["district"],
                               textAlign: TextAlign.left,
                               style: new TextStyle(
                                 color: Colors.black54,
@@ -172,5 +174,5 @@ class FavoritePageState extends State<FavoritePage> {
 }
 
 void deleteFavoritePlace(favoritePlace, index) {
-  favoritePlace.removeAt(index);
+  favoritePlace.remove(favOrSearch[index]);
 }

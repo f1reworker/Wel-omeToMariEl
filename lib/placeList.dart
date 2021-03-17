@@ -1,31 +1,32 @@
 import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
-//import 'package:welcome_to_mari_el/data.dart';
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
+import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'placeListTab.dart';
 import 'package:webdav/webdav.dart';
+import 'searchPage/searchBar.dart';
 
-//import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
-//import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 List favoritePlace = [];
 List finalPlace = place;
+List data = placeOrSearch;
 void filterPlace(districtsCheck, searchCheck) {
   finalPlace = [];
   for (int i = 0; i < place.length; i++) {
     if (districtsCheck.indexOf(place[i]["id"].split("")[0]) != -1 &&
         searchCheck.indexOf(place[i]["id"].split("")[1]) != -1) {
       finalPlace.add(place[i]);
+      placeOrSearch = finalPlace;
     }
   }
 }
 
-List _data = finalPlace;
+List placeOrSearch = finalPlace;
 
 class FilteredPlace with ChangeNotifier {
-  List get getData => _data;
-  void changeFinalPlace(finalPlace) {
-    _data = finalPlace;
+  List get getData => data;
+  void changeFinalPlace(placeOrSearch) {
+    data = placeOrSearch;
     notifyListeners();
   }
 }
@@ -64,7 +65,7 @@ class PlaceList extends StatelessWidget {
                                 decoration:
                                     BoxDecoration(shape: BoxShape.circle),
                                 child: Image.network(
-                                    finalPlace[index]["photo"][0]),
+                                    placeOrSearch[index]["photo"][0]),
                               ),
                             ),
                             Column(children: <Widget>[
@@ -76,7 +77,7 @@ class PlaceList extends StatelessWidget {
                                     width:
                                         MediaQuery.of(context).size.width - 176,
                                     child: Text(
-                                      finalPlace[index]["name"],
+                                      placeOrSearch[index]["name"],
                                       softWrap: true,
                                       textAlign: TextAlign.left,
                                       style: new TextStyle(
@@ -87,7 +88,7 @@ class PlaceList extends StatelessWidget {
                                 ],
                               ),
                               Text(
-                                finalPlace[index]["district"],
+                                placeOrSearch[index]["district"],
                                 textAlign: TextAlign.left,
                                 style: new TextStyle(
                                   color: Colors.black54,
@@ -110,10 +111,15 @@ class PlaceList extends StatelessWidget {
                                 onPressed: () {
                                   context
                                       .read<FavoritePlace>()
-                                      .changeFavoritePlace(finalPlace, index);
+                                      .changeFavoritePlace(
+                                          placeOrSearch, index);
                                 },
                                 icon: Icon(
-                                    duplicateItems.indexOf(finalPlace[index]) !=
+                                    context
+                                                .watch<FavoritePlace>()
+                                                .getData
+                                                .indexOf(
+                                                    placeOrSearch[index]) !=
                                             -1
                                         ? Icons.star_outlined
                                         : Icons.star_outline_sharp,
@@ -144,11 +150,10 @@ class PlaceList extends StatelessWidget {
 
 class FavoritePlace with ChangeNotifier {
   List get getData => favoritePlace;
-  void changeFavoritePlace(finalPlace, index) {
-    favoritePlace.indexOf(finalPlace[index]) != -1
-        ? favoritePlace.remove(finalPlace[index])
-        : favoritePlace.add(finalPlace[index]);
-    duplicateItems = favoritePlace;
+  void changeFavoritePlace(placeOrSearch, index) {
+    favoritePlace.indexOf(placeOrSearch[index]) != -1
+        ? favoritePlace.remove(placeOrSearch[index])
+        : favoritePlace.add(placeOrSearch[index]);
     notifyListeners();
   }
 }

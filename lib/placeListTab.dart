@@ -19,7 +19,29 @@ List place = [
   park,
   cerkov,
   muzey,
-  podvorye
+  podvorye,
+  cafeStolovaya,
+  cafeSuleyman,
+  mariWveycariya,
+  zakaznikKammenayaGora,
+  dolinaStudenihRodnikov,
+  memorial,
+  me4etPort9nur,
+  prudAlawayka,
+  seloIlet,
+  rekaBuy,
+  derevn9Olori,
+  rekaIrovka,
+  vod9na9melnica,
+  seloKuknur,
+  derevn9Koklala,
+  isto4nikYowkar,
+  isto4nikMaryan,
+  kafeKolos,
+  barPodvorye,
+  name,
+  cafeSemeynoe,
+  zare4be,
 ];
 
 var yuryZamok = {
@@ -220,7 +242,7 @@ var zakaznik = {
       " Государственный природный биологический заказник республиканского значения «Холодный ключ». Образован в 2002 г. с целью сохранения, восстановления, изучения популяций редких видов растений: живокости клиновидной, зеленчука желтого, лилии кудреватой, медуницы мягкой и осоки горной, занесенных в Красную книгу Республики Марий Эл.",
   "location": "56.765556, 49.621389",
   "photo": [
-    "https://disk.yandex.ru/i/WK3XtzUWGdhB3g",
+    "https://disk.yandex.ru/i/hVZPE9RS0I147Q",
     "https://disk.yandex.ru/i/5pCKicAjGuwcbQ",
   ],
   "id": "2314",
@@ -237,7 +259,7 @@ var hram = {
       "Каменный храм во имя Святой Троицы в Мамсинере был построен в 1848 г. на средства прихожан. Здесь располагались русские, марийские, удмуртские, татарские деревни. В приходе числилось более 4 тысяч человек. По своим архитектурным формам Троицкая церковь принадлежит к памятникам стиля классицизма. Симметричные объемы, круглая ротонда, завершающаяся сферическим куполом, декоративные портики, украшающие северную и южную стены храма, наконец, колокольня, увенчанная шпилем, придают церкви строгий, стройный вид. Храм был закрыт в 1937 году. Его имущество конфисковали. В настоящее время церковь возрождает свою былую красоту. С. Мамсинер. ",
   "location": "56.935061, 49.985944",
   "photo": [
-    "https://disk.yandex.ru/i/aX0vAjEGZY3NWw",
+    "https://disk.yandex.ru/i/E2hBSULLCKNNeA",
     "https://disk.yandex.ru/i/7riEyTDeilDfiQ",
   ],
   "id": "2415",
@@ -254,7 +276,7 @@ var gostinica = {
       "В отеле имеются комфортабельные и просторные класса «люкс» 1,2,3 и 4-х местные номера.  Гостиничные номера оснащены современной мебелью, многоканальным ж/к телевизором, санузлом и душевой кабиной высокой функциональности.",
   "location": "56.785301, 49.598970",
   "photo": [
-    "https://disk.yandex.ru/i/e85Te6Sy7SBf_A",
+    "https://disk.yandex.ru/i/PUQNUwMPepHzKw",
     "https://disk.yandex.ru/i/N2I6sivszifPHw",
   ],
   "id": "2816",
@@ -271,7 +293,7 @@ var park = {
       "Центральный парк Мари-Турека - одно из красивейших мест поселка. Особенно в теплое время года. Здесь растут высокие сосны, ели, березы, делая воздух особенным. Парк — любимое место отдыха и взрослых, и детей. В центральном парке райцентра всегда многолюдно: занимаются спортом и отдыхают, любуются красотой и дышат свежим воздухом, проводят свободное время, а кто-то просто ежедневно идет по парку на работу и в школу. Особенно оживленно бывает на детской площадке парке. В центре парка находится памятник-обелиск землякам, погибшим в годы Великой Отечественной войны, а также Мемориальный комплекс, посвященный воинам-интернационалистам, участникам локальных войн и ликвидаторам катастрофы на Чернобыльской АЭС.",
   "location": "56.787998, 49.621996",
   "photo": [
-    "https://disk.yandex.ru/i/HHVpbNrAG7ZJdw",
+    "https://disk.yandex.ru/i/7YrBo-Wl-PZbZw",
     "https://disk.yandex.ru/i/KAfJAqhvGX_YYA",
   ],
   "id": "2517",
@@ -288,7 +310,7 @@ var cerkov = {
       "Кирпичная однокупольная Казанская церковь была построена в 1834-1838 в стиле классицизма. Трапезная с Петропавловским и Фроло-Лаврским приделами расширена в кон. 1900-х. Закрыта в 1934, перестроена, занята домом культуры. В 1979 выгорела и разобрана. В нач. 1990-х в поселке создана община верующих. Первоначально богослужения проводились в приспособленном здании, в 1993-2006 на месте старой церкви построен новый кирпичный храм типа восьмерик на четверике с колокольней.",
   "location": "56.789507, 49.623427",
   "photo": [
-    "https://disk.yandex.ru/i/sT5atomAO0umfw",
+    "https://disk.yandex.ru/i/jATfym6KqezHlw",
     "https://disk.yandex.ru/i/TuIXu1qIyBvACg",
   ],
   "id": "2418",
@@ -305,7 +327,7 @@ var muzey = {
       "История краеведческого музея начинается с 1969 года. Здесь собран и хранится уникальный материал по этнографии, боевой и трудовой славе района. В настоящее время краеведческий музей Мари-Турекского района имеет фонд более 4000 музейных предметов и музейных коллекций. В Мари-Турекском краеведческом музее им. В.П. Мосолова имеется несколько залов. ",
   "location": "56.789412, 49.621903",
   "photo": [
-    "https://disk.yandex.ru/i/YHA7HIL0ubnDLA",
+    "https://disk.yandex.ru/i/hEN9W417Caagjw",
     "https://disk.yandex.ru/i/PTwK2QSDNZ-N7A",
   ],
   "id": "2519",
@@ -322,7 +344,7 @@ var podvorye = {
       "Гостиничный комплекс предлагает к услугам гостей 2 комфортабельных гостиничных номера. В каждом номере есть всё необходимое для полноценного отдыха. В административном здании гостиницы на 1-м этаже есть кафе «Подворье». Помещение кафе имеет современный ремонт, оснащено барной стойкой, кондиционером, имеется проектор. Кафе предлагает вкусные блюда русской и марийской кухни (подкогыли, шокта, мелна, шере руаш гыч когыльо, когыльо чыве шыл да шураш). На 2 этаже имеется банкетный зал на 20 человек. Банкетный зал оснащен кондиционером, большим плазменным телевизором.",
   "location": "56.935124, 49.146218",
   "photo": [
-    "https://disk.yandex.ru/i/7GBON7ktApvldg",
+    "https://disk.yandex.ru/i/aKD5LqFkTuCcZA",
     "https://disk.yandex.ru/i/KUy62nkj9b9jNQ",
   ],
   "id": "4720",
@@ -337,9 +359,9 @@ var zare4be = {
       "Торгово-гостиничный комплекс Заречье расположен в поселке Сернур. К услугам гостей 12 номеров различной ценовой категории, из которых 2 относятся к классу «люкс», 3 — к классу «полулюкс», остальные стандартные. В каждом номере есть все необходимое для полноценного отдыха — качественная и красивая мебель, постельное белье и полотенца, кондиционеры, телевизоры (спутниковое телевидение).",
   "location": "56.949191, 49.149605",
   "photo": [
-    "http://in-rent.ru/gallery/3748.jpg",
-    "https://турист.рф/media/hotelphoto/5170/x_1566912696-4.jpg",
-    "https://турист.рф/media/hotelphoto/5170/x_1566912696-7.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F15.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F16.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F17.png"
   ],
   "id": "4721",
   "transport":
@@ -354,7 +376,7 @@ var cafeSemeynoe = {
   "description": "Описание отсутствует",
   "location": "56.939603, 49.151420",
   "photo": [
-    "https://10619-2.s.cdn12.com/rests/small/w550/h367/110_397633890.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F18.png"
   ],
   "id": "4622",
   "transport":
@@ -369,8 +391,8 @@ var name = {
   "description": "Описание отсутствует",
   "location": "56.935596, 49.145985",
   "photo": [
-    "https://10619-2.s.cdn12.com/rests/original/106_373143237.jpg",
-    "https://10619-2.s.cdn12.com/r5/interior-Kafe-Maska.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F19.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F20.png"
   ],
   "id": "4623",
   "transport":
@@ -385,8 +407,8 @@ var barPodvorye = {
   "description": "Описание отсутствует",
   "location": "56.935124, 49.146218",
   "photo": [
-    "https://10619-2.s.cdn12.com/rests/original/107_276910506.jpg",
-    "https://10619-2.s.cdn12.com/rests/original/107_395741310.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F21.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F22.png"
   ],
   "id": "4624",
   "transport":
@@ -401,8 +423,8 @@ var kafeKolos = {
   "description": "Описание отсутствует",
   "location": "56.934859, 49.146263",
   "photo": [
-    "https://10619-2.s.cdn12.com/rests/original/106_276909909.jpg",
-    "https://10619-2.s.cdn12.com/rests/original/106_505690769.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F23.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F24.png"
   ],
   "id": "4625",
   "transport":
@@ -418,9 +440,9 @@ var isto4nikMaryan = {
       "Главная достопримечательность Марьян Памаш - родники, ключи, или, как раньше говорили, кипуны, которыми богат этот необычный уголок природы. Родник всегда считался благодатью Божьей, подарком Творца.Как не вспомнить почитание минеральных источников римлянами, освящение воды христианами... Издревле люди знали о полезных, живительных силах влаги. Врачи, начиная с Авиценны, напоминают, что бодрящие, оздоровляющие водные процедуры помогают снять усталость, обновляют и стимулируют кровеносную систему, очищают весь зашлакованный цивилизацией организм. Особенно, если эта вода - из родника.",
   "location": "56.998338, 49.535395",
   "photo": [
-    "http://zhurnal.lib.ru/img/k/kochujushie2/1093mp/p8294882.jpg",
-    "http://zhurnal.lib.ru/img/k/kochujushie2/1093mp/p8294890.jpg",
-    "https://geocaching.su/photos/albums/275059.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F25.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F26.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F27.png"
   ],
   "id": "4526",
   "transport":
@@ -436,8 +458,8 @@ var isto4nikYowkar = {
       "Находится источник в 1, 5 км к северо-востоку от центра сельской администрации, села Марисола, на левом берегу реки Шаба, совсем не далеко от места, где речушка впадает в речку Она.",
   "location": "57.089531, 49.105507",
   "photo": [
-    "http://samlib.ru/img/k/kochujushie2/1091/p8315512.jpg",
-    "http://temples.ru/private/f000264/264_0301941b.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F28.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F29.png"
   ],
   "id": "4527",
   "transport":
@@ -453,8 +475,8 @@ var derevn9Koklala = {
       "Дорога к роще начинается от деревни Большая Коклала. В течение всего года мари проводят несколько молений, среди которых главным считается Всемарийское моление Тÿня Кумалтыш — завершающее годичный цикл религиозных обрядов. В этом году из Москвы на него отправился актив мерянского краеведческого общества «Metsa Kunnta».  Моление Тÿня Кумалтыш было проведено 7 ноября  в роще деревни Большая Коклала Сернурского района Республики Марий Эл.",
   "location": "56.885638, 49.106378",
   "photo": [
-    "https://media.nazaccent.ru/cache/a2/9e/a29eab016babe97a90d777e282b111aa.jpg",
-    "https://kartarf.ru/images/heritage/1080/6/61643.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F30.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F31.png"
   ],
   "id": "4528",
   "transport":
@@ -469,7 +491,9 @@ var seloKuknur = {
   "description":
       "Каменный храм в селе Кукнур в честь Воздвижения Креста Господня является одним из старейших сельских каменных храмов на территории Марийского края. Строительство на средства прихожан было начато в 1816 году. В архитектурном отношении церковь интересна тем, что сочетает в себе некоторые детали классического и барочного стилей. Симметричная постановка объемов — от классицизма. Круглые окна основного храма, декор окон на апсиде и трапезной — от барокко. Стройные пропорции придал зодчий трехъярусной колокольне. Главный престол храма в честь Воздвижения Животворящего Креста Господня освятили в 1824 году, правый придел во имя святителя Николая Чудотворца — в 1823 году, левый, в честь святителя Василия Великого, — в 1833 году. В 1915 году к церкви были приписаны три часовни, которые находились в деревнях Коноплево, Конаково, Красном Яре. На территории прихода в селе Кукнур действовали церковно-приходская школа. В советские времена храм оставался действующим до 1961 года, второго периода гонений на церковь. Затем ее закрыли. В 1962 г. были сняты кресты и колокола, иконы увезены в Сернур на растопку печей, а в церкви разместили зернохранилище. Почти три десятилетия храм оставался оскверненным. В январе 1990 г. в селе была зарегистрирована община верующих и ей передано здание церкви. Начались богослужения. В 2008 году заново освятили придел Николая Чудотворца, в 2009-м – святого Пророка Илии. А 23 октября 2014 года – проведен чин освящения главного престола – Воздвижения Креста Господня. Провел его архиепископ Йошкар-Олинский и Марийский Иоанн. Несмотря на то, что храм довольно неплохо сохранился, но реставрация его продолжается до сих пор. А недавно храму было передано здание бывшей больницы. После ремонта здесь разместятся воскресная школа, трапезная, библиотека, гостиница. При храме несколько освященных источников: священномученика Киприяна и святой мученицы Устинии на окраине села и святого Пророка и Крестителя Иоанна Предтечи на реке Немде.",
   "location": "57.229461, 49.054294",
-  "photo": ["https://www.mari-eparhia.ru/www/2017/1(8).JPG"],
+  "photo": [
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F32.png"
+  ],
   "id": "4529",
   "transport":
       "Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
@@ -484,8 +508,8 @@ var vod9na9melnica = {
       "Водяная мельница в деревне Желонкино, в Сернурском районе, работает, по некоторым данным, более 200 лет. Точно не знает никто. Она ломалась, чинилась, горела, перестраивалась, отстраивалась заново – и продолжала работать. Живописный пруд, питаемый ключами (рядом деревня с говорящим названием Большие Ключи) с чистейшей, холодной водой заканчивается четырехметровой высоты запрудой, с которой с шумом падает вода. Перед запрудой – бревенчатая защита от льда, и в этом импровизированном бассейне глубиной в 2,5 метра каждый камушек на дне хорошо просматривается.",
   "location": "57.056349, 48.966771",
   "photo": [
-    "https://s0.slide-share.ru/s_image/d26dd0090faba1721d55e24a2adc22cc/08a6c3f4-5f5d-4fd0-b51e-f00663e73ba6.jpeg",
-    "http://mari-el.gov.ru/sernur/PublishingImages/P9300015.JPG"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F33.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F34.png"
   ],
   "id": "4530",
   "transport":
@@ -500,7 +524,9 @@ var rekaIrovka = {
   "description":
       "Устье реки находится в 136 км по правому берегу реки Илеть (около урочища Булыгино – в 5 км. на север от д. Наратлык). Урочище получило своё имя от фамилии купца Булыгина, который имел на Ировке и Илети водяные мельницы. Буквально на границе с РТ. Длина реки составляет 69 км, площадь водосборного бассейна 917 км².",
   "location": "56.604594, 49.183211",
-  "photo": ["http://komanda-k.ru/sites/default/files/irovka3.jpg"],
+  "photo": [
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F35.png"
+  ],
   "id": "3331",
   "transport": "",
   "latLngTransport": "",
@@ -513,7 +539,9 @@ var derevn9Olori = {
   "description":
       "Деревня находится буквально в нескольких километрах от Истока Илети (3-4 км. на Север), но речка Олорка, сливаясь с речкой Ирсерма, впадает в Нолю, которая течет к Вятке.",
   "location": "56.743449,49.556143",
-  "photo": ["http://komanda-k.ru/sites/default/files/5_23.jpg"],
+  "photo": [
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F36.png"
+  ],
   "id": "3332",
   "transport": "",
   "latLngTransport": "",
@@ -527,7 +555,7 @@ var rekaBuy = {
       "Буй - река в России, протекает в Республике Марий Эл и Кировской области. Устье реки находится в 283 км от устья Вятки по правому берегу. Длина реки составляет 92 км, площадь водосборного бассейна - 806 км².",
   "location": "56.892620, 49.483134",
   "photo": [
-    "https://fsd.multiurok.ru/html/2019/09/24/s_5d8a64bd0307f/1211105_3.jpeg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F37.png"
   ],
   "id": "3333",
   "transport": "",
@@ -542,7 +570,7 @@ var seloIlet = {
       "Каменный храм в селе Илеть был построен в 1866-1887 годах и освящен во имя Святой Троицы. До сих пор в храме висит мраморная доска, на которой указаны день закладки храма (24 июня 1866 года), священник Григорий, староста Бусыгин, строитель Никанор Домрачев и мастер Степан Тюрген. Крестьяне были богобоязненными старообрядцами. На разветвлении дорог в Орловку, Ляжинск и Кишкинск ими была установлена часовня. Гордостью сельчан была церковь, строительство которой началось в 1848 г. в целях утверждения православия среди местных старообрядцев. Храм освящен 5 февраля 1850 г. В географостатистическом словаре Семенова-Тянь-Шанского (1863-1885 гг.) записано: 'На границе д. Параньга есть русская деревня Илеть... Живут в деревне мастеровой люд и богомольцы-староверы. Имеется церковь Троицкая... деревянная (рядом строится каменная церковь)'",
   "location": "56.576212, 49.500484",
   "photo": [
-    "http://www.marieltour.ru/sites/default/files/mari-hramy-paranga.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F38.png"
   ],
   "id": "3434",
   "transport": "",
@@ -557,7 +585,7 @@ var prudAlawayka = {
       "Возникновение татарской д. Алашайка относится ко второй половине XVIIв. По сохранившемуся среди марийцев преданию, здесь до середины ХV1 в. жили марийцы. В период взятия Казани в 1552 г. селение было сожжено  отрядом русских войск. Именно поэтому марийцы Алашайку называют Шўгар- Сола (Кладбищенская деревня).С событиями далекого прошлого марийцы увязывают и другое название деревни - “Мазарбашы”. Согласно народному преданию, деревню так назвали по имени организатора отпора отряду неприятелей, который погиб, будучи обезглавленным на пепелище.",
   "location": "56.773308, 49.489949",
   "photo": [
-    "https://img-fotki.yandex.ru/get/5402/42670583.25/0_ddf3a_a7672c73_orig.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F39.png"
   ],
   "id": "3335",
   "transport": "",
@@ -572,7 +600,7 @@ var me4etPort9nur = {
       "Деревня Портянур расположена в 8 км юго-западнее районного центра - п. Параньга. В XVIII в. она входила в состав волости Ушнур Казанского уезда Казанской губернии, затем в Параньгинскую, а с XIX - до начала XX в. - Турекскую волости Уржумского уезда Вятской губернии. С 1920 г. в составе этой волости включена в Сернурский, с 1924 г. - Мари-Турекский кантоны МАО. С 1931 г. Портянур находится в Ирнурском сельсовете Параньгинского района. В 1934 г. деревня стала центром сельского Совета.",
   "location": "56.684548, 49.273955",
   "photo": [
-    "https://img-fotki.yandex.ru/get/9251/42670583.25/0_ddf5e_8b30686e_orig.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F40.png"
   ],
   "id": "3436",
   "transport": "",
@@ -587,7 +615,7 @@ var memorial = {
       "Обелиск памяти погибших в ВОВ — это военный памятник / мемориал, что находится в городе Параньга.",
   "location": "56.707462, 49.402714",
   "photo": [
-    "https://img-fotki.yandex.ru/get/9800/42670583.25/0_ddf1e_bf01eba4_orig.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F41.png"
   ],
   "id": "3437",
   "transport": "",
@@ -602,8 +630,8 @@ var dolinaStudenihRodnikov = {
       "В удивительно красивом месте, между д.Ивансола и д.Купсола Куженерского района, расположилась 'Долина студеных родников' с четырьмя десятками источников. С каждым из них связано много легенд и преданий. Самыми почитаемыми считаются Кугу Памаш (Большой родник, его водами обмывали младенцев от сглаза и болезней) и Онгыр Памаш (Родник-колокольчик, получил своё название за то, что он очень звонкий; славится тем, что вода из него помогает от заикания). Интересен и ключ-кипун, расположившийся под таинственной сенью деревьев. Вода в нем, выбиваясь из-под земли, заставляет песок двигаться, и, кажется, что она кипит. 'Долина родников' привлекает к себе внимание не только обилием источников, но и красотой пейзажа. На одном склоне оврага тянутся высоко к небу величественные сосны, на другом - раскинули свои мохнатые лапы ели. По дну оврага петляет небольшая р.Нолька, подпитываемая множеством ключей. Несмотря на малую протяженность реки (12 км), на её берегу когда-то крутили свои жернова несколько водяных мельниц. А какой замечательный вид из этих мест открывается на деревню Ивансола. Выше 'Долины родников' находятся пласты камня, использовавшегося для изготовления каменных стоек для фундамента домов. Это место своеобразная 'купсолинская Карелия' с деревцами среди камней и бьющими из-под земли ключами. Этот уникальный природный уголок с его незабываемыми пейзажами и вкуснейшей ключевой водой надолго остается в памяти и хочется вернуться сюда еще не один раз.",
   "location": "56.854860, 49.139056",
   "photo": [
-    "https://visit-mariel.ru/upload/iblock/364/36493bf1673d032730f9cd74766bc9d7.JPG",
-    "https://visit-mariel.ru/upload/iblock/803/803871c1aff95781720f1e914cdc2d43.png"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F42.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F43.1.png"
   ],
   "id": "5338",
   "transport":
@@ -619,8 +647,8 @@ var zakaznikKammenayaGora = {
       "Государственный природный заказник республиканского значения «Каменная Гора» расположен в четырех километрах юго-западнее села Русские Шои Куженерского района Республики Марий Эл. За схожесть пейзажа со швейцарскими Альпами заповедник получил народное название «Марийская Швейцария». Цели создания заказника – сохранение, восстановление, изучение уникальных объектов: своеобразного ландшафта, популяций редких видов растений, занесенных в Красную книгу Республики Марий Эл, реликтовой популяции ели сибирской и родника Казанской Божьей Матери. Одна из достопримечательностей «Каменной Горы» – родник Казанской Божьей Матери, вода которого, по народному поверью, обладает целебными свойствами. Святой родник Казанской Божьей Матери, является местом паломничества для верующих всей республики. На территории много маленьких безымянных и крупных родников, имеющих красивые, порой неординарные названия – Кипунчик, Пашкин ключ и др. Рядом с родником – небольшая беседка с увенчанным шпилем куполом вместо крыши и православная часовенка. В нескольких километрах от ключа можно найти строения заброшенной деревеньки, история которой началась с конца восемнадцатого века.",
   "location": "56.642275, 49.089410",
   "photo": [
-    "https://visit-mariel.ru/upload/iblock/f71/f7104741d7b120864f41a2f6331502a2.jpg",
-    "https://visit-mariel.ru/upload/iblock/675/675397f99b5196d9750bc909fe5b388e.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F44.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F45.png"
   ],
   "id": "5339",
   "transport":
@@ -636,8 +664,8 @@ var mariWveycariya = {
       "Расположена в 110 км от города Йошкар Ола в д.Визимбирь, Куженерского района Республики Марий Эл и на сегодняшний день объединяет три банных комплекса. На территории первого комплекса находится баня на роднике с бассейном, теплый гостевой домик с камином, летняя беседка с русской печью и встроенным мангалом, шашлычная, сцена, три дачных домика для отдыха, искусственный водоем, качели. ",
   "location": "56.658837, 49.059306",
   "photo": [
-    "http://www.marieltour.ru/sites/default/files/baza-vizimbir5.jpg",
-    "https://img-cdn.tinkoffjournal.ru/image37__long_joshkar-ola.qmigukh7emtq.jpg"
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F46.png",
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F47.png"
   ],
   "id": "5840",
   "transport":
@@ -652,7 +680,9 @@ var cafeSuleyman = {
   "description":
       "Имеется в продаже шаурма, пицца, самса,манты, плов и многое другое из азиатской кухни. График работы с 8:00 до 00:00 без обеда и выходных!",
   "location": "56.809861, 48.914833",
-  "photo": ["https://10619-2.s.cdn12.com/rests/original/101_508035710.jpg"],
+  "photo": [
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F48.png"
+  ],
   "id": "5641",
   "transport":
       "Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
@@ -666,237 +696,11 @@ var cafeStolovaya = {
   "description":
       "Столовая - одно из популярных заведений в г. Куженер. Всего же сеть насчитывает 400 точек по всей стране. Меню Столовой не оставит равнодушным даже самого искушенного гурмана.",
   "location": "56.810250, 48.914361",
-  "photo": ["https://10619-2.s.cdn12.com/rests/original/102_504763401.jpg"],
+  "photo": [
+    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F49.png"
+  ],
   "id": "5642",
   "transport":
       "Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
   "latLngTransport": "",
 };
-
-var rekaWukwan = {
-  "district": "Новоторъяльский район",
-  "what": "Природное место",
-  "name": "Река Шукшан",
-  "description": "",
-  "location": "",
-  "photo": "",
-  "id": "",
-  "transport": "6",
-  "latLngTransport": "",
-};
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "Сернурский район",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "4",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
-
-// var name = {
-//   "district": "",
-//   "what": "",
-//   "name": "",
-//   "description": "",
-//   "location": "",
-//   "photo": "",
-//   "id": "",
-//   "transport": "",
-//   "latLngTransport": "",
-// };
