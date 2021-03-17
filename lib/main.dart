@@ -39,7 +39,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<FilteredPlace>(create: (_) => FilteredPlace()),
         ChangeNotifierProvider<FavoritePlace>(create: (_) => FavoritePlace()),
         ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
-        //ChangeNotifierProvider<Filter>(create: (_) => Filter()),
       ],
       child: MaterialApp(
         title: 'Mari El Travel book',

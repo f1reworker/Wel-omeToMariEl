@@ -1,10 +1,11 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
+
+import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
+import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 //import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
-import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
-import 'package:location/location.dart';
 //import 'package:welcome_to_mari_el/data.dart';
 
 LatLng _center = LatLng(56.6388, 47.8908);
@@ -111,7 +112,6 @@ class MapState extends State<Map> {
             ),
           ),
         ),
-        //Buttons(),
         SearchButton(),
       ],
     );
