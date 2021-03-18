@@ -85,16 +85,15 @@ class SearchListState extends State<SearchList> {
         //ChangeNotifierProvider<Filter>(create: (_) => Filter()),
       ],
       child: Scaffold(
-        appBar: AppBar(
-          centerTitle: false,
-          title: _appBarTitle,
-          leading: new IconButton(
+        appBar:
+            AppBar(centerTitle: false, title: _appBarTitle, actions: <Widget>[
+          new IconButton(
             icon: _searchIcon,
             onPressed: () {
               _searchPressed();
             },
           ),
-        ),
+        ]),
         body: Container(
           color: PrimaryColor,
           child: Column(children: <Widget>[

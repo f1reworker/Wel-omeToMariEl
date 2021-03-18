@@ -6,6 +6,7 @@ import 'package:welcome_to_mari_el/data.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/routePage/route.dart';
+import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:welcome_to_mari_el/settingsPage/settings.dart';
 import 'dart:io';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
           '/favorite': (context) => FavoritePage(),
           '/settings': (context) => SettingsPage(),
           '/route': (context) => NavigationPage(),
+          '/place': (context) => PlacePage(),
         },
       ),
     );

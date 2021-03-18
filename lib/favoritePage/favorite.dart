@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
+import 'package:welcome_to_mari_el/searchPage/placePage.dart';
+import 'package:welcome_to_mari_el/placeListTab.dart';
 //import 'package:webdav/webdav.dart';
 
 class FavoritePage extends StatefulWidget {
@@ -66,14 +68,12 @@ class FavoritePageState extends State<FavoritePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: _appBarTitle,
-        leading: new IconButton(
+      appBar: AppBar(centerTitle: false, title: _appBarTitle, actions: <Widget>[
+        new IconButton(
           icon: _searchIcon,
           onPressed: _searchPressed,
         ),
-      ),
+      ]),
       body: Container(
         color: PrimaryColor,
         width: MediaQuery.of(context).size.width,
@@ -89,7 +89,10 @@ class FavoritePageState extends State<FavoritePage> {
                   Container(
                     width: MediaQuery.of(context).size.width - 80,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        indexPlace = place.indexOf(favOrSearch[index]);
+                        Navigator.pushNamed(context, '/place');
+                      },
                       style: ElevatedButton.styleFrom(
                           primary: Colors.white, onPrimary: Colors.black),
                       child: Row(
@@ -156,8 +159,19 @@ class FavoritePageState extends State<FavoritePage> {
                             width: 25,
                             child: Center(
                               child: IconButton(
-                                onPressed: () {},
-                                icon: Icon(CustomIcons.route, size: 25),
+                                onPressed: () {
+                                  indexPlace =
+                                      place.indexOf(favOrSearch[index]);
+                                  changeRoutingPlace(place, indexPlace);
+                                  setState(() {});
+                                },
+                                icon: Icon(CustomIcons.route,
+                                    size: 25,
+                                    color: routePlace
+                                                .indexOf(favOrSearch[index]) !=
+                                            -1
+                                        ? Colors.blueAccent
+                                        : Colors.black87),
                               ),
                             ),
                           ),

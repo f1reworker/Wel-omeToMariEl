@@ -6,10 +6,14 @@ import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'placeListTab.dart';
 import 'package:webdav/webdav.dart';
 import 'searchPage/searchBar.dart';
+import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 
 List favoritePlace = [];
+List routePlace = [];
 List finalPlace = place;
 List data = placeOrSearch;
+int indexPlace;
+
 void filterPlace(districtsCheck, searchCheck) {
   finalPlace = [];
   for (int i = 0; i < place.length; i++) {
@@ -53,7 +57,10 @@ class PlaceList extends StatelessWidget {
                     Container(
                       width: MediaQuery.of(context).size.width - 80,
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          indexPlace = place.indexOf(placeOrSearch[index]);
+                          Navigator.pushNamed(context, '/place');
+                        },
                         style: ElevatedButton.styleFrom(
                             primary: Colors.white, onPrimary: Colors.black),
                         child: Row(
@@ -132,8 +139,21 @@ class PlaceList extends StatelessWidget {
                               width: 25,
                               child: Center(
                                 child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(CustomIcons.route, size: 25),
+                                  onPressed: () {
+                                    context
+                                        .read<FavoritePlace>()
+                                        .changeRoutePlace(placeOrSearch, index);
+                                  },
+                                  icon: Icon(CustomIcons.route,
+                                      size: 25,
+                                      color: context
+                                                  .watch<FavoritePlace>()
+                                                  .getData2
+                                                  .indexOf(
+                                                      placeOrSearch[index]) !=
+                                              -1
+                                          ? Colors.blueAccent
+                                          : Colors.black87),
                                 ),
                               ),
                             ),
@@ -154,6 +174,14 @@ class FavoritePlace with ChangeNotifier {
     favoritePlace.indexOf(placeOrSearch[index]) != -1
         ? favoritePlace.remove(placeOrSearch[index])
         : favoritePlace.add(placeOrSearch[index]);
+    notifyListeners();
+  }
+
+  List get getData2 => routePlace;
+  void changeRoutePlace(placeOrSearch, index) {
+    routePlace.indexOf(placeOrSearch[index]) != -1
+        ? routePlace.remove(placeOrSearch[index])
+        : routePlace.add(placeOrSearch[index]);
     notifyListeners();
   }
 }
