@@ -1,12 +1,11 @@
 import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
-import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
+//import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
+//import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'placeListTab.dart';
-import 'package:webdav/webdav.dart';
-import 'searchPage/searchBar.dart';
-import 'package:welcome_to_mari_el/searchPage/placePage.dart';
+//import 'searchPage/searchBar.dart';
+//import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 
 List favoritePlace = [];
 List routePlace = [];

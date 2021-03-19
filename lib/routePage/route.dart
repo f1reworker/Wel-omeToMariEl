@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
-import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
+//import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/main.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
 

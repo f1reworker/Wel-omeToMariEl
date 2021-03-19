@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
-import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
+//import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 
 void changeRoutingPlace(place, indexPlace) {
   routePlace.indexOf(place[indexPlace]) != -1
@@ -56,36 +56,37 @@ class _PlacePageState extends State<PlacePage> {
                   : Colors.white)
         ],
       ),
-      body: Column(children: <Widget>[
-        Align(
-          alignment: Alignment.centerLeft,
-          child: Container(
-              child: Text(
-            "   Район:" + place[indexPlace]["district"],
-            textAlign: TextAlign.left,
-          )),
-        ),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: Container(
-            child: Text(
-              "   Категория:" + place[indexPlace]["what"],
-              textAlign: TextAlign.left,
+      body: ListView(
+        children: [
+          Column(children: <Widget>[
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                  child: Text(
+                "   Район:" + place[indexPlace]["district"],
+                textAlign: TextAlign.left,
+              )),
             ),
-          ),
-        ),
-        Container(
-            height: 200, child: Image.network(place[indexPlace]["photo"][0])),
-        Container(
-          height: MediaQuery.of(context).size.height - 317,
-          child: ListView(children: <Widget>[
-            Text(
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                child: Text(
+                  "   Категория:" + place[indexPlace]["what"],
+                  textAlign: TextAlign.left,
+                ),
+              ),
+            ),
+            Container(
+                width: MediaQuery.of(context).size.width - 10,
+                child: Image.network(place[indexPlace]["photo"][1])),
+            Container(
+                child: Text(
               place[indexPlace]["description"],
               softWrap: true,
-            )
+            ))
           ]),
-        )
-      ]),
+        ],
+      ),
     );
   }
 }

@@ -46,9 +46,7 @@ class MyApp extends StatelessWidget {
         theme: new ThemeData(
           scaffoldBackgroundColor: const Color(0xFFFFFEFC),
           primaryColor: MyRed,
-          //textTheme: GoogleFonts.marmeladTextTheme(
-          //  Theme.of(context).textTheme,
-          // ),
+          fontFamily: "Roboto",
         ),
         initialRoute: '/',
         routes: {

@@ -1,6 +1,6 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 List place = [
-  //lakeKumyary,
-  //oakPugachev,
   yuryZamok,
   yuryElgas,
   hosteLPrichal,
@@ -44,6 +44,38 @@ List place = [
   zare4be,
 ];
 
+List<LatLng> trolleybus1 = [
+  LatLng(56.639758, 47.870323),
+  LatLng(56.641799, 47.872635),
+  LatLng(56.644239, 47.873842),
+  LatLng(56.645989, 47.874839),
+  LatLng(56.649333, 47.875023),
+  LatLng(56.652018, 47.875099),
+  LatLng(56.652081, 47.874739),
+  LatLng(56.653887, 47.876285),
+  LatLng(56.653100, 47.879330),
+  LatLng(56.652566, 47.882186),
+  LatLng(56.652265, 47.884492),
+  LatLng(56.651396, 47.888876),
+  LatLng(56.651129, 47.889589),
+  LatLng(56.650462, 47.892976),
+  LatLng(56.650416, 47.894006),
+  LatLng(56.648238, 47.893729),
+  LatLng(56.647683, 47.893065),
+  LatLng(56.645184, 47.891486),
+  LatLng(56.644407, 47.891315),
+  LatLng(56.641071, 47.888731),
+  LatLng(56.640598, 47.888911),
+  LatLng(56.635965, 47.885346),
+  LatLng(56.635386, 47.885374),
+  LatLng(56.629878, 47.880875),
+  LatLng(56.629337, 47.880286),
+  LatLng(56.627056, 47.879350),
+  LatLng(56.626991, 47.879958),
+  LatLng(56.623500, 47.879935),
+  LatLng(56.622547, 47.880179),
+];
+
 var yuryZamok = {
   "district": "Юринский район",
   "what": "Гостиница",
@@ -51,8 +83,8 @@ var yuryZamok = {
       "Гостиница расположена непосредственно в Замке Шереметьева. К услугам гостей 17 номеров от многоместных без удобств, до люксов.",
   "location": "N 56° 17' 12.1848 E 46° 17' 36.8448",
   "photo": [
-    "https://disk.yandex.ru/i/0UKMmSoPA0jDTw",
-    "https://disk.yandex.ru/i/swMPJfvRTj_Rog",
+    "https://welcometomariel.neocities.org/photo/Фото%2014.png",
+    "https://welcometomariel.neocities.org/photo/yr.jpg",
   ],
   "id": "1801",
   "transport":
@@ -66,7 +98,8 @@ var yuryElgas = {
   "description": "Гостиница эконом класса. В наличии 100 номеров.",
   "location": "56.287452, 46.291462",
   "photo": [
-    "https://disk.yandex.ru/i/uD37AZeLJidcOQ",
+    "https://welcometomariel.neocities.org/photo/Пустой%20круг.png",
+    "https://welcometomariel.neocities.org/photo/Пустой%20круг.png",
   ],
   "id": "1802",
   "transport":
@@ -81,8 +114,8 @@ var hosteLPrichal = {
       "Хостел 'У ПРИЧАЛА' предлагает удобное размещение для туристов, студентов и всем, кому необходимо недорогое, уютное, удобное, чистое жилье для короткого или длительного пребывания в пгт. Юрино.",
   "location": "56.287502, 46.286728",
   "photo": [
-    "https://disk.yandex.ru/i/jC39d3vXTy4bOA",
-    "https://disk.yandex.ru/i/s3p867g1Oh3png",
+    "https://welcometomariel.neocities.org/photo/Фото%2013.png",
+    "https://welcometomariel.neocities.org/photo/hprich.jpg"
   ],
   "id": "1903",
   "transport":
@@ -96,8 +129,8 @@ var cafePrichal = {
   "description": "-",
   "location": "56.287547, 46.288174",
   "photo": [
-    "https://disk.yandex.ru/i/5eUNfRr-xvnJbg",
-    "https://disk.yandex.ru/i/3lbnFvWqdm_K1w",
+    "https://welcometomariel.neocities.org/photo/Фото%2012.png",
+    "https://welcometomariel.neocities.org/photo/cfprich.jpg",
   ],
   "id": "1604",
   "transport":
@@ -110,8 +143,8 @@ var cafeVechernee = {
   "description": "-",
   "location": "56.287892, 46.290770",
   "photo": [
-    "https://disk.yandex.ru/i/6zx3j3bZM_bUkA",
-    "https://disk.yandex.ru/i/iRStdQlUGm8GNQ",
+    "https://welcometomariel.neocities.org/photo/Фото%2011.png",
+    "https://welcometomariel.neocities.org/photo/cf%20vech.jpg",
   ],
   "id": "1605",
   "transport":
@@ -128,9 +161,9 @@ var mikhailoHram = {
           'Церковь очень оригинальна по своей композиции и декору. В основу храма положен тип построек “восьмерик на четверике”. Вокруг четверика по сторонам креста пристроены приделы, завершенные могучими арками, а по диагонали в общую композицию удачно были вписаны башенки. Сочетание двух цветов — красного и белого — подчеркивает нарядность и праздничность всего сооружения. Декоративное убранство гармонирует с общей композицией церкви. Смешение различных орнаментальных стилей, что было столь характерным для церковной архитектуры того времени, придает церкви воздушность, гармонирует с общей композицией сооружения. Небольшая трапезная связывает храм с колокольней, сохранившей только один ярус из трех." + "Стены и своды храма были расписаны нижегородскими и владимирскими мастерами. При храме был погост. Здесь хоронили священнослужителей. В специальном склепе были погребены Василий Петрович, Ольга Дмитриевна и их сын Петр Васильевич Шереметевы — последние перед революцией 1917 г. владельцы усадьбы и замка.',
   "location": "56.288486, 46.290887",
   "photo": [
-    "https://disk.yandex.ru/i/QFcQjqs7m4gX4Q",
-    "https://disk.yandex.ru/i/8TUU68H9b0bpJA",
-    "https://disk.yandex.ru/i/11-0FkTgKPCaUA",
+    "https://welcometomariel.neocities.org/photo/Фото%2010.png",
+    "https://welcometomariel.neocities.org/photo/mikh.jpg",
+    "https://welcometomariel.neocities.org/photo/mikh2.jpg",
   ],
   "id": "1406",
   "transport":
@@ -147,10 +180,10 @@ var zamokWeremeteva = {
               'Строительство проходило под руководством немецкого архитектора Р. Мюллера при участии А. Штерна, А. Парланда и А. Корша. Ближе к финальной стадии строительства над зданием работали русские архитекторы Павел Малиновский и Сергей Родионов. Бесподобно внутреннее убранство замка. Замок насчитывает почти сто комнат, среди них — «Картинная галерея», «Восточный кабинет», «Дубовая комната» и «Скобелевский зал». В одной из комнат даже присутствует плита, найденная во время раскопок в Помпее. Общая площадь усадьбы превышает 40 гектаров. В настоящее время часть этого дворцово-паркового ансамбля занимает комфортабельная гостиница, а другая находится на реставрации.',
   "location": "56.286667, 46.293897",
   "photo": [
-    "https://disk.yandex.ru/i/3blgm7FCzRBl6Q",
-    "https://disk.yandex.ru/i/k5wGS9bJcxEKbw",
-    "https://disk.yandex.ru/i/rXlyqMOKIzlxGQ",
-    "https://disk.yandex.ru/i/dCcwxs6wtv6tyg",
+    "https://welcometomariel.neocities.org/photo/Фото%208.png",
+    "https://welcometomariel.neocities.org/photo/weremet.jpg",
+    "https://welcometomariel.neocities.org/photo/weremet%202.jpg",
+    "https://welcometomariel.neocities.org/photo/weremet%203.jpg",
   ],
   "id": "1507",
   "transport":
@@ -165,8 +198,8 @@ var sklepWeremeteva = {
       "Последний владелец замка в Юрино родился больным и прожил всего 33 года, скончавшись в 1916 году. При советской власти фамильная усыпальница была разграблена. Вновь останки были обнаружены при ремонте водопровода в Юрино. В 2007 году сооружен склеп и поставлен небольшой памятник.",
   "location": "56 17.265, 46 17.475",
   "photo": [
-    "https://disk.yandex.ru/i/B1Narhmjb5KXjw",
-    "https://disk.yandex.ru/i/cnAVkhO_2eiMyQ",
+    "https://welcometomariel.neocities.org/photo/Фото%205.png",
+    "https://welcometomariel.neocities.org/photo/sklepWeremeteva.jpg",
   ],
   "id": "1408",
   "transport":
@@ -180,8 +213,8 @@ var vetluga = {
   "description": "Крупнейший приток Волги!",
   "location": "57.887425, 45.937822",
   "photo": [
-    "https://disk.yandex.ru/i/I_jeAt8FB2rwBA",
-    "https://disk.yandex.ru/i/UQQUWx9tU_WYFA",
+    "https://welcometomariel.neocities.org/photo/Фото%204.png",
+    "https://welcometomariel.neocities.org/photo/vetluga.jpg",
   ],
   "id": "1309",
   "transport":
@@ -195,8 +228,8 @@ var lyunda = {
   "description": "Правый приток  Ветлуги",
   "location": "56.650349, 45.514788",
   "photo": [
-    "https://disk.yandex.ru/i/vsL_Lx8RORcm_A",
-    "https://disk.yandex.ru/i/knlHHFqtfQaP-A",
+    "https://welcometomariel.neocities.org/photo/Фото%203.png",
+    "https://welcometomariel.neocities.org/photo/lyunda.JPG",
   ],
   "id": "1310",
   "transport":
@@ -210,8 +243,8 @@ var yuronga = {
   "description": "Килемарский заказник!",
   "location": "56.955371, 46.004127",
   "photo": [
-    "https://disk.yandex.ru/i/UsZodjn4Tk7QoQ",
-    "https://disk.yandex.ru/i/NfnQSVHiSUK9iA",
+    "https://welcometomariel.neocities.org/photo/Фото%202.png",
+    "https://welcometomariel.neocities.org/photo/yuronga1.jpg",
   ],
   "id": "1311",
   "transport":
@@ -226,8 +259,8 @@ var dorogucha = {
       "Река в Нижегородской области и республике Марий Эл, левый приток Волги.  Расположена в междуречье Ветлуги и Керженца.",
   "location": "56.3906,45.5075",
   "photo": [
-    "https://disk.yandex.ru/i/HpPNT4GAJi--jw",
-    "https://disk.yandex.ru/i/iFyXMxSAK-xAHg",
+    "https://welcometomariel.neocities.org/photo/Фото%201.png",
+    "https://welcometomariel.neocities.org/photo/dorogucha.jpg",
   ],
   "id": "1312",
   "transport":
@@ -242,8 +275,8 @@ var zakaznik = {
       " Государственный природный биологический заказник республиканского значения «Холодный ключ». Образован в 2002 г. с целью сохранения, восстановления, изучения популяций редких видов растений: живокости клиновидной, зеленчука желтого, лилии кудреватой, медуницы мягкой и осоки горной, занесенных в Красную книгу Республики Марий Эл.",
   "location": "56.765556, 49.621389",
   "photo": [
-    "https://disk.yandex.ru/i/hVZPE9RS0I147Q",
-    "https://disk.yandex.ru/i/5pCKicAjGuwcbQ",
+    "https://welcometomariel.neocities.org/photo/c208%202.png",
+    "https://welcometomariel.neocities.org/photo/208.jpg",
   ],
   "id": "2314",
   "transport":
@@ -259,8 +292,8 @@ var hram = {
       "Каменный храм во имя Святой Троицы в Мамсинере был построен в 1848 г. на средства прихожан. Здесь располагались русские, марийские, удмуртские, татарские деревни. В приходе числилось более 4 тысяч человек. По своим архитектурным формам Троицкая церковь принадлежит к памятникам стиля классицизма. Симметричные объемы, круглая ротонда, завершающаяся сферическим куполом, декоративные портики, украшающие северную и южную стены храма, наконец, колокольня, увенчанная шпилем, придают церкви строгий, стройный вид. Храм был закрыт в 1937 году. Его имущество конфисковали. В настоящее время церковь возрождает свою былую красоту. С. Мамсинер. ",
   "location": "56.935061, 49.985944",
   "photo": [
-    "https://disk.yandex.ru/i/E2hBSULLCKNNeA",
-    "https://disk.yandex.ru/i/7riEyTDeilDfiQ",
+    "https://welcometomariel.neocities.org/photo/c222%202.png",
+    "https://welcometomariel.neocities.org/photo/222.jpg",
   ],
   "id": "2415",
   "transport":
@@ -276,8 +309,8 @@ var gostinica = {
       "В отеле имеются комфортабельные и просторные класса «люкс» 1,2,3 и 4-х местные номера.  Гостиничные номера оснащены современной мебелью, многоканальным ж/к телевизором, санузлом и душевой кабиной высокой функциональности.",
   "location": "56.785301, 49.598970",
   "photo": [
-    "https://disk.yandex.ru/i/PUQNUwMPepHzKw",
-    "https://disk.yandex.ru/i/N2I6sivszifPHw",
+    "https://welcometomariel.neocities.org/photo/237c%202.png",
+    "https://welcometomariel.neocities.org/photo/237.jpg",
   ],
   "id": "2816",
   "transport":
@@ -293,8 +326,8 @@ var park = {
       "Центральный парк Мари-Турека - одно из красивейших мест поселка. Особенно в теплое время года. Здесь растут высокие сосны, ели, березы, делая воздух особенным. Парк — любимое место отдыха и взрослых, и детей. В центральном парке райцентра всегда многолюдно: занимаются спортом и отдыхают, любуются красотой и дышат свежим воздухом, проводят свободное время, а кто-то просто ежедневно идет по парку на работу и в школу. Особенно оживленно бывает на детской площадке парке. В центре парка находится памятник-обелиск землякам, погибшим в годы Великой Отечественной войны, а также Мемориальный комплекс, посвященный воинам-интернационалистам, участникам локальных войн и ликвидаторам катастрофы на Чернобыльской АЭС.",
   "location": "56.787998, 49.621996",
   "photo": [
-    "https://disk.yandex.ru/i/7YrBo-Wl-PZbZw",
-    "https://disk.yandex.ru/i/KAfJAqhvGX_YYA",
+    "https://welcometomariel.neocities.org/photo/251c%202.png",
+    "https://welcometomariel.neocities.org/photo/251.jpg",
   ],
   "id": "2517",
   "transport":
@@ -310,8 +343,8 @@ var cerkov = {
       "Кирпичная однокупольная Казанская церковь была построена в 1834-1838 в стиле классицизма. Трапезная с Петропавловским и Фроло-Лаврским приделами расширена в кон. 1900-х. Закрыта в 1934, перестроена, занята домом культуры. В 1979 выгорела и разобрана. В нач. 1990-х в поселке создана община верующих. Первоначально богослужения проводились в приспособленном здании, в 1993-2006 на месте старой церкви построен новый кирпичный храм типа восьмерик на четверике с колокольней.",
   "location": "56.789507, 49.623427",
   "photo": [
-    "https://disk.yandex.ru/i/jATfym6KqezHlw",
-    "https://disk.yandex.ru/i/TuIXu1qIyBvACg",
+    "https://welcometomariel.neocities.org/photo/265c%202.png",
+    "https://welcometomariel.neocities.org/photo/265.jpg",
   ],
   "id": "2418",
   "transport":
@@ -327,8 +360,8 @@ var muzey = {
       "История краеведческого музея начинается с 1969 года. Здесь собран и хранится уникальный материал по этнографии, боевой и трудовой славе района. В настоящее время краеведческий музей Мари-Турекского района имеет фонд более 4000 музейных предметов и музейных коллекций. В Мари-Турекском краеведческом музее им. В.П. Мосолова имеется несколько залов. ",
   "location": "56.789412, 49.621903",
   "photo": [
-    "https://disk.yandex.ru/i/hEN9W417Caagjw",
-    "https://disk.yandex.ru/i/PTwK2QSDNZ-N7A",
+    "https://welcometomariel.neocities.org/photo/280c%202.png",
+    "https://welcometomariel.neocities.org/photo/280.jpg",
   ],
   "id": "2519",
   "transport":
@@ -344,8 +377,8 @@ var podvorye = {
       "Гостиничный комплекс предлагает к услугам гостей 2 комфортабельных гостиничных номера. В каждом номере есть всё необходимое для полноценного отдыха. В административном здании гостиницы на 1-м этаже есть кафе «Подворье». Помещение кафе имеет современный ремонт, оснащено барной стойкой, кондиционером, имеется проектор. Кафе предлагает вкусные блюда русской и марийской кухни (подкогыли, шокта, мелна, шере руаш гыч когыльо, когыльо чыве шыл да шураш). На 2 этаже имеется банкетный зал на 20 человек. Банкетный зал оснащен кондиционером, большим плазменным телевизором.",
   "location": "56.935124, 49.146218",
   "photo": [
-    "https://disk.yandex.ru/i/aKD5LqFkTuCcZA",
-    "https://disk.yandex.ru/i/KUy62nkj9b9jNQ",
+    "https://welcometomariel.neocities.org/photo/296c%202.png",
+    "https://welcometomariel.neocities.org/photo/296.jpg",
   ],
   "id": "4720",
   "transport": "",
@@ -359,9 +392,10 @@ var zare4be = {
       "Торгово-гостиничный комплекс Заречье расположен в поселке Сернур. К услугам гостей 12 номеров различной ценовой категории, из которых 2 относятся к классу «люкс», 3 — к классу «полулюкс», остальные стандартные. В каждом номере есть все необходимое для полноценного отдыха — качественная и красивая мебель, постельное белье и полотенца, кондиционеры, телевизоры (спутниковое телевидение).",
   "location": "56.949191, 49.149605",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F15.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F16.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F17.png"
+    "https://welcometomariel.neocities.org/photo/15.png",
+    "https://welcometomariel.neocities.org/photo/15.jpg",
+    "https://welcometomariel.neocities.org/photo/16.jpg",
+    "https://welcometomariel.neocities.org/photo/17.jpg"
   ],
   "id": "4721",
   "transport":
@@ -376,7 +410,8 @@ var cafeSemeynoe = {
   "description": "Описание отсутствует",
   "location": "56.939603, 49.151420",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F18.png"
+    "https://welcometomariel.neocities.org/photo/18.png",
+    "https://welcometomariel.neocities.org/photo/18.jpg"
   ],
   "id": "4622",
   "transport":
@@ -391,8 +426,9 @@ var name = {
   "description": "Описание отсутствует",
   "location": "56.935596, 49.145985",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F19.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F20.png"
+    "https://welcometomariel.neocities.org/photo/19.png",
+    "https://welcometomariel.neocities.org/photo/19.jpg",
+    "https://welcometomariel.neocities.org/photo/20.jpg"
   ],
   "id": "4623",
   "transport":
@@ -407,8 +443,9 @@ var barPodvorye = {
   "description": "Описание отсутствует",
   "location": "56.935124, 49.146218",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F21.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F22.png"
+    "https://welcometomariel.neocities.org/photo/21.png",
+    "https://welcometomariel.neocities.org/photo/21.jpg",
+    "https://welcometomariel.neocities.org/photo/22.jpg"
   ],
   "id": "4624",
   "transport":
@@ -423,8 +460,9 @@ var kafeKolos = {
   "description": "Описание отсутствует",
   "location": "56.934859, 49.146263",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F23.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F24.png"
+    "https://welcometomariel.neocities.org/photo/23.png",
+    "https://welcometomariel.neocities.org/photo/23.jpg",
+    "https://welcometomariel.neocities.org/photo/24.jpg"
   ],
   "id": "4625",
   "transport":
@@ -440,9 +478,10 @@ var isto4nikMaryan = {
       "Главная достопримечательность Марьян Памаш - родники, ключи, или, как раньше говорили, кипуны, которыми богат этот необычный уголок природы. Родник всегда считался благодатью Божьей, подарком Творца.Как не вспомнить почитание минеральных источников римлянами, освящение воды христианами... Издревле люди знали о полезных, живительных силах влаги. Врачи, начиная с Авиценны, напоминают, что бодрящие, оздоровляющие водные процедуры помогают снять усталость, обновляют и стимулируют кровеносную систему, очищают весь зашлакованный цивилизацией организм. Особенно, если эта вода - из родника.",
   "location": "56.998338, 49.535395",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F25.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F26.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F27.png"
+    "https://welcometomariel.neocities.org/photo/25.png",
+    "https://welcometomariel.neocities.org/photo/25.jpg",
+    "https://welcometomariel.neocities.org/photo/26.jpg",
+    "https://welcometomariel.neocities.org/photo/27.jpg"
   ],
   "id": "4526",
   "transport":
@@ -458,8 +497,9 @@ var isto4nikYowkar = {
       "Находится источник в 1, 5 км к северо-востоку от центра сельской администрации, села Марисола, на левом берегу реки Шаба, совсем не далеко от места, где речушка впадает в речку Она.",
   "location": "57.089531, 49.105507",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F28.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F29.png"
+    "https://welcometomariel.neocities.org/photo/28.png",
+    "https://welcometomariel.neocities.org/photo/28.jpg",
+    "https://welcometomariel.neocities.org/photo/29.jpg"
   ],
   "id": "4527",
   "transport":
@@ -475,8 +515,9 @@ var derevn9Koklala = {
       "Дорога к роще начинается от деревни Большая Коклала. В течение всего года мари проводят несколько молений, среди которых главным считается Всемарийское моление Тÿня Кумалтыш — завершающее годичный цикл религиозных обрядов. В этом году из Москвы на него отправился актив мерянского краеведческого общества «Metsa Kunnta».  Моление Тÿня Кумалтыш было проведено 7 ноября  в роще деревни Большая Коклала Сернурского района Республики Марий Эл.",
   "location": "56.885638, 49.106378",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F30.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F31.png"
+    "https://welcometomariel.neocities.org/photo/30.png",
+    "https://welcometomariel.neocities.org/photo/30.jpg",
+    "https://welcometomariel.neocities.org/photo/31.jpg"
   ],
   "id": "4528",
   "transport":
@@ -492,7 +533,8 @@ var seloKuknur = {
       "Каменный храм в селе Кукнур в честь Воздвижения Креста Господня является одним из старейших сельских каменных храмов на территории Марийского края. Строительство на средства прихожан было начато в 1816 году. В архитектурном отношении церковь интересна тем, что сочетает в себе некоторые детали классического и барочного стилей. Симметричная постановка объемов — от классицизма. Круглые окна основного храма, декор окон на апсиде и трапезной — от барокко. Стройные пропорции придал зодчий трехъярусной колокольне. Главный престол храма в честь Воздвижения Животворящего Креста Господня освятили в 1824 году, правый придел во имя святителя Николая Чудотворца — в 1823 году, левый, в честь святителя Василия Великого, — в 1833 году. В 1915 году к церкви были приписаны три часовни, которые находились в деревнях Коноплево, Конаково, Красном Яре. На территории прихода в селе Кукнур действовали церковно-приходская школа. В советские времена храм оставался действующим до 1961 года, второго периода гонений на церковь. Затем ее закрыли. В 1962 г. были сняты кресты и колокола, иконы увезены в Сернур на растопку печей, а в церкви разместили зернохранилище. Почти три десятилетия храм оставался оскверненным. В январе 1990 г. в селе была зарегистрирована община верующих и ей передано здание церкви. Начались богослужения. В 2008 году заново освятили придел Николая Чудотворца, в 2009-м – святого Пророка Илии. А 23 октября 2014 года – проведен чин освящения главного престола – Воздвижения Креста Господня. Провел его архиепископ Йошкар-Олинский и Марийский Иоанн. Несмотря на то, что храм довольно неплохо сохранился, но реставрация его продолжается до сих пор. А недавно храму было передано здание бывшей больницы. После ремонта здесь разместятся воскресная школа, трапезная, библиотека, гостиница. При храме несколько освященных источников: священномученика Киприяна и святой мученицы Устинии на окраине села и святого Пророка и Крестителя Иоанна Предтечи на реке Немде.",
   "location": "57.229461, 49.054294",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F32.png"
+    "https://welcometomariel.neocities.org/photo/32.png",
+    "https://welcometomariel.neocities.org/photo/32.JPG"
   ],
   "id": "4529",
   "transport":
@@ -508,8 +550,9 @@ var vod9na9melnica = {
       "Водяная мельница в деревне Желонкино, в Сернурском районе, работает, по некоторым данным, более 200 лет. Точно не знает никто. Она ломалась, чинилась, горела, перестраивалась, отстраивалась заново – и продолжала работать. Живописный пруд, питаемый ключами (рядом деревня с говорящим названием Большие Ключи) с чистейшей, холодной водой заканчивается четырехметровой высоты запрудой, с которой с шумом падает вода. Перед запрудой – бревенчатая защита от льда, и в этом импровизированном бассейне глубиной в 2,5 метра каждый камушек на дне хорошо просматривается.",
   "location": "57.056349, 48.966771",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F33.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F34.png"
+    "https://welcometomariel.neocities.org/photo/33.png",
+    "https://welcometomariel.neocities.org/photo/33.JPG",
+    "https://welcometomariel.neocities.org/photo/34.JPG"
   ],
   "id": "4530",
   "transport":
@@ -525,7 +568,8 @@ var rekaIrovka = {
       "Устье реки находится в 136 км по правому берегу реки Илеть (около урочища Булыгино – в 5 км. на север от д. Наратлык). Урочище получило своё имя от фамилии купца Булыгина, который имел на Ировке и Илети водяные мельницы. Буквально на границе с РТ. Длина реки составляет 69 км, площадь водосборного бассейна 917 км².",
   "location": "56.604594, 49.183211",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F35.png"
+    "https://welcometomariel.neocities.org/photo/35.png",
+    "https://welcometomariel.neocities.org/photo/35.jpg"
   ],
   "id": "3331",
   "transport": "",
@@ -540,7 +584,8 @@ var derevn9Olori = {
       "Деревня находится буквально в нескольких километрах от Истока Илети (3-4 км. на Север), но речка Олорка, сливаясь с речкой Ирсерма, впадает в Нолю, которая течет к Вятке.",
   "location": "56.743449,49.556143",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F36.png"
+    "https://welcometomariel.neocities.org/photo/36.png",
+    "https://welcometomariel.neocities.org/photo/36.jpg"
   ],
   "id": "3332",
   "transport": "",
@@ -555,7 +600,8 @@ var rekaBuy = {
       "Буй - река в России, протекает в Республике Марий Эл и Кировской области. Устье реки находится в 283 км от устья Вятки по правому берегу. Длина реки составляет 92 км, площадь водосборного бассейна - 806 км².",
   "location": "56.892620, 49.483134",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F37.png"
+    "https://welcometomariel.neocities.org/photo/37.png",
+    "https://welcometomariel.neocities.org/photo/37.jpeg"
   ],
   "id": "3333",
   "transport": "",
@@ -570,7 +616,8 @@ var seloIlet = {
       "Каменный храм в селе Илеть был построен в 1866-1887 годах и освящен во имя Святой Троицы. До сих пор в храме висит мраморная доска, на которой указаны день закладки храма (24 июня 1866 года), священник Григорий, староста Бусыгин, строитель Никанор Домрачев и мастер Степан Тюрген. Крестьяне были богобоязненными старообрядцами. На разветвлении дорог в Орловку, Ляжинск и Кишкинск ими была установлена часовня. Гордостью сельчан была церковь, строительство которой началось в 1848 г. в целях утверждения православия среди местных старообрядцев. Храм освящен 5 февраля 1850 г. В географостатистическом словаре Семенова-Тянь-Шанского (1863-1885 гг.) записано: 'На границе д. Параньга есть русская деревня Илеть... Живут в деревне мастеровой люд и богомольцы-староверы. Имеется церковь Троицкая... деревянная (рядом строится каменная церковь)'",
   "location": "56.576212, 49.500484",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F38.png"
+    "https://welcometomariel.neocities.org/photo/38.png",
+    "https://welcometomariel.neocities.org/photo/38.jpg"
   ],
   "id": "3434",
   "transport": "",
@@ -585,7 +632,8 @@ var prudAlawayka = {
       "Возникновение татарской д. Алашайка относится ко второй половине XVIIв. По сохранившемуся среди марийцев преданию, здесь до середины ХV1 в. жили марийцы. В период взятия Казани в 1552 г. селение было сожжено  отрядом русских войск. Именно поэтому марийцы Алашайку называют Шўгар- Сола (Кладбищенская деревня).С событиями далекого прошлого марийцы увязывают и другое название деревни - “Мазарбашы”. Согласно народному преданию, деревню так назвали по имени организатора отпора отряду неприятелей, который погиб, будучи обезглавленным на пепелище.",
   "location": "56.773308, 49.489949",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F39.png"
+    "https://welcometomariel.neocities.org/photo/39.png",
+    "https://welcometomariel.neocities.org/photo/39.jpg"
   ],
   "id": "3335",
   "transport": "",
@@ -600,7 +648,8 @@ var me4etPort9nur = {
       "Деревня Портянур расположена в 8 км юго-западнее районного центра - п. Параньга. В XVIII в. она входила в состав волости Ушнур Казанского уезда Казанской губернии, затем в Параньгинскую, а с XIX - до начала XX в. - Турекскую волости Уржумского уезда Вятской губернии. С 1920 г. в составе этой волости включена в Сернурский, с 1924 г. - Мари-Турекский кантоны МАО. С 1931 г. Портянур находится в Ирнурском сельсовете Параньгинского района. В 1934 г. деревня стала центром сельского Совета.",
   "location": "56.684548, 49.273955",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F40.png"
+    "https://welcometomariel.neocities.org/photo/40.png",
+    "https://welcometomariel.neocities.org/photo/40.jpg"
   ],
   "id": "3436",
   "transport": "",
@@ -615,7 +664,8 @@ var memorial = {
       "Обелиск памяти погибших в ВОВ — это военный памятник / мемориал, что находится в городе Параньга.",
   "location": "56.707462, 49.402714",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F41.png"
+    "https://welcometomariel.neocities.org/photo/41.png",
+    "https://welcometomariel.neocities.org/photo/41.jpg"
   ],
   "id": "3437",
   "transport": "",
@@ -630,8 +680,9 @@ var dolinaStudenihRodnikov = {
       "В удивительно красивом месте, между д.Ивансола и д.Купсола Куженерского района, расположилась 'Долина студеных родников' с четырьмя десятками источников. С каждым из них связано много легенд и преданий. Самыми почитаемыми считаются Кугу Памаш (Большой родник, его водами обмывали младенцев от сглаза и болезней) и Онгыр Памаш (Родник-колокольчик, получил своё название за то, что он очень звонкий; славится тем, что вода из него помогает от заикания). Интересен и ключ-кипун, расположившийся под таинственной сенью деревьев. Вода в нем, выбиваясь из-под земли, заставляет песок двигаться, и, кажется, что она кипит. 'Долина родников' привлекает к себе внимание не только обилием источников, но и красотой пейзажа. На одном склоне оврага тянутся высоко к небу величественные сосны, на другом - раскинули свои мохнатые лапы ели. По дну оврага петляет небольшая р.Нолька, подпитываемая множеством ключей. Несмотря на малую протяженность реки (12 км), на её берегу когда-то крутили свои жернова несколько водяных мельниц. А какой замечательный вид из этих мест открывается на деревню Ивансола. Выше 'Долины родников' находятся пласты камня, использовавшегося для изготовления каменных стоек для фундамента домов. Это место своеобразная 'купсолинская Карелия' с деревцами среди камней и бьющими из-под земли ключами. Этот уникальный природный уголок с его незабываемыми пейзажами и вкуснейшей ключевой водой надолго остается в памяти и хочется вернуться сюда еще не один раз.",
   "location": "56.854860, 49.139056",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F42.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F43.1.png"
+    "https://welcometomariel.neocities.org/photo/42.png",
+    "https://welcometomariel.neocities.org/photo/42.JPG",
+    "https://welcometomariel.neocities.org/photo/43.png"
   ],
   "id": "5338",
   "transport":
@@ -647,8 +698,9 @@ var zakaznikKammenayaGora = {
       "Государственный природный заказник республиканского значения «Каменная Гора» расположен в четырех километрах юго-западнее села Русские Шои Куженерского района Республики Марий Эл. За схожесть пейзажа со швейцарскими Альпами заповедник получил народное название «Марийская Швейцария». Цели создания заказника – сохранение, восстановление, изучение уникальных объектов: своеобразного ландшафта, популяций редких видов растений, занесенных в Красную книгу Республики Марий Эл, реликтовой популяции ели сибирской и родника Казанской Божьей Матери. Одна из достопримечательностей «Каменной Горы» – родник Казанской Божьей Матери, вода которого, по народному поверью, обладает целебными свойствами. Святой родник Казанской Божьей Матери, является местом паломничества для верующих всей республики. На территории много маленьких безымянных и крупных родников, имеющих красивые, порой неординарные названия – Кипунчик, Пашкин ключ и др. Рядом с родником – небольшая беседка с увенчанным шпилем куполом вместо крыши и православная часовенка. В нескольких километрах от ключа можно найти строения заброшенной деревеньки, история которой началась с конца восемнадцатого века.",
   "location": "56.642275, 49.089410",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F44.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F45.png"
+    "https://welcometomariel.neocities.org/photo/44.png",
+    "https://welcometomariel.neocities.org/photo/44.jpg",
+    "https://welcometomariel.neocities.org/photo/45.jpg"
   ],
   "id": "5339",
   "transport":
@@ -664,8 +716,9 @@ var mariWveycariya = {
       "Расположена в 110 км от города Йошкар Ола в д.Визимбирь, Куженерского района Республики Марий Эл и на сегодняшний день объединяет три банных комплекса. На территории первого комплекса находится баня на роднике с бассейном, теплый гостевой домик с камином, летняя беседка с русской печью и встроенным мангалом, шашлычная, сцена, три дачных домика для отдыха, искусственный водоем, качели. ",
   "location": "56.658837, 49.059306",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F46.png",
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F47.png"
+    "https://welcometomariel.neocities.org/photo/46.png",
+    "https://welcometomariel.neocities.org/photo/46.jpg",
+    "https://welcometomariel.neocities.org/photo/47.jpg"
   ],
   "id": "5840",
   "transport":
@@ -681,7 +734,8 @@ var cafeSuleyman = {
       "Имеется в продаже шаурма, пицца, самса,манты, плов и многое другое из азиатской кухни. График работы с 8:00 до 00:00 без обеда и выходных!",
   "location": "56.809861, 48.914833",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F48.png"
+    "https://welcometomariel.neocities.org/photo/48.png",
+    "https://welcometomariel.neocities.org/photo/48.jpg"
   ],
   "id": "5641",
   "transport":
@@ -697,7 +751,8 @@ var cafeStolovaya = {
       "Столовая - одно из популярных заведений в г. Куженер. Всего же сеть насчитывает 400 точек по всей стране. Меню Столовой не оставит равнодушным даже самого искушенного гурмана.",
   "location": "56.810250, 48.914361",
   "photo": [
-    "https://disk.yandex.ru/client/disk?source=landing2_signin_ru&idApp=client&dialog=slider&idDialog=%2Fdisk%2F49.png"
+    "https://welcometomariel.neocities.org/photo/49.png",
+    "https://welcometomariel.neocities.org/photo/49.jpg"
   ],
   "id": "5642",
   "transport":
@@ -727,7 +782,10 @@ var rekaRuyka = {
   "description":
       "Река в России, протекает по территории Новоторъяльского и Сернурского района Республики Марий Эл. Устье реки находится в 133 км по правому берегу Немды. Длина реки составляет 15 км",
   "location": "56.633859, 49.918951",
-  "photo": ["Отсутствует"],
+  "photo": [
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png",
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png"
+  ],
   "id": "6344",
   "transport": "",
   "latLngTransport": "",
@@ -740,7 +798,10 @@ var rekaEksey = {
   "description":
       "река в России, протекает по Новоторъяльскому району Республики Марий Эл. Начинается возле деревни Логинцы, течёт на юго-восток. На берегах расположены деревни Маркелово, Ексей Мари, Егоро-Петрово. Устье реки находится в 3,8 км от устья реки Шукшан по левому берегу. Длина реки составляет 14 км[",
   "location": "57.017071, 48.646219",
-  "photo": ["Отсутствует"],
+  "photo": [
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png",
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png"
+  ],
   "id": "6345",
   "transport": "",
   "latLngTransport": "",
@@ -753,7 +814,10 @@ var rekaKavanerka = {
   "description":
       "река в России, протекает в Пижанском районе Кировской области и Новоторъяльском районе Республики Марий Эл. Устье реки находится в 12 км по левому берегу реки Толмань. Длина реки составляет 15 км.",
   "location": "57.178269, 48.576713",
-  "photo": ["Отсутствует"],
+  "photo": [
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png",
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png"
+  ],
   "id": "6346",
   "transport": "",
   "latLngTransport": "",
@@ -766,7 +830,10 @@ var rekaNurma = {
   "description":
       "река в России, протекает по Новоторъялскому и Оршанскому районам Республики Марий Эл[2]. Устье реки находится в 176 км от устья Малой Кокшаги по левому берегу. Длина реки составляет 17 км, площадь водосборного бассейна — 63,1 км²[3",
   "location": "56.980353, 48.236738",
-  "photo": ["Отсутствует"],
+  "photo": [
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png",
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png"
+  ],
   "id": "6347",
   "transport": "",
   "latLngTransport": "",
@@ -779,7 +846,10 @@ var reka4u4a = {
   "description":
       "река в России, протекает по территории Новоторъяльского района Республики Марий Эл[2]. Устье реки находится в 118 км по левому берегу Немды, длина реки составляет 11 км[3].",
   "location": "57.053160, 48.779825",
-  "photo": ["Отсутствует"],
+  "photo": [
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png",
+    "https://welcometomariel.neocities.org/photo/%D0%9F%D1%83%D1%81%D1%82%D0%BE%D0%B9%20%D0%BA%D1%80%D1%83%D0%B3.png"
+  ],
   "id": "6348",
   "transport": "",
   "latLngTransport": "",
