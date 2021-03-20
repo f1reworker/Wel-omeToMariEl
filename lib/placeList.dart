@@ -51,7 +51,7 @@ class PlaceList extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return new Container(
-                  height: 90,
+                  height: 95,
                   child: Row(children: <Widget>[
                     Container(
                       width: MediaQuery.of(context).size.width - 80,
@@ -168,11 +168,19 @@ class PlaceList extends StatelessWidget {
 }
 
 class FavoritePlace with ChangeNotifier {
-  List get getData => favoritePlace;
+  List data = favoritePlace;
+  List get getData => data;
   void changeFavoritePlace(placeOrSearch, index) {
     favoritePlace.indexOf(placeOrSearch[index]) != -1
         ? favoritePlace.remove(placeOrSearch[index])
         : favoritePlace.add(placeOrSearch[index]);
+    data = favoritePlace;
+    notifyListeners();
+  }
+
+  void refreshFavPlace(favoritePlace) {
+    data = favoritePlace;
+    print(data);
     notifyListeners();
   }
 

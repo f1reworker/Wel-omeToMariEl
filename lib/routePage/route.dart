@@ -34,7 +34,7 @@ class _NavigationPageState extends State<NavigationPage> {
           ),
           itemBuilder: (context, index) {
             return new Container(
-                height: 90,
+                height: 95,
                 child: Row(children: <Widget>[
                   Container(
                     width: MediaQuery.of(context).size.width - 80,
