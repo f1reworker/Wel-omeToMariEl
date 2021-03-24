@@ -4,7 +4,7 @@ import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
-//import 'package:webdav/webdav.dart';
+import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
 class FavoritePage extends StatefulWidget {
   @override
@@ -149,6 +149,9 @@ class FavoritePageState extends State<FavoritePage> {
                               onPressed: () {
                                 deleteFavoritePlace(favoritePlace, index);
                                 setState(() {});
+                                indexPlace =
+                                    place.indexOf(placeOrSearch[index]);
+                                onAddMarker(indexPlace);
                               },
                               icon: Icon(Icons.star_outlined,
                                   color: Colors.amber, size: 35),

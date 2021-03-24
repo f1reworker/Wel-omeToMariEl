@@ -4,6 +4,7 @@ import 'package:welcome_to_mari_el/placeListTab.dart';
 //import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/main.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
+import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
 class NavigationPage extends StatefulWidget {
   NavigationPage({Key key}) : super(key: key);
@@ -100,6 +101,7 @@ class _NavigationPageState extends State<NavigationPage> {
                                 indexPlace = place.indexOf(routePlace[index]);
                                 changeFavorite(place, indexPlace);
                                 setState(() {});
+                                onAddMarker(indexPlace);
                               },
                               icon: Icon(
                                   favoritePlace.indexOf(routePlace[index]) != -1

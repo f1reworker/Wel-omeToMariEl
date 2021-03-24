@@ -1,6 +1,7 @@
 import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:welcome_to_mari_el/mainPage/Map.dart';
 //import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 //import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'placeListTab.dart';
@@ -119,6 +120,9 @@ class PlaceList extends StatelessWidget {
                                       .read<FavoritePlace>()
                                       .changeFavoritePlace(
                                           placeOrSearch, index);
+                                  indexPlace =
+                                      place.indexOf(placeOrSearch[index]);
+                                  onAddMarker(indexPlace);
                                 },
                                 icon: Icon(
                                     context

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
 import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
@@ -7,20 +6,6 @@ import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/data.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
-LatLng markerPosition = LatLng(56.63011039048471, 47.918735914174235);
-final Set<Marker> markers = {};
-//Icon data = new Icon(Icons.search);
-
-// class Filter extends ChangeNotifier {
-//   bool search = false;
-
-//   Icon get getSearchIcon => data;
-//   void areSearching() {
-//     search = !search;
-//     search ? data = new Icon(Icons.close) : data = new Icon(Icons.search);
-//     notifyListeners();
-//   }
-// }
 
 class SearchList extends StatefulWidget {
   @override

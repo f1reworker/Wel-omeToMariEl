@@ -1,22 +1,48 @@
 import 'dart:async';
 //import 'package:geocoding/geocoding.dart';
-import 'package:flutter_polyline_points/flutter_polyline_points.dart';
+//import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
+//import 'package:geolocator/geolocator.dart';
+//import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 //import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
-import 'dart:math' show cos, sqrt, asin;
-import 'package:welcome_to_mari_el/data.dart';
+//import 'dart:math' show cos, sqrt, asin;
+//import 'package:welcome_to_mari_el/data.dart';
 import 'package:location/location.dart';
 
 LatLng _center = LatLng(56.6388, 47.8908);
+final Set<Marker> markers = {};
 
-class Secrets {
-  // Add your Google Maps API Key here
-  static const API_KEY = 'AIzaSyCyA0gC2lsmH8NndQGx802x2eaiFcY1uJI';
+void onAddMarker(indexPlace) {
+  double latitude = double.parse(place[indexPlace]["location"].split(",")[0]);
+  double longitude = double.parse(place[indexPlace]["location"].split(",")[1]);
+  LatLng location = new LatLng(latitude, longitude);
+  markers.contains(Marker(
+    markerId: MarkerId(location.toString()),
+    position: location,
+    infoWindow: InfoWindow(
+      title: place[indexPlace]["name"],
+    ),
+    icon: BitmapDescriptor.defaultMarker,
+  ))
+      ? markers.remove(Marker(
+          markerId: MarkerId(location.toString()),
+          position: location,
+          infoWindow: InfoWindow(
+            title: place[indexPlace]["name"],
+          ),
+          icon: BitmapDescriptor.defaultMarker,
+        ))
+      : markers.add(Marker(
+          markerId: MarkerId(location.toString()),
+          position: location,
+          infoWindow: InfoWindow(
+            title: place[indexPlace]["name"],
+          ),
+          icon: BitmapDescriptor.defaultMarker,
+        ));
 }
 
 class Map extends StatefulWidget {
@@ -28,21 +54,6 @@ class MapState extends State<Map> {
   Completer<GoogleMapController> _controller = Completer();
 
   MapType _currentMapType = MapType.normal;
-
-  void onAddMarkerButtonPressed() {
-    setState(() {
-      markers.add(Marker(
-        markerId: MarkerId(markerPosition.toString()),
-        position: markerPosition,
-        infoWindow: InfoWindow(
-          title: 'Really cool place',
-          snippet: '5 Star Rating',
-        ),
-        icon: BitmapDescriptor.defaultMarker,
-      ));
-    });
-  }
-
   void _onMapCreated(GoogleMapController controller) {
     _controller.complete(controller);
   }
@@ -51,22 +62,6 @@ class MapState extends State<Map> {
     setState(() {
       _currentMapType =
           _currentMapType == MapType.normal ? MapType.hybrid : MapType.normal;
-    });
-    var fff = place[1]["location"].split(",");
-    double latitude = double.parse(fff[0]);
-    double longitude = double.parse(fff[1]);
-    LatLng location = new LatLng(latitude, longitude);
-    print(location);
-    setState(() {
-      markers.add(Marker(
-        markerId: MarkerId(markerPosition.toString()),
-        position: location,
-        infoWindow: InfoWindow(
-          title: 'Really cool place',
-          snippet: '5 Star Rating',
-        ),
-        icon: BitmapDescriptor.defaultMarker,
-      ));
     });
   }
 
@@ -79,7 +74,7 @@ class MapState extends State<Map> {
     } on Exception {
       currentLocation = null;
     }
-
+    _center = LatLng(currentLocation.latitude, currentLocation.longitude);
     controller.animateCamera(CameraUpdate.newCameraPosition(
       CameraPosition(
         bearing: 0,
