@@ -99,7 +99,7 @@ class MapState extends State<Map> {
           zoomControlsEnabled: false,
           myLocationButtonEnabled: false,
           zoomGesturesEnabled: true,
-          compassEnabled: true,
+          compassEnabled: false,
         ),
         Container(
           padding: const EdgeInsets.all(16.0),
