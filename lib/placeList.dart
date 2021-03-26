@@ -1,15 +1,9 @@
 import 'package:provider/provider.dart';
-import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
-//import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
-//import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'placeListTab.dart';
-//import 'searchPage/searchBar.dart';
-//import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 
 List favoritePlace = [];
-List routePlace = [];
 List finalPlace = place;
 List data = placeOrSearch;
 int indexPlace;
@@ -52,10 +46,10 @@ class PlaceList extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return new Container(
-                  height: 101.4,
+                  height: 95,
                   child: Row(children: <Widget>[
                     Container(
-                      width: MediaQuery.of(context).size.width - 80,
+                      width: MediaQuery.of(context).size.width - 45,
                       child: TextButton(
                         onPressed: () {
                           indexPlace = place.indexOf(placeOrSearch[index]);
@@ -82,10 +76,11 @@ class PlaceList extends StatelessWidget {
                                   SizedBox(width: 10),
                                   Container(
                                     width:
-                                        MediaQuery.of(context).size.width - 176,
+                                        MediaQuery.of(context).size.width - 141,
                                     child: Text(
                                       placeOrSearch[index]["name"],
                                       softWrap: true,
+                                      overflow: TextOverflow.clip,
                                       textAlign: TextAlign.left,
                                       style: new TextStyle(
                                         fontSize: 15.0,
@@ -109,60 +104,38 @@ class PlaceList extends StatelessWidget {
                     Stack(children: <Widget>[
                       Align(
                         alignment: Alignment.centerRight,
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              width: 25,
-                              height: 70,
-                              child: IconButton(
-                                onPressed: () {
-                                  context
-                                      .read<FavoritePlace>()
-                                      .changeFavoritePlace(
-                                          placeOrSearch, index);
-                                  indexPlace =
-                                      place.indexOf(placeOrSearch[index]);
-                                  onAddMarker(indexPlace);
-                                },
-                                icon: Icon(
-                                    context
-                                                .watch<FavoritePlace>()
-                                                .getData
-                                                .indexOf(
-                                                    placeOrSearch[index]) !=
-                                            -1
-                                        ? Icons.star_outlined
-                                        : Icons.star_outline_sharp,
-                                    color: Colors.amber,
-                                    size: 35),
+                        child: Container(
+                          width: 25,
+                          height: 70,
+                          child: Center(
+                            child: IconButton(
+                              padding: new EdgeInsets.all(0.0),
+                              onPressed: () {
+                                context
+                                    .read<FavoritePlace>()
+                                    .changeFavoritePlace(placeOrSearch, index);
+                                indexPlace =
+                                    place.indexOf(placeOrSearch[index]);
+                                onAddMarker(indexPlace);
+                              },
+                              icon: Icon(
+                                context
+                                            .watch<FavoritePlace>()
+                                            .getData
+                                            .indexOf(placeOrSearch[index]) !=
+                                        -1
+                                    ? Icons.star_outlined
+                                    : Icons.star_outline_sharp,
+                                color: Colors.amber,
+                                size: 40,
                               ),
                             ),
-                            SizedBox(width: 10),
-                            Container(
-                              width: 25,
-                              child: Center(
-                                child: IconButton(
-                                  onPressed: () {
-                                    context
-                                        .read<FavoritePlace>()
-                                        .changeRoutePlace(placeOrSearch, index);
-                                  },
-                                  icon: Icon(CustomIcons.route,
-                                      size: 25,
-                                      color: context
-                                                  .watch<FavoritePlace>()
-                                                  .getData2
-                                                  .indexOf(
-                                                      placeOrSearch[index]) !=
-                                              -1
-                                          ? Colors.blueAccent
-                                          : Colors.black87),
-                                ),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
+                      SizedBox(
+                        width: 10,
+                      )
                     ]),
                   ]));
             },
@@ -185,14 +158,6 @@ class FavoritePlace with ChangeNotifier {
   void refreshFavPlace(favoritePlace) {
     data = favoritePlace;
     print(data);
-    notifyListeners();
-  }
-
-  List get getData2 => routePlace;
-  void changeRoutePlace(placeOrSearch, index) {
-    routePlace.indexOf(placeOrSearch[index]) != -1
-        ? routePlace.remove(placeOrSearch[index])
-        : routePlace.add(placeOrSearch[index]);
     notifyListeners();
   }
 }

@@ -5,10 +5,8 @@ import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/data.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
-import 'package:welcome_to_mari_el/routePage/route.dart';
 import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
-import 'package:welcome_to_mari_el/settingsPage/settings.dart';
 import 'dart:io';
 import 'placeList.dart';
 
@@ -53,8 +51,6 @@ class MyApp extends StatelessWidget {
           '/': (context) => HomePage(),
           '/search': (context) => SearchList(),
           '/favorite': (context) => FavoritePage(),
-          '/settings': (context) => SettingsPage(),
-          '/route': (context) => NavigationPage(),
           '/place': (context) => PlacePage(),
         },
       ),
@@ -73,15 +69,13 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 2,
       child: Scaffold(
         body: TabBarView(
           physics: NeverScrollableScrollPhysics(),
           children: [
             Map(),
             FavoritePage(),
-            NavigationPage(),
-            SettingsPage(),
           ],
         ),
         bottomNavigationBar: TabBar(
@@ -97,18 +91,6 @@ class HomePageState extends State<HomePage> {
               icon: Icon(
                 CustomIcons.star_empty,
                 size: 27,
-                color: Colors.white,
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                CustomIcons.route,
-                color: Colors.white,
-              ),
-            ),
-            Tab(
-              icon: Icon(
-                CustomIcons.cog,
                 color: Colors.white,
               ),
             ),

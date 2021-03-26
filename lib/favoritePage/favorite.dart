@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
-import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
-import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 
@@ -84,10 +82,10 @@ class FavoritePageState extends State<FavoritePage> {
           ),
           itemBuilder: (context, index) {
             return new Container(
-                height: 101.4,
+                height: 95,
                 child: Row(children: <Widget>[
                   Container(
-                    width: MediaQuery.of(context).size.width - 80,
+                    width: MediaQuery.of(context).size.width - 45,
                     child: TextButton(
                       onPressed: () {
                         indexPlace = place.indexOf(favOrSearch[index]);
@@ -113,7 +111,7 @@ class FavoritePageState extends State<FavoritePage> {
                                 SizedBox(width: 10),
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width - 176,
+                                      MediaQuery.of(context).size.width - 141,
                                   child: Text(
                                     favOrSearch[index]["name"],
                                     softWrap: true,
@@ -158,26 +156,6 @@ class FavoritePageState extends State<FavoritePage> {
                             ),
                           ),
                           SizedBox(width: 10),
-                          Container(
-                            width: 25,
-                            child: Center(
-                              child: IconButton(
-                                onPressed: () {
-                                  indexPlace =
-                                      place.indexOf(favOrSearch[index]);
-                                  changeRoutingPlace(place, indexPlace);
-                                  setState(() {});
-                                },
-                                icon: Icon(CustomIcons.route,
-                                    size: 25,
-                                    color: routePlace
-                                                .indexOf(favOrSearch[index]) !=
-                                            -1
-                                        ? Colors.blueAccent
-                                        : Colors.black87),
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                     ),

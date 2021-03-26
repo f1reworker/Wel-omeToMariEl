@@ -1,48 +1,79 @@
 import 'dart:async';
-//import 'package:geocoding/geocoding.dart';
-//import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-//import 'package:geolocator/geolocator.dart';
-//import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
-//import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/mainPage/navigationButton.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
-//import 'dart:math' show cos, sqrt, asin;
-//import 'package:welcome_to_mari_el/data.dart';
 import 'package:location/location.dart';
+import 'package:welcome_to_mari_el/main.dart';
 
 LatLng _center = LatLng(56.6388, 47.8908);
 final Set<Marker> markers = {};
-
 void onAddMarker(indexPlace) {
   double latitude = double.parse(place[indexPlace]["location"].split(",")[0]);
   double longitude = double.parse(place[indexPlace]["location"].split(",")[1]);
   LatLng location = new LatLng(latitude, longitude);
+  BitmapDescriptor colorMarker;
+  switch (place[indexPlace]["id"].split("")[1]) {
+    case "9":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure);
+      break;
+    case "1":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue);
+      break;
+    case "2":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan);
+      break;
+    case "3":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen);
+      break;
+    case "4":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta);
+      break;
+    case "5":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta);
+      break;
+    case "6":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange);
+      break;
+    case "7":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed);
+      break;
+    case "8":
+      colorMarker =
+          BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow);
+      break;
+  }
   markers.contains(Marker(
     markerId: MarkerId(location.toString()),
     position: location,
     infoWindow: InfoWindow(
       title: place[indexPlace]["name"],
     ),
-    icon: BitmapDescriptor.defaultMarker,
+    icon: colorMarker,
   ))
       ? markers.remove(Marker(
-          markerId: MarkerId(location.toString()),
+          markerId: MarkerId(indexPlace),
           position: location,
           infoWindow: InfoWindow(
             title: place[indexPlace]["name"],
           ),
-          icon: BitmapDescriptor.defaultMarker,
+          icon: colorMarker,
         ))
       : markers.add(Marker(
-          markerId: MarkerId(location.toString()),
+          markerId: MarkerId(indexPlace),
           position: location,
           infoWindow: InfoWindow(
             title: place[indexPlace]["name"],
           ),
-          icon: BitmapDescriptor.defaultMarker,
-        ));
+          icon: colorMarker));
 }
 
 class Map extends StatefulWidget {

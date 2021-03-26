@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import "package:provider/provider.dart";
-import 'package:welcome_to_mari_el/custom_icons.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
-
-void changeRoutingPlace(place, indexPlace) {
-  routePlace.indexOf(place[indexPlace]) != -1
-      ? routePlace.remove(place[indexPlace])
-      : routePlace.add(place[indexPlace]);
-}
 
 class PlacePage extends StatefulWidget {
   PlacePage({Key key}) : super(key: key);
@@ -56,16 +49,6 @@ class _PlacePageState extends State<PlacePage> {
               iconSize: 35,
               color: Colors.amber,
             ),
-            new IconButton(
-                onPressed: () {
-                  changeRoutingPlace(place, indexPlace);
-                  setState(() {});
-                },
-                icon: Icon(CustomIcons.route),
-                iconSize: 25,
-                color: routePlace.indexOf(place[indexPlace]) != -1
-                    ? Colors.blueAccent
-                    : Colors.white)
           ],
         ),
         body: ListView(

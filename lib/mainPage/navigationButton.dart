@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-const MyRed = Color(0xFFFF6860);
+import 'package:welcome_to_mari_el/main.dart';
 
 class SearchButton extends StatelessWidget {
   @override
