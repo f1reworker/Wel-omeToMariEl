@@ -82,7 +82,7 @@ class FavoritePageState extends State<FavoritePage> {
           ),
           itemBuilder: (context, index) {
             return new Container(
-                height: 95,
+                height: 101.4,
                 child: Row(children: <Widget>[
                   Container(
                     width: MediaQuery.of(context).size.width - 45,

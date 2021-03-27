@@ -32,14 +32,18 @@ dependencies:
   cupertino_icons: ^1.0.0
   google_maps_flutter: ^1.1.1  
   location: ^3.2.4
-  geolocator: ^5.3.1
   provider: ^4.3.3
-  geocoding: ^1.0.5
-  flutter_polyline_points: ^0.2.4
+  shared_preferences: ^2.0.5
+  flutter_launcher_icons: ^0.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+#flutter_icons: 
+#  android: "launcher_icon"
+#  ios: true
+#  image_path: ""
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -58,6 +62,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+#    - assets/icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

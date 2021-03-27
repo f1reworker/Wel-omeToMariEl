@@ -52,7 +52,7 @@ void onAddMarker(indexPlace) {
       break;
   }
   markers.contains(Marker(
-    markerId: MarkerId(location.toString()),
+    markerId: MarkerId(indexPlace.toString()),
     position: location,
     infoWindow: InfoWindow(
       title: place[indexPlace]["name"],
@@ -60,7 +60,7 @@ void onAddMarker(indexPlace) {
     icon: colorMarker,
   ))
       ? markers.remove(Marker(
-          markerId: MarkerId(indexPlace),
+          markerId: MarkerId(indexPlace.toString()),
           position: location,
           infoWindow: InfoWindow(
             title: place[indexPlace]["name"],
@@ -68,7 +68,7 @@ void onAddMarker(indexPlace) {
           icon: colorMarker,
         ))
       : markers.add(Marker(
-          markerId: MarkerId(indexPlace),
+          markerId: MarkerId(indexPlace.toString()),
           position: location,
           infoWindow: InfoWindow(
             title: place[indexPlace]["name"],
