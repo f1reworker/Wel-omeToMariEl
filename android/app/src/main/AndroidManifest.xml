@@ -10,8 +10,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="Mari.travel"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Mari.Travel"
+        android:icon="@mipmap/launcher_icon">
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyCyA0gC2lsmH8NndQGx802x2eaiFcY1uJI"/>
         <activity

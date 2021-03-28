@@ -4,8 +4,7 @@ import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/data.dart';
-
-const PrimaryColor = Color(0xFFFFFEFC);
+import 'package:welcome_to_mari_el/main.dart';
 
 class SearchList extends StatefulWidget {
   @override

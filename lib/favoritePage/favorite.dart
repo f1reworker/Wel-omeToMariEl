@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
-import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
+import 'package:welcome_to_mari_el/main.dart';
 
 class FavoritePage extends StatefulWidget {
   @override
@@ -61,6 +61,15 @@ class FavoritePageState extends State<FavoritePage> {
     duplicateItems.addAll(_searchPlace);
     favOrSearch = duplicateItems;
     setState(() {});
+  }
+
+  void deleteFavoritePlace(favoritePlace, index) {
+    favoritePlace.remove(favOrSearch[index]);
+    if (search) {
+      setState(() {
+        favOrSearch.removeAt(place.indexOf(placeOrSearch[index]));
+      });
+    }
   }
 
   @override
@@ -145,10 +154,10 @@ class FavoritePageState extends State<FavoritePage> {
                             height: 70,
                             child: IconButton(
                               onPressed: () {
-                                deleteFavoritePlace(favoritePlace, index);
-                                setState(() {});
                                 indexPlace =
                                     place.indexOf(placeOrSearch[index]);
+                                deleteFavoritePlace(favoritePlace, index);
+                                setState(() {});
                                 onAddMarker(indexPlace);
                               },
                               icon: Icon(Icons.star_outlined,
@@ -166,8 +175,4 @@ class FavoritePageState extends State<FavoritePage> {
       ),
     );
   }
-}
-
-void deleteFavoritePlace(favoritePlace, index) {
-  favoritePlace.remove(favOrSearch[index]);
 }
