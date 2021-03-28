@@ -2,6 +2,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'placeListTab.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 List favoritePlace = [];
 List finalPlace = place;
@@ -17,6 +18,14 @@ void filterPlace(districtsCheck, searchCheck) {
       placeOrSearch = finalPlace;
     }
   }
+}
+
+void _incrementCounter() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  favoritePlace.indexOf(place[indexPlace]) == -1
+      ? prefs.setInt("listIndex", indexPlace)
+      : prefs.remove(indexPlace.toString());
+  print(prefs.getInt('listIndex'));
 }
 
 List placeOrSearch = finalPlace;
@@ -116,6 +125,7 @@ class PlaceList extends StatelessWidget {
                                     .changeFavoritePlace(placeOrSearch, index);
                                 indexPlace =
                                     place.indexOf(placeOrSearch[index]);
+                                _incrementCounter();
                                 onAddMarker(indexPlace);
                               },
                               icon: Icon(
