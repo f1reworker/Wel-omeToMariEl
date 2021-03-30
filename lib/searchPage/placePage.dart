@@ -4,27 +4,11 @@ import "package:provider/provider.dart";
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
+import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 
-class PlacePage extends StatefulWidget {
-  PlacePage({Key key}) : super(key: key);
-
-  @override
-  _PlacePageState createState() => _PlacePageState();
-}
-
-class _PlacePageState extends State<PlacePage> {
-  void changeFavorite(place, indexPlace) {
-    favoritePlace.indexOf(place[indexPlace]) != -1
-        ? favoritePlace.remove(place[indexPlace])
-        : favoritePlace.add(place[indexPlace]);
-    setState(() {});
-  }
-
+class PlacePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final PageController _controller = new PageController();
-    // ignore: unused_local_variable
-    int _pageIndex = 0;
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<FilteredPlace>(create: (_) => FilteredPlace()),
@@ -39,11 +23,17 @@ class _PlacePageState extends State<PlacePage> {
           actions: <Widget>[
             new IconButton(
               onPressed: () {
-                changeFavorite(place, indexPlace);
-                context.read<FavoritePlace>().refreshFavPlace(favoritePlace);
-                MapState().onAddMarker(indexPlace);
+                context
+                    .read<FavoritePlace>()
+                    .changeFavoritePlace(favoritePlace, indexPlace);
+                onAddMarker(indexPlace);
+                saveFavoritePlace(indexPlace);
               },
-              icon: favoritePlace.indexOf(place[indexPlace]) != -1
+              icon: context
+                          .watch<FavoritePlace>()
+                          .getData
+                          .indexOf(place[indexPlace]) !=
+                      -1
                   ? Icon(Icons.star_outlined)
                   : Icon(Icons.star_outline_sharp),
               iconSize: 35,
@@ -84,22 +74,7 @@ class _PlacePageState extends State<PlacePage> {
               Container(
                   height: (MediaQuery.of(context).size.width - 10) * 3 / 4,
                   width: MediaQuery.of(context).size.width - 10,
-                  child: PageView.builder(
-                      controller: _controller,
-                      onPageChanged: (index) {
-                        setState(() => _pageIndex = index);
-                      },
-                      itemCount: place[indexPlace]["photo"].length - 1,
-                      itemBuilder: (BuildContext context, int position) {
-                        return Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: NetworkImage(place[indexPlace]
-                                                ["photo"]
-                                            .elementAt(position + 1))))));
-                      })),
+                  child: PhotoGalery()),
               SizedBox(
                 height: 10,
               ),
@@ -129,5 +104,36 @@ class _PlacePageState extends State<PlacePage> {
         ),
       ),
     );
+  }
+}
+
+class PhotoGalery extends StatefulWidget {
+  PhotoGalery({Key key}) : super(key: key);
+
+  @override
+  _PhotoGaleryState createState() => _PhotoGaleryState();
+}
+
+class _PhotoGaleryState extends State<PhotoGalery> {
+  final PageController _controller = new PageController();
+  // ignore: unused_field
+  int _pageIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return PageView.builder(
+        controller: _controller,
+        onPageChanged: (index) {
+          setState(() => _pageIndex = index);
+        },
+        itemCount: place[indexPlace]["photo"].length - 1,
+        itemBuilder: (BuildContext context, int position) {
+          return Align(
+              alignment: Alignment.topLeft,
+              child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(place[indexPlace]["photo"]
+                              .elementAt(position + 1))))));
+        });
   }
 }

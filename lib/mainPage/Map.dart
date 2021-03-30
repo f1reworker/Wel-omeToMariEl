@@ -10,29 +10,13 @@ import 'package:welcome_to_mari_el/main.dart';
 LatLng _center = LatLng(56.6388, 47.8908);
 final Set<Marker> markers = {};
 
-class Map extends StatefulWidget {
-  @override
-  MapState createState() => MapState();
-}
-
-class MapState extends State<Map> {
-  void initState() {
-    super.initState();
-  }
-
-  Completer<GoogleMapController> _controller = Completer();
-
-  MapType _currentMapType = MapType.normal;
-  void _onMapCreated(GoogleMapController controller) {
-    _controller.complete(controller);
-  }
-
-  void onAddMarker(indexPlace) {
-    double latitude = double.parse(place[indexPlace]["location"].split(",")[0]);
-    double longitude =
-        double.parse(place[indexPlace]["location"].split(",")[1]);
-    LatLng location = LatLng(latitude, longitude);
-    BitmapDescriptor colorMarker;
+void onAddMarker(indexPlace) {
+  // double latitude = double.parse(place[indexPlace]["location"].split(",")[0]);
+  // double longitude =
+  //     double.parse(place[indexPlace]["location"].split(",")[1]);
+  // LatLng location = LatLng(latitude, longitude);
+  BitmapDescriptor colorMarker;
+  void colorize(indexPlace) {
     switch (place[indexPlace]["id"].split("")[1]) {
       case "9":
         colorMarker =
@@ -71,23 +55,61 @@ class MapState extends State<Map> {
             BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueYellow);
         break;
     }
-    favoritePlace.contains(place[indexPlace])
-        ? markers.add(Marker(
-            markerId: MarkerId(indexPlace.toString()),
-            position: location,
-            infoWindow: InfoWindow(
-              title: place[indexPlace]["name"],
-            ),
-            icon: colorMarker,
-          ))
-        : markers.remove(Marker(
-            markerId: MarkerId(indexPlace.toString()),
-            position: location,
-            infoWindow: InfoWindow(
-              title: place[indexPlace]["name"],
-            ),
-            icon: colorMarker));
   }
+
+  markers.clear();
+  for (int i = 0; i < prefs.getStringList('listIndex').length; i++) {
+    colorize(int.parse(prefs.getStringList('listIndex')[i]));
+    LatLng location = LatLng(
+        double.parse(place[int.parse(prefs.getStringList('listIndex')[i])]
+                ["location"]
+            .split(",")[0]),
+        double.parse(place[int.parse(prefs.getStringList('listIndex')[i])]
+                ["location"]
+            .split(",")[1]));
+    markers.add(Marker(
+      markerId: MarkerId(prefs.getStringList('listIndex')[i]),
+      position: location,
+      infoWindow: InfoWindow(
+        title: place[int.parse(prefs.getStringList('listIndex')[i])]["name"],
+      ),
+      icon: colorMarker,
+    ));
+  }
+}
+
+class Map extends StatefulWidget {
+  @override
+  MapState createState() => MapState();
+}
+
+class MapState extends State<Map> {
+  void initState() {
+    super.initState();
+  }
+
+  Completer<GoogleMapController> _controller = Completer();
+
+  MapType _currentMapType = MapType.normal;
+  void _onMapCreated(GoogleMapController controller) {
+    _controller.complete(controller);
+  }
+  // favoritePlace.contains(place[indexPlace])
+  //     ? markers.add(Marker(
+  //         markerId: MarkerId(indexPlace.toString()),
+  //         position: location,
+  //         infoWindow: InfoWindow(
+  //           title: place[indexPlace]["name"],
+  //         ),
+  //         icon: colorMarker,
+  //       ))
+  //     : markers.remove(Marker(
+  //         markerId: MarkerId(indexPlace.toString()),
+  //         position: location,
+  //         infoWindow: InfoWindow(
+  //           title: place[indexPlace]["name"],
+  //         ),
+  //       ));
 
   void _onMapTypeButtonPressed() {
     setState(() {

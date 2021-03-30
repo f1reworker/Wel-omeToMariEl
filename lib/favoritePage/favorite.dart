@@ -76,12 +76,17 @@ class FavoritePageState extends State<FavoritePage> {
   }
 
   void deleteFavoritePlace(favoritePlace, index) {
-    favoritePlace.remove(favOrSearch[index]);
+    indexPlace = place.indexOf(favOrSearch[index]);
+    favoritePlace.remove(place[indexPlace]);
     if (search) {
       setState(() {
         favOrSearch.removeAt(place.indexOf(placeOrSearch[index]));
       });
     }
+    dupFav.remove(indexPlace.toString());
+    prefs.setStringList('listIndex', dupFav);
+    print(prefs.getStringList('listIndex'));
+    onAddMarker(indexPlace);
   }
 
   @override
@@ -166,11 +171,8 @@ class FavoritePageState extends State<FavoritePage> {
                             height: 70,
                             child: IconButton(
                               onPressed: () {
-                                indexPlace =
-                                    place.indexOf(placeOrSearch[index]);
                                 deleteFavoritePlace(favoritePlace, index);
                                 setState(() {});
-                                MapState().onAddMarker(indexPlace);
                               },
                               icon: Icon(Icons.star_outlined,
                                   color: Colors.amber, size: 35),

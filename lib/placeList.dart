@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'placeListTab.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 
-List favoritePlace = [];
 List finalPlace = place;
 List data = placeOrSearch;
 int indexPlace;
@@ -29,6 +29,7 @@ void saveFavoritePlace(indexPlace) async {
       : dupFav.remove(indexPlace.toString());
   prefs.setStringList('listIndex', dupFav);
   print(prefs.getStringList('listIndex'));
+  onAddMarker(indexPlace);
 }
 
 List placeOrSearch = finalPlace;
@@ -123,13 +124,13 @@ class PlaceList extends StatelessWidget {
                             child: IconButton(
                               padding: new EdgeInsets.all(0.0),
                               onPressed: () {
-                                context
-                                    .read<FavoritePlace>()
-                                    .changeFavoritePlace(placeOrSearch, index);
                                 indexPlace =
                                     place.indexOf(placeOrSearch[index]);
+                                context
+                                    .read<FavoritePlace>()
+                                    .changeFavoritePlace(
+                                        favoritePlace, indexPlace);
                                 saveFavoritePlace(indexPlace);
-                                MapState().onAddMarker(indexPlace);
                               },
                               icon: Icon(
                                 context
@@ -160,17 +161,11 @@ class PlaceList extends StatelessWidget {
 class FavoritePlace with ChangeNotifier {
   List data = favoritePlace;
   List get getData => data;
-  void changeFavoritePlace(placeOrSearch, index) {
-    favoritePlace.indexOf(placeOrSearch[index]) != -1
-        ? favoritePlace.remove(placeOrSearch[index])
-        : favoritePlace.add(placeOrSearch[index]);
+  void changeFavoritePlace(favoritePlace, indexPlace) {
+    favoritePlace.indexOf(place[indexPlace]) != -1
+        ? favoritePlace.remove(place[indexPlace])
+        : favoritePlace.add(place[indexPlace]);
     data = favoritePlace;
-    notifyListeners();
-  }
-
-  void refreshFavPlace(favoritePlace) {
-    data = favoritePlace;
-    print(data);
     notifyListeners();
   }
 }
