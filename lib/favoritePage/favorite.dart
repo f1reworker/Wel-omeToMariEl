@@ -3,6 +3,7 @@ import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FavoritePage extends StatefulWidget {
   @override
@@ -13,6 +14,17 @@ bool search = false;
 var favOrSearch = favoritePlace;
 
 class FavoritePageState extends State<FavoritePage> {
+  void initState() {
+    super.initState();
+    if (favoritePlace == [] && prefs.getStringList('listIndex') != null) {
+      for (int i = 0; i < prefs.getStringList('listIndex').length; i++) {
+        favoritePlace
+            .add(place[int.parse(prefs.getStringList('listIndex')[i])]);
+      }
+      setState(() {});
+    }
+  }
+
   List duplicateItems = [];
   TextEditingController editingController = TextEditingController();
   Icon _searchIcon = search ? new Icon(Icons.close) : new Icon(Icons.search);
@@ -158,7 +170,7 @@ class FavoritePageState extends State<FavoritePage> {
                                     place.indexOf(placeOrSearch[index]);
                                 deleteFavoritePlace(favoritePlace, index);
                                 setState(() {});
-                                onAddMarker(indexPlace);
+                                MapState().onAddMarker(indexPlace);
                               },
                               icon: Icon(Icons.star_outlined,
                                   color: Colors.amber, size: 35),

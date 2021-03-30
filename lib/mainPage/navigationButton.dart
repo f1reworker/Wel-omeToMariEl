@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/main.dart';
+import 'package:welcome_to_mari_el/placeListTab.dart';
 
 class SearchButton extends StatelessWidget {
   @override
@@ -21,6 +22,7 @@ class SearchButton extends StatelessWidget {
           ),
           onPressed: () {
             Navigator.pushNamed(context, '/search');
+            print(place.length);
           },
           child: Row(children: [
             Icon(

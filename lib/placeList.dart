@@ -20,12 +20,15 @@ void filterPlace(districtsCheck, searchCheck) {
   }
 }
 
-void _incrementCounter() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  favoritePlace.indexOf(place[indexPlace]) == -1
-      ? prefs.setInt("listIndex", indexPlace)
-      : prefs.remove(indexPlace.toString());
-  print(prefs.getInt('listIndex'));
+SharedPreferences prefs;
+List<String> dupFav = [];
+void saveFavoritePlace(indexPlace) async {
+  prefs = await SharedPreferences.getInstance();
+  favoritePlace.indexOf(place[indexPlace]) != -1
+      ? dupFav.add(indexPlace.toString())
+      : dupFav.remove(indexPlace.toString());
+  prefs.setStringList('listIndex', dupFav);
+  print(prefs.getStringList('listIndex'));
 }
 
 List placeOrSearch = finalPlace;
@@ -125,8 +128,8 @@ class PlaceList extends StatelessWidget {
                                     .changeFavoritePlace(placeOrSearch, index);
                                 indexPlace =
                                     place.indexOf(placeOrSearch[index]);
-                                _incrementCounter();
-                                onAddMarker(indexPlace);
+                                saveFavoritePlace(indexPlace);
+                                MapState().onAddMarker(indexPlace);
                               },
                               icon: Icon(
                                 context

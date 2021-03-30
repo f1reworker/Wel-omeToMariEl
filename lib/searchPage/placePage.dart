@@ -41,7 +41,7 @@ class _PlacePageState extends State<PlacePage> {
               onPressed: () {
                 changeFavorite(place, indexPlace);
                 context.read<FavoritePlace>().refreshFavPlace(favoritePlace);
-                onAddMarker(indexPlace);
+                MapState().onAddMarker(indexPlace);
               },
               icon: favoritePlace.indexOf(place[indexPlace]) != -1
                   ? Icon(Icons.star_outlined)
