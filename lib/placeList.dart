@@ -2,23 +2,12 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'placeListTab.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 List finalPlace = place;
 List data = placeOrSearch;
 int indexPlace;
-
-void filterPlace(districtsCheck, searchCheck) {
-  finalPlace = [];
-  for (int i = 0; i < place.length; i++) {
-    if (districtsCheck.indexOf(place[i]["id"].split("")[0]) != -1 &&
-        searchCheck.indexOf(place[i]["id"].split("")[1]) != -1) {
-      finalPlace.add(place[i]);
-      placeOrSearch = finalPlace;
-    }
-  }
-}
 
 SharedPreferences prefs;
 List<String> dupFav = [];
@@ -30,6 +19,17 @@ void saveFavoritePlace(indexPlace) async {
   prefs.setStringList('listIndex', dupFav);
   print(prefs.getStringList('listIndex'));
   onAddMarker(indexPlace);
+}
+
+void filterPlace(districtsCheck, searchCheck) {
+  finalPlace = [];
+  for (int i = 0; i < place.length; i++) {
+    if (districtsCheck.indexOf(place[i]["id"].split("")[0]) != -1 &&
+        searchCheck.indexOf(place[i]["id"].split("")[1]) != -1) {
+      finalPlace.add(place[i]);
+      placeOrSearch = finalPlace;
+    }
+  }
 }
 
 List placeOrSearch = finalPlace;

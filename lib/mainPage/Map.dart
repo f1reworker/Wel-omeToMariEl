@@ -11,10 +11,6 @@ LatLng _center = LatLng(56.6388, 47.8908);
 final Set<Marker> markers = {};
 
 void onAddMarker(indexPlace) {
-  // double latitude = double.parse(place[indexPlace]["location"].split(",")[0]);
-  // double longitude =
-  //     double.parse(place[indexPlace]["location"].split(",")[1]);
-  // LatLng location = LatLng(latitude, longitude);
   BitmapDescriptor colorMarker;
   void colorize(indexPlace) {
     switch (place[indexPlace]["id"].split("")[1]) {
@@ -86,6 +82,8 @@ class Map extends StatefulWidget {
 class MapState extends State<Map> {
   void initState() {
     super.initState();
+    const oneSecond = const Duration(seconds: 3);
+    new Timer.periodic(oneSecond, (Timer t) => setState(() {}));
   }
 
   Completer<GoogleMapController> _controller = Completer();
@@ -94,22 +92,6 @@ class MapState extends State<Map> {
   void _onMapCreated(GoogleMapController controller) {
     _controller.complete(controller);
   }
-  // favoritePlace.contains(place[indexPlace])
-  //     ? markers.add(Marker(
-  //         markerId: MarkerId(indexPlace.toString()),
-  //         position: location,
-  //         infoWindow: InfoWindow(
-  //           title: place[indexPlace]["name"],
-  //         ),
-  //         icon: colorMarker,
-  //       ))
-  //     : markers.remove(Marker(
-  //         markerId: MarkerId(indexPlace.toString()),
-  //         position: location,
-  //         infoWindow: InfoWindow(
-  //           title: place[indexPlace]["name"],
-  //         ),
-  //       ));
 
   void _onMapTypeButtonPressed() {
     setState(() {

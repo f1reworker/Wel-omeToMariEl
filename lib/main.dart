@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
@@ -7,7 +8,7 @@ import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/searchPage/placePage.dart';
 import 'package:welcome_to_mari_el/searchPage/searchBar.dart';
-import 'dart:io';
+
 import 'placeList.dart';
 
 const PrimaryColor = Color(0xFFFFFEFC);
@@ -66,6 +67,11 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  void initState() {
+    super.initState();
+    FavoritePageState().initPrefs();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

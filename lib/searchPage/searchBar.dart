@@ -1,10 +1,11 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
-import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
-import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:provider/provider.dart';
 import 'package:welcome_to_mari_el/data.dart';
 import 'package:welcome_to_mari_el/main.dart';
+import 'package:welcome_to_mari_el/placeList.dart';
+import 'package:welcome_to_mari_el/searchPage/DistrictsFilter.dart';
+import 'package:welcome_to_mari_el/searchPage/searchFilter.dart';
 
 class SearchList extends StatefulWidget {
   @override
@@ -14,6 +15,12 @@ class SearchList extends StatefulWidget {
 bool search = false;
 
 class SearchListState extends State<SearchList> {
+  void initState() {
+    super.initState();
+    const oneSecond = const Duration(seconds: 3);
+    new Timer.periodic(oneSecond, (Timer t) => setState(() {}));
+  }
+
   TextEditingController editingController = TextEditingController();
   Icon _searchIcon = search ? new Icon(Icons.close) : new Icon(Icons.search);
   Widget _appBarTitle = new Text('Поиск...');
@@ -66,7 +73,6 @@ class SearchListState extends State<SearchList> {
       providers: [
         ChangeNotifierProvider<FilteredPlace>(create: (_) => FilteredPlace()),
         ChangeNotifierProvider<DistrictsFil>(create: (_) => DistrictsFil()),
-        //ChangeNotifierProvider<Filter>(create: (_) => Filter()),
       ],
       child: Scaffold(
         appBar:

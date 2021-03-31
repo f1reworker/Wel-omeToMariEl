@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:welcome_to_mari_el/placeList.dart';
 import 'package:welcome_to_mari_el/placeListTab.dart';
 import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'package:welcome_to_mari_el/main.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async';
 
 List favoritePlace = [];
 bool search = false;
@@ -17,12 +18,8 @@ class FavoritePage extends StatefulWidget {
 class FavoritePageState extends State<FavoritePage> {
   void initState() {
     super.initState();
-    if (favoritePlace == [] && prefs.getStringList('listIndex') != null) {
-      for (int i = 0; i < prefs.getStringList('listIndex').length; i++) {
-        favoritePlace
-            .add(place[int.parse(prefs.getStringList('listIndex')[i])]);
-      }
-    }
+    const oneSecond = const Duration(seconds: 3);
+    new Timer.periodic(oneSecond, (Timer t) => setState(() {}));
   }
 
   List duplicateItems = [];
@@ -54,6 +51,20 @@ class FavoritePageState extends State<FavoritePage> {
         this._searchIcon = new Icon(Icons.search);
       }
     });
+  }
+
+  void initPrefs() async {
+    if (prefs == null) prefs = await SharedPreferences.getInstance();
+    if (prefs.getStringList('listIndex') != null) {
+      final favoritPlaces = prefs.getStringList('listIndex');
+      if (favOrSearch.length == 0) {
+        for (int i = 0; i < favoritPlaces.length; i++) {
+          favOrSearch.add(place[int.parse(favoritPlaces[i])]);
+          onAddMarker(int.parse(favoritPlaces[i]));
+        }
+        setState(() {});
+      }
+    }
   }
 
   void filterSearchResults(value) {
