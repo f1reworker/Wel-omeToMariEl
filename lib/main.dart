@@ -69,6 +69,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
+    getLocation();
     FavoritePageState().initPrefs();
   }
 

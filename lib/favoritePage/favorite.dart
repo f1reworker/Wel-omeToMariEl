@@ -119,7 +119,7 @@ class FavoritePageState extends State<FavoritePage> {
           ),
           itemBuilder: (context, index) {
             return new Container(
-                height: 101.4,
+                height: 122.4,
                 child: Row(children: <Widget>[
                   Container(
                     width: MediaQuery.of(context).size.width - 45,
@@ -162,6 +162,15 @@ class FavoritePageState extends State<FavoritePage> {
                             ),
                             Text(
                               favOrSearch[index]["district"],
+                              textAlign: TextAlign.left,
+                              style: new TextStyle(
+                                color: Colors.black54,
+                              ),
+                            ),
+                            Text(
+                              "Расстояние: " +
+                                  calculateDistance(index).toStringAsFixed(3) +
+                                  " км",
                               textAlign: TextAlign.left,
                               style: new TextStyle(
                                 color: Colors.black54,

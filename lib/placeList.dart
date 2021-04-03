@@ -4,11 +4,12 @@ import 'package:welcome_to_mari_el/mainPage/Map.dart';
 import 'placeListTab.dart';
 import 'package:welcome_to_mari_el/favoritePage/favorite.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:math';
+import 'package:location/location.dart';
 
 List finalPlace = place;
 List data = placeOrSearch;
 int indexPlace;
-
 SharedPreferences prefs;
 List<String> dupFav = [];
 void saveFavoritePlace(indexPlace) async {
@@ -30,6 +31,27 @@ void filterPlace(districtsCheck, searchCheck) {
       placeOrSearch = finalPlace;
     }
   }
+}
+
+LocationData _currentPosition;
+Future getLocation() async {
+  Location location = new Location();
+  _currentPosition = await location.getLocation();
+}
+
+double calculateDistance(index) {
+  var lat1, lat2, lon1, lon2;
+  getLocation();
+  lat2 = _currentPosition.latitude;
+  lon2 = _currentPosition.longitude;
+  lat1 = double.parse(placeOrSearch[index]["location"].split(",")[0]);
+  lon1 = double.parse(placeOrSearch[index]["location"].split(",")[1]);
+  var p = 0.017453292519943295;
+  var c = cos;
+  var a = 0.5 -
+      c((lat2 - lat1) * p) / 2 +
+      c(lat1 * p) * c(lat2 * p) * (1 - c((lon2 - lon1) * p)) / 2;
+  return 12742 * asin(sqrt(a));
 }
 
 List placeOrSearch = finalPlace;
@@ -59,7 +81,7 @@ class PlaceList extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return new Container(
-                  height: 101.4,
+                  height: 122.4,
                   child: Row(children: <Widget>[
                     Container(
                       width: MediaQuery.of(context).size.width - 45,
@@ -104,6 +126,16 @@ class PlaceList extends StatelessWidget {
                               ),
                               Text(
                                 placeOrSearch[index]["district"],
+                                textAlign: TextAlign.left,
+                                style: new TextStyle(
+                                  color: Colors.black54,
+                                ),
+                              ),
+                              Text(
+                                "Расстояние: " +
+                                    calculateDistance(index)
+                                        .toStringAsFixed(3) +
+                                    " км",
                                 textAlign: TextAlign.left,
                                 style: new TextStyle(
                                   color: Colors.black54,

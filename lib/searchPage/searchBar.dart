@@ -17,6 +17,7 @@ bool search = false;
 class SearchListState extends State<SearchList> {
   void initState() {
     super.initState();
+    getLocation();
     const oneSecond = const Duration(seconds: 3);
     new Timer.periodic(oneSecond, (Timer t) => setState(() {}));
   }
@@ -89,6 +90,7 @@ class SearchListState extends State<SearchList> {
           child: Column(children: <Widget>[
             DistrictsFilter(),
             SearchFilter(),
+            //DropDownList(),
             Flexible(
               child: PlaceList(),
             ),
@@ -96,6 +98,49 @@ class SearchListState extends State<SearchList> {
         ),
       ),
     );
+  }
+}
+
+class DropDownList extends StatefulWidget {
+  @override
+  _DropDownListState createState() => _DropDownListState();
+}
+
+List<String> users = ["по умолчанию", "по расстоянию"];
+String selectedUser = users[0];
+
+class _DropDownListState extends State<DropDownList> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        height: 40,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(color: PrimaryColor),
+        margin: EdgeInsets.all(3),
+        child: Center(
+          child: Row(children: <Widget>[
+            Text("Сортировка: ",
+                style: new TextStyle(fontSize: 15.0, color: Colors.black)),
+            DropdownButton<String>(
+              value: selectedUser,
+              // ignore: non_constant_identifier_names
+              onChanged: (String Value) {
+                setState(() {
+                  selectedUser = Value;
+                  SearchListState().initState();
+                });
+              },
+              items: users.map((String user) {
+                return DropdownMenuItem<String>(
+                  value: user,
+                  child: Text(user,
+                      style:
+                          new TextStyle(fontSize: 15.0, color: Colors.black)),
+                );
+              }).toList(),
+            ),
+          ]),
+        ));
   }
 }
 
