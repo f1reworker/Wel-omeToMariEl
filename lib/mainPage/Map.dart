@@ -70,6 +70,7 @@ void onAddMarker(indexPlace) {
         title: place[int.parse(prefs.getStringList('listIndex')[i])]["name"],
       ),
       icon: colorMarker,
+      //onTap: MapState().showAlertDialogMarker(),
     ));
   }
 }
@@ -85,6 +86,91 @@ class MapState extends State<Map> {
     const oneSecond = const Duration(seconds: 3);
     new Timer.periodic(oneSecond, (Timer t) => setState(() {}));
   }
+
+  // showAlertDialogMarker() {
+  //   print("object");
+  //   AlertDialog alert = AlertDialog(
+  //       shape: RoundedRectangleBorder(
+  //           borderRadius: BorderRadius.all(Radius.circular(30))),
+  //       title: Text("Выберите районы:"),
+  //       content: TextButton(
+  //         onPressed: () {},
+  //         child: Container(
+  //             height: 122.4,
+  //             width: MediaQuery.of(context).size.width - 100,
+  //             child: Row(children: <Widget>[
+  //               Container(
+  //                 child: Text("marker"),
+  //                 //   child: TextButton(
+  //                 //     onPressed: () {
+  //                 //       indexPlace = place.indexOf(favOrSearch[index]);
+  //                 //       Navigator.pushNamed(context, '/place');
+  //                 //     },
+  //                 //     style: ElevatedButton.styleFrom(
+  //                 //         primary: Colors.white, onPrimary: Colors.black),
+  //                 //     child: Row(
+  //                 //       children: <Widget>[
+  //                 //         Align(
+  //                 //           alignment: Alignment.centerLeft,
+  //                 //           child: Container(
+  //                 //             width: 70,
+  //                 //             decoration: BoxDecoration(shape: BoxShape.circle),
+  //                 //             child:
+  //                 //                 Image.network(favOrSearch[index]["photo"][0]),
+  //                 //           ),
+  //                 //         ),
+  //                 //         Column(children: <Widget>[
+  //                 //           Row(
+  //                 //             mainAxisAlignment: MainAxisAlignment.start,
+  //                 //             children: <Widget>[
+  //                 //               SizedBox(width: 10),
+  //                 //               Container(
+  //                 //                 width:
+  //                 //                     MediaQuery.of(context).size.width - 141,
+  //                 //                 child: Text(
+  //                 //                   favOrSearch[index]["name"],
+  //                 //                   softWrap: true,
+  //                 //                   textAlign: TextAlign.left,
+  //                 //                   style: new TextStyle(
+  //                 //                     fontSize: 15.0,
+  //                 //                   ),
+  //                 //                 ),
+  //                 //               ),
+  //                 //             ],
+  //                 //           ),
+  //                 //           Text(
+  //                 //             favOrSearch[index]["district"],
+  //                 //             textAlign: TextAlign.left,
+  //                 //             style: new TextStyle(
+  //                 //               color: Colors.black54,
+  //                 //             ),
+  //                 //           ),
+  //                 //           Text(
+  //                 //             "Расстояние: " +
+  //                 //                 calculateDistance(
+  //                 //                         place.indexOf())
+  //                 //                     .toStringAsFixed(2) +
+  //                 //                 " км",
+  //                 //             textAlign: TextAlign.left,
+  //                 //             style: new TextStyle(
+  //                 //               color: Colors.black54,
+  //                 //             ),
+  //                 //           ),
+  //                 //         ]),
+  //                 //       ],
+  //                 //     ),
+  //                 //   ),
+  //               ),
+  //             ])),
+  //       ));
+
+  //   showDialog(
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return alert;
+  //     },
+  //   );
+  // }
 
   Completer<GoogleMapController> _controller = Completer();
 

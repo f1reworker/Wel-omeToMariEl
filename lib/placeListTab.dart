@@ -261,6 +261,7 @@ var yuryZamok = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Гостиница В Замке Шереметева",
+  "dist": "",
 };
 
 var yuryElgas = {
@@ -276,6 +277,7 @@ var yuryElgas = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Гостиница «Элгас»",
+  "dist": "",
 };
 
 var hosteLPrichal = {
@@ -292,6 +294,7 @@ var hosteLPrichal = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Хостел 'У ПРИЧАЛА'",
+  "dist": "",
 };
 
 var cafePrichal = {
@@ -307,6 +310,7 @@ var cafePrichal = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Кафе 'Причал'",
+  "dist": "",
 };
 var cafeVechernee = {
   "district": "Юринский район",
@@ -321,6 +325,7 @@ var cafeVechernee = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Кафе 'Вечернее'",
+  "dist": "",
 };
 
 var mikhailoHram = {
@@ -338,6 +343,7 @@ var mikhailoHram = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Михайло-Архангельский храм",
+  "dist": "",
 };
 
 var zamokWeremeteva = {
@@ -356,6 +362,7 @@ var zamokWeremeteva = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Замок Шереметева",
+  "dist": "",
 };
 
 var sklepWeremeteva = {
@@ -372,6 +379,7 @@ var sklepWeremeteva = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Склеп Петра Шереметева",
+  "dist": "",
 };
 
 var vetluga = {
@@ -386,7 +394,8 @@ var vetluga = {
   "id": "1309",
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
-  "name": "Ветлуга"
+  "name": "Ветлуга",
+  "dist": "",
 };
 
 var lyunda = {
@@ -402,6 +411,7 @@ var lyunda = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Люнда",
+  "dist": "",
 };
 
 var yuronga = {
@@ -417,6 +427,7 @@ var yuronga = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Юронга",
+  "dist": "",
 };
 
 var dorogucha = {
@@ -433,6 +444,7 @@ var dorogucha = {
   "transport":
       " Ближайшая железнодорожная станция расположена в 80 километрах к юго-востоку от посёлка, в Чебоксарах. \n В Юрино можно добраться только автомобильным транспортом из Йошкар-Олы, Чебоксар, Казани, Нижнего Новгорода.Добраться из Москвы до Юрино можно через Чебоксары (автобусом) или через Нижний Новгород (на личном транспорте).",
   "name": "Дорогуча",
+  "dist": "",
 };
 var zakaznik = {
   "district": "Мари-Турекский район",
@@ -448,7 +460,7 @@ var zakaznik = {
   "id": "2314",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var hram = {
@@ -465,7 +477,7 @@ var hram = {
   "id": "2415",
   "transport":
       " Время пути - 4 ч.19 мин. Доехать можно по трассе Р-172 «Йошкар-Ола-Уржум».",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var gostinica = {
@@ -482,7 +494,7 @@ var gostinica = {
   "id": "2816",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var park = {
@@ -499,7 +511,7 @@ var park = {
   "id": "2517",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var cerkov = {
@@ -516,7 +528,7 @@ var cerkov = {
   "id": "2418",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var muzey = {
@@ -533,7 +545,7 @@ var muzey = {
   "id": "2519",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var podvorye = {
@@ -550,7 +562,7 @@ var podvorye = {
   "id": "4820",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 var zare4be = {
   "district": "Сернурский район",
@@ -568,7 +580,7 @@ var zare4be = {
   "id": "4821",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var cafeSemeynoe = {
@@ -584,7 +596,7 @@ var cafeSemeynoe = {
   "id": "4622",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var name = {
@@ -601,7 +613,7 @@ var name = {
   "id": "4623",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var barPodvorye = {
@@ -618,7 +630,7 @@ var barPodvorye = {
   "id": "4624",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var kafeKolos = {
@@ -635,7 +647,7 @@ var kafeKolos = {
   "id": "4625",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var isto4nikMaryan = {
@@ -654,7 +666,7 @@ var isto4nikMaryan = {
   "id": "4526",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var isto4nikYowkar = {
@@ -672,7 +684,7 @@ var isto4nikYowkar = {
   "id": "4527",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var derevn9Koklala = {
@@ -690,7 +702,7 @@ var derevn9Koklala = {
   "id": "4528",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var seloKuknur = {
@@ -707,7 +719,7 @@ var seloKuknur = {
   "id": "4529",
   "transport":
       "Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var vod9na9melnica = {
@@ -725,7 +737,7 @@ var vod9na9melnica = {
   "id": "4530",
   "transport":
       " Добраться можно на автобусе, который ходит по расписанию из города Йошкар-Ола",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaIrovka = {
@@ -741,7 +753,7 @@ var rekaIrovka = {
   ],
   "id": "3331",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var derevn9Olori = {
@@ -757,7 +769,7 @@ var derevn9Olori = {
   ],
   "id": "3332",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaBuy = {
@@ -773,7 +785,7 @@ var rekaBuy = {
   ],
   "id": "3333",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var seloIlet = {
@@ -789,7 +801,7 @@ var seloIlet = {
   ],
   "id": "3434",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var prudAlawayka = {
@@ -805,7 +817,7 @@ var prudAlawayka = {
   ],
   "id": "3335",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var me4etPort9nur = {
@@ -821,7 +833,7 @@ var me4etPort9nur = {
   ],
   "id": "3436",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var memorial = {
@@ -837,7 +849,7 @@ var memorial = {
   ],
   "id": "3437",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var dolinaStudenihRodnikov = {
@@ -855,7 +867,7 @@ var dolinaStudenihRodnikov = {
   "id": "5338",
   "transport":
       " Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var zakaznikKammenayaGora = {
@@ -873,7 +885,7 @@ var zakaznikKammenayaGora = {
   "id": "5339",
   "transport":
       " Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var mariWveycariya = {
@@ -891,7 +903,7 @@ var mariWveycariya = {
   "id": "5840",
   "transport":
       " Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var cafeSuleyman = {
@@ -908,7 +920,7 @@ var cafeSuleyman = {
   "id": "5641",
   "transport":
       " Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var cafeStolovaya = {
@@ -925,7 +937,7 @@ var cafeStolovaya = {
   "id": "5642",
   "transport":
       "Доехать от города Йошкар-Ола до поселка Куженер можно на маршрутном такси, среднее время в пути составляет 1 час.",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaWukwan = {
@@ -941,7 +953,7 @@ var rekaWukwan = {
   ],
   "id": "6343",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaRuyka = {
@@ -957,7 +969,7 @@ var rekaRuyka = {
   ],
   "id": "6344",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaEksey = {
@@ -973,7 +985,7 @@ var rekaEksey = {
   ],
   "id": "6345",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaKavanerka = {
@@ -989,7 +1001,7 @@ var rekaKavanerka = {
   ],
   "id": "6346",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var rekaNurma = {
@@ -1005,7 +1017,7 @@ var rekaNurma = {
   ],
   "id": "6347",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var reka4u4a = {
@@ -1021,7 +1033,7 @@ var reka4u4a = {
   ],
   "id": "6348",
   "transport": "",
-  "latLngTransport": "",
+  "dist": "",
 };
 
 var dubPuga4eva = {
@@ -1038,6 +1050,7 @@ var dubPuga4eva = {
   ],
   "id": "7549",
   "transport": "",
+  "dist": "",
 };
 
 var zeleniyKlu4 = {
@@ -1054,6 +1067,7 @@ var zeleniyKlu4 = {
   ],
   "id": "7550",
   "transport": "",
+  "dist": "",
 };
 
 var ozeroMorskoyGlaz = {
@@ -1071,6 +1085,7 @@ var ozeroMorskoyGlaz = {
   ],
   "id": "7351",
   "transport": "",
+  "dist": "",
 };
 
 var sv9wenniyIsto4nik = {
@@ -1087,6 +1102,7 @@ var sv9wenniyIsto4nik = {
   ],
   "id": "7552",
   "transport": "",
+  "dist": "",
 };
 
 var kompleks4otkara = {
@@ -1106,6 +1122,7 @@ var kompleks4otkara = {
   ],
   "id": "7505",
   "transport": "",
+  "dist": "",
 };
 
 var ozeroYal4ik = {
@@ -1124,6 +1141,7 @@ var ozeroYal4ik = {
   "id": "7306",
   "transport":
       " Расположен в 3 км к северу от центра поселения — села Эмеково, в 24 км по автодорогам к северу от центра Волжска, на озере Яльчик, в национальном парке Марий Чодра.",
+  "dist": "",
 };
 
 var ozeroGluhoe = {
@@ -1142,6 +1160,7 @@ var ozeroGluhoe = {
   "id": "7307",
   "transport":
       " Озеро расположено примерно в 4 км. северо-восточнее поселка Яльчинского Волжского района Республики Марий Эл. Добраться до поселка можно на прямом автобусе из Йошкар-Олы. Через остановку «Помары, поворот» проходит автобус Ижевск – Чебоксары, следующий транзитом по городам Менделеевск, Елабуга, Казань, Зеленодольск, Волжск. Ближайшая ж/д станция «Помары» находится в поселке Приволжском в 12 км. Через нее ежедневно курсирует поезд Йошкар-Ола – Москва. Рядом проходит трасса А295 (Йошкар-Ола – Волжск – Зеленодольск – объездная дорога М7 «Волга» в Казани). Расстояние до Йошкар-Олы составляет 83 км.",
+  "dist": "",
 };
 
 var nacParkMariChodra = {
@@ -1158,6 +1177,7 @@ var nacParkMariChodra = {
   ],
   "id": "7308",
   "transport": "",
+  "dist": "",
 };
 
 var cerkovGuriya = {
@@ -1173,6 +1193,7 @@ var cerkovGuriya = {
   ],
   "id": "7409",
   "transport": "",
+  "dist": "",
 };
 
 var cerkovSolunskogo = {
@@ -1190,6 +1211,7 @@ var cerkovSolunskogo = {
   ],
   "id": "7410",
   "transport": "",
+  "dist": "",
 };
 
 var cerkovPokrova = {
@@ -1206,6 +1228,7 @@ var cerkovPokrova = {
   ],
   "id": "7411",
   "transport": "",
+  "dist": "",
 };
 
 var cerkovTroici = {
@@ -1222,6 +1245,7 @@ var cerkovTroici = {
   ],
   "id": "7412",
   "transport": "",
+  "dist": "",
 };
 
 var cerkovSotnur = {
@@ -1238,6 +1262,7 @@ var cerkovSotnur = {
   ],
   "id": "7413",
   "transport": "",
+  "dist": "",
 };
 
 var chasovn9Pokrova = {
@@ -1254,6 +1279,7 @@ var chasovn9Pokrova = {
   ],
   "id": "7414 ",
   "transport": "",
+  "dist": "",
 };
 
 var sanatoriyKlenovayaGora = {
@@ -1271,6 +1297,7 @@ var sanatoriyKlenovayaGora = {
   ],
   "id": "7815",
   "transport": "",
+  "dist": "",
 };
 
 var solOlimpiec = {
@@ -1286,6 +1313,7 @@ var solOlimpiec = {
   ],
   "id": "7816",
   "transport": "",
+  "dist": "",
 };
 
 var sanatoriyKi4ier = {
@@ -1303,6 +1331,7 @@ var sanatoriyKi4ier = {
   ],
   "id": "7817",
   "transport": "",
+  "dist": "",
 };
 
 var pansionatYal4ik = {
@@ -1320,6 +1349,7 @@ var pansionatYal4ik = {
   ],
   "id": "7818",
   "transport": "",
+  "dist": "",
 };
 
 var rubin = {
@@ -1337,6 +1367,7 @@ var rubin = {
   ],
   "id": "7819",
   "transport": " ",
+  "dist": "",
 };
 
 var bazapolitehnik = {
@@ -1354,6 +1385,7 @@ var bazapolitehnik = {
   ],
   "id": "7820",
   "transport": " ",
+  "dist": "",
 };
 
 var trinTrava = {
@@ -1368,6 +1400,7 @@ var trinTrava = {
   ],
   "id": "7821",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeTulpan = {
@@ -1383,6 +1416,7 @@ var cafeTulpan = {
   ],
   "id": "7622",
   "transport": " ",
+  "dist": "",
 };
 
 var bazaStarayaMelnica = {
@@ -1399,6 +1433,7 @@ var bazaStarayaMelnica = {
   ],
   "id": "8801",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeRus = {
@@ -1413,6 +1448,7 @@ var cafeRus = {
   ],
   "id": "8602",
   "transport": " ",
+  "dist": "",
 };
 
 var suwibar = {
@@ -1427,6 +1463,7 @@ var suwibar = {
   ],
   "id": "8603",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeEnsul = {
@@ -1441,6 +1478,7 @@ var cafeEnsul = {
   ],
   "id": "8604",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeErviy = {
@@ -1455,6 +1493,7 @@ var cafeErviy = {
   ],
   "id": "8605",
   "transport": " ",
+  "dist": "",
 };
 
 var goraKarmanKurik = {
@@ -1471,6 +1510,7 @@ var goraKarmanKurik = {
   ],
   "id": "8306",
   "transport": " ",
+  "dist": "",
 };
 
 var dommuzey = {
@@ -1486,6 +1526,7 @@ var dommuzey = {
   ],
   "id": "8107",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyLiteraturnoetno = {
@@ -1501,6 +1542,7 @@ var muzeyLiteraturnoetno = {
   ],
   "id": "8108",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyKazakova = {
@@ -1516,6 +1558,7 @@ var muzeyKazakova = {
   ],
   "id": "8109",
   "transport": " ",
+  "dist": "",
 };
 
 var lu4inskieOzera = {
@@ -1532,6 +1575,7 @@ var lu4inskieOzera = {
   ],
   "id": "8310",
   "transport": " ",
+  "dist": "",
 };
 
 var domMuzeyChavayna = {
@@ -1549,6 +1593,7 @@ var domMuzeyChavayna = {
   ],
   "id": "8111",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeroKanal = {
@@ -1564,6 +1609,7 @@ var ozeroKanal = {
   ],
   "id": "8312",
   "transport": " ",
+  "dist": "",
 };
 
 var kompleksworunjinskiyy = {
@@ -1582,6 +1628,7 @@ var kompleksworunjinskiyy = {
   ],
   "id": "8513",
   "transport": " ",
+  "dist": "",
 };
 
 var kataygora = {
@@ -1597,6 +1644,7 @@ var kataygora = {
   ],
   "id": "B301",
   "transport": " ",
+  "dist": "",
 };
 
 var lisi4kinoozero = {
@@ -1613,6 +1661,7 @@ var lisi4kinoozero = {
   ],
   "id": "B302",
   "transport": " ",
+  "dist": "",
 };
 
 var mari4odra = {
@@ -1628,6 +1677,7 @@ var mari4odra = {
   ],
   "id": "B303",
   "transport": " ",
+  "dist": "",
 };
 
 var ozerosayver = {
@@ -1643,6 +1693,7 @@ var ozerosayver = {
   ],
   "id": "B304",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeroTair = {
@@ -1659,6 +1710,7 @@ var ozeroTair = {
   ],
   "id": "B305",
   "transport": " ",
+  "dist": "",
 };
 
 var ozero4urkan = {
@@ -1675,6 +1727,7 @@ var ozero4urkan = {
   ],
   "id": "B306",
   "transport": " ",
+  "dist": "",
 };
 
 var ozerowardar = {
@@ -1690,6 +1743,7 @@ var ozerowardar = {
   ],
   "id": "B307",
   "transport": " ",
+  "dist": "",
 };
 
 var serebr9noeozero = {
@@ -1706,6 +1760,7 @@ var serebr9noeozero = {
   ],
   "id": "B308",
   "transport": " ",
+  "dist": "",
 };
 
 var turbazaOzeroKunduwturskoe = {
@@ -1722,6 +1777,7 @@ var turbazaOzeroKunduwturskoe = {
   "id": "9801",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var svyatIsto4nik = {
@@ -1738,6 +1794,7 @@ var svyatIsto4nik = {
   "id": "9402",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var muzeyKraevedSovetskiy = {
@@ -1755,6 +1812,7 @@ var muzeyKraevedSovetskiy = {
   "id": "9103",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var rekaRonga = {
@@ -1771,6 +1829,7 @@ var rekaRonga = {
   "id": "9304",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var cerkovPokrovaPresv9toyBogorodici = {
@@ -1784,6 +1843,7 @@ var cerkovPokrovaPresv9toyBogorodici = {
   "id": "9405",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var kinokafeNeon = {
@@ -1801,6 +1861,7 @@ var kinokafeNeon = {
   "id": "8606",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var ozeroTabawino = {
@@ -1817,6 +1878,7 @@ var ozeroTabawino = {
   "id": "A301",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до Табашино с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var cerkovRojdestvaIonnaPredte4ivOrwanke = {
@@ -1833,6 +1895,7 @@ var cerkovRojdestvaIonnaPredte4ivOrwanke = {
   "id": "A402",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до Оршанки с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var hramVozneseniyaGospodn9Wulka = {
@@ -1849,6 +1912,7 @@ var hramVozneseniyaGospodn9Wulka = {
   "id": "A403",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до села Шулка с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var sosnovayaAlleyaPuyal = {
@@ -1862,6 +1926,7 @@ var sosnovayaAlleyaPuyal = {
   "id": "A304",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до деревни Пуял с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var muzeyVoinskoySlaviMotovilova = {
@@ -1878,6 +1943,7 @@ var muzeyVoinskoySlaviMotovilova = {
   "id": "A105",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до Оршанки с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var rodnikRadonejskogoOrwan = {
@@ -1891,6 +1957,7 @@ var rodnikRadonejskogoOrwan = {
   "id": "A306",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до Упши с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var muzeyMayorovaWketana = {
@@ -1906,6 +1973,7 @@ var muzeyMayorovaWketana = {
   ],
   "id": "A107",
   "transport": " ",
+  "dist": "",
 };
 
 var cafederev9wka = {
@@ -1918,6 +1986,7 @@ var cafederev9wka = {
   "id": "A608",
   "transport":
       " Можно добраться на автобусе из Йошкар-Олы до Шойбулака с остановочной площадки часть II привокзальной площади",
+  "dist": "",
 };
 
 var kremlCarevokok = {
@@ -1933,6 +2002,7 @@ var kremlCarevokok = {
   ],
   "id": "C501",
   "transport": " ",
+  "dist": "",
 };
 
 var pokrovCas = {
@@ -1949,6 +2019,7 @@ var pokrovCas = {
   "id": "C502",
   "transport":
       " Добраться до Царевококшайского кремля в Йошкар-Оле: ост. «Царевококшайский кремль», № 1, 9",
+  "dist": "",
 };
 
 var pam9tnikMolodojenamgreysKelli = {
@@ -1965,6 +2036,7 @@ var pam9tnikMolodojenamgreysKelli = {
   "id": "C503",
   "transport":
       " Добраться можно на: Такси, 10, 11, 17, 21, 24, 30,40 выход у “EUROSPAR”",
+  "dist": "",
 };
 
 var muzeyIstoriiYo = {
@@ -1983,6 +2055,7 @@ var muzeyIstoriiYo = {
   "id": "C104",
   "transport":
       " До главного здания музея истории города Йошкар-Ола на Вознесенской улице, 39 можно доехать на маршрутках № 17к, 21к, 22к, 24к, 28к, 30к, 40к и троллейбусах № 10, 11, которые останавливаются на остановке «Первая аптека».Быстро добраться по нужному адресу помогут службы такси Везет, Максим, Яндекс. Такси",
+  "dist": "",
 };
 
 var muzeyGulaga = {
@@ -2000,6 +2073,7 @@ var muzeyGulaga = {
   "id": "C105",
   "transport":
       " Доехать можно до: ост. «Царевококшайский кремль», № 1, 9, или вызвать такси",
+  "dist": "",
 };
 
 var kotYowkin = {
@@ -2017,6 +2091,7 @@ var kotYowkin = {
   "id": "C506",
   "transport":
       " Добраться на автобусе 5, троллейбусе  8, маршрутное такси 16, 18, 34",
+  "dist": "",
 };
 
 var apostoli12 = {
@@ -2034,6 +2109,7 @@ var apostoli12 = {
   "id": "C507",
   "transport":
       " Ближайшая к часам остановка общественного транспорта называется Патриаршая площадь, на ней останавливаются троллейбусы № 10 и 11, а также маршрутные такси № 17, 21, 22, 24, 30 и 40. Также в непосредственной близости от часов находится остановка под названием Воскресенский проспект, здесь проходит троллейбус № 2 и маршрутные такси № 18 и 50. Можно также воспользоваться услугами такси в Йошкар-Оле: здесь функционируют известные приложения, такие, как Яндекс. Такси, Uber, Gett, такси Максим, Везет и многие другие, а также работают местные перевозчики — Народное такси, Би-би-ка, Столица, Вятка, Апельсин, Фортуна, такси Эконом, Зенит, Спутник и так далее.",
+  "dist": "",
 };
 
 var parkKulturiIotdiha = {
@@ -2042,7 +2118,7 @@ var parkKulturiIotdiha = {
   "name": "ЦЕНТРАЛЬНЫЙ ПАРК КУЛЬТУРЫ И ОТДЫХА",
   "description":
       " Поднимаясь от реки Малая Кокшага по бульвару Чавайна издалека можно увидеть большую красивую арку Центрального Парка Культуры. Кто из жителей города не знает этого места? Это вход в зелёный «оазис». В нашем городе парк является настоящим местом отдыха для горожан и гостей столицы. ",
-  "location": "56.637561,48.891285",
+  "location": "56.636075, 47.892808",
   "photo": [
     "https://welcometomariel.neocities.org/photo/26.03/parkKulturiIotdiha%201.png",
     "https://welcometomariel.neocities.org/photo/26.03/parkKulturiIotdiha.jpg",
@@ -2050,6 +2126,7 @@ var parkKulturiIotdiha = {
   ],
   "id": "C508",
   "transport": " Добраться на абтобусе 5, маршрутное такси 16",
+  "dist": "",
 };
 
 var cafeVas9Guan4jou = {
@@ -2066,6 +2143,7 @@ var cafeVas9Guan4jou = {
   ],
   "id": "C609",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeJiraf = {
@@ -2082,6 +2160,7 @@ var cafeJiraf = {
   ],
   "id": "C610",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeBestMangal = {
@@ -2098,6 +2177,7 @@ var cafeBestMangal = {
   ],
   "id": "C611",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafesitor = {
@@ -2114,6 +2194,7 @@ var cafesitor = {
   ],
   "id": "C612",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeTomas = {
@@ -2130,6 +2211,7 @@ var cafeTomas = {
   ],
   "id": "C613",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeTerrasa = {
@@ -2146,6 +2228,7 @@ var cafeTerrasa = {
   ],
   "id": "C614",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeAfrika = {
@@ -2160,6 +2243,7 @@ var cafeAfrika = {
   ],
   "id": "C615",
   "transport": " Доехать можно на такси",
+  "dist": "",
 };
 
 var cafeKetchup = {
@@ -2176,6 +2260,7 @@ var cafeKetchup = {
   ],
   "id": "C616",
   "transport": " Доехать можно на такси",
+  "dist": "",
 };
 
 var restoranStariyAMmbar = {
@@ -2192,6 +2277,7 @@ var restoranStariyAMmbar = {
   ],
   "id": "C717",
   "transport": " Доехать можно на такси",
+  "dist": "",
 };
 
 var cafepingvin = {
@@ -2208,6 +2294,7 @@ var cafepingvin = {
   ],
   "id": "C618",
   "transport": " Доехать можно на такси",
+  "dist": "",
 };
 
 var patriarwaPlowad = {
@@ -2226,6 +2313,7 @@ var patriarwaPlowad = {
   "id": "C519",
   "transport":
       " Ближайшая к Патриаршей площади остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11.",
+  "dist": "",
 };
 
 var teatrKukol = {
@@ -2242,6 +2330,7 @@ var teatrKukol = {
   "id": "C520",
   "transport":
       " Ближайшая остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11",
+  "dist": "",
 };
 
 var fontanFevronii = {
@@ -2258,6 +2347,7 @@ var fontanFevronii = {
   "id": "C521",
   "transport":
       " Ближайшая остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11",
+  "dist": "",
 };
 
 var zagsDvorec = {
@@ -2287,6 +2377,7 @@ var blagoBawn9 = {
   "id": "C523",
   "transport":
       " Ближайшая остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11, также можно доехать и на такси",
+  "dist": "",
 };
 
 var cafedralSoborBogorodici = {
@@ -2303,6 +2394,7 @@ var cafedralSoborBogorodici = {
   "id": "C424",
   "transport":
       " Ближайшая остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11, также можно доехать и на такси",
+  "dist": "",
 };
 
 var arhangelSloboda = {
@@ -2335,6 +2427,7 @@ var spasskayaBawn9 = {
   "id": "C526",
   "transport":
       " Ближайшая остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11, также можно доехать и на такси",
+  "dist": "",
 };
 
 var bulwarChavayna = {
@@ -2351,6 +2444,7 @@ var bulwarChavayna = {
   "id": "C527",
   "transport":
       " Ближайшая остановка — стадион «Электрон». До нее ходят маршрутки № 24, 30, 17к, 21к, 22к, 28к, 40к, а также троллейбусы № 10 и 11, также можно доехать и на такси",
+  "dist": "",
 };
 
 var colesoobozreni9 = {
@@ -2366,6 +2460,7 @@ var colesoobozreni9 = {
   ],
   "id": "C528",
   "transport": " Доехать можно на такси",
+  "dist": "",
 };
 
 var skverPravitelstva = {
@@ -2382,6 +2477,7 @@ var skverPravitelstva = {
   "id": "C529",
   "transport":
       " Доехать можно на такси, автобусе 14, троллейбус 1, 3, 5, 6, маршрутное такси 20",
+  "dist": "",
 };
 
 var ulicaUspenskaya = {
@@ -2398,6 +2494,7 @@ var ulicaUspenskaya = {
   "id": "C530",
   "transport":
       " Доехать можно на автобусе 14, троллейбусе 1, 3, 5, 6, маршрутное такси 20 ",
+  "dist": "",
 };
 
 var skverGogol9 = {
@@ -2413,6 +2510,7 @@ var skverGogol9 = {
   ],
   "id": "C531",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var teatrWketana = {
@@ -2429,6 +2527,7 @@ var teatrWketana = {
   "id": "C532",
   "transport":
       " Доехать можно на автобусе 5, троллейбусе 2, 8, маршрутном такси 16, 18, 34",
+  "dist": "",
 };
 
 var teatrErikaSap = {
@@ -2445,6 +2544,7 @@ var teatrErikaSap = {
   ],
   "id": "C533",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var plowadNogotkova = {
@@ -2461,6 +2561,7 @@ var plowadNogotkova = {
   "id": "C534",
   "transport":
       " Доехать можно на автобусе 5, троллейбусе 2, 8, маршрутном такси 16, 18, 34",
+  "dist": "",
 };
 
 var voskresNab = {
@@ -2476,6 +2577,7 @@ var voskresNab = {
   ],
   "id": "C535",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var plowadRespublikiPresDeviMarii = {
@@ -2491,6 +2593,7 @@ var plowadRespublikiPresDeviMarii = {
   ],
   "id": "C536",
   "transport": " Доехать можно на троллейбусе 2, 8, маршрутном такси 18, 34",
+  "dist": "",
 };
 
 var soborVoskresKrista = {
@@ -2506,6 +2609,7 @@ var soborVoskresKrista = {
   ],
   "id": "C537",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cerkovTroiciPres = {
@@ -2521,6 +2625,7 @@ var cerkovTroiciPres = {
   ],
   "id": "C438",
   "transport": " Доехать можно на автобусе 1, 9, маршрутном такси 1, 9",
+  "dist": "",
 };
 
 var carPuwka = {
@@ -2536,6 +2641,7 @@ var carPuwka = {
   ],
   "id": "C539",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var muzeyGlavUprisprav = {
@@ -2552,6 +2658,7 @@ var muzeyGlavUprisprav = {
   "id": "C140",
   "transport":
       " До главного здания музея истории города Йошкар-Ола на Вознесенской улице, 39 можно доехать на маршрутках № 17к, 21к, 22к, 24к, 28к, 30к, 40к и троллейбусах № 10, 11, которые останавливаются на остановке «Первая аптека».",
+  "dist": "",
 };
 
 var nachudGalereya = {
@@ -2568,6 +2675,7 @@ var nachudGalereya = {
   "id": "C242",
   "transport":
       " Доехать можно на автобусе 14, троллейбусе 1, 3, 5, маршрутном такси 16, 18, 34",
+  "dist": "",
 };
 
 var soborVozGospodn9 = {
@@ -2584,6 +2692,7 @@ var soborVozGospodn9 = {
   "id": "C443",
   "transport":
       " Доехать можно на троллейбусе 10, 11, маршрутном такси 17, 21, 22, 24, 30, 40",
+  "dist": "",
 };
 
 var cafethetop = {
@@ -2599,6 +2708,7 @@ var cafethetop = {
   ],
   "id": "C644",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafewale = {
@@ -2614,6 +2724,7 @@ var cafewale = {
   ],
   "id": "C645",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafelime = {
@@ -2629,6 +2740,7 @@ var cafelime = {
   ],
   "id": "C646",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeizba = {
@@ -2644,6 +2756,7 @@ var cafeizba = {
   ],
   "id": "C647",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeGurman = {
@@ -2659,6 +2772,7 @@ var cafeGurman = {
   ],
   "id": "C648",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var cafeloungeCafe = {
@@ -2673,6 +2787,7 @@ var cafeloungeCafe = {
   ],
   "id": "C649",
   "transport": " Добраться можно на такси",
+  "dist": "",
 };
 
 var ozeroKumyar = {
@@ -2689,6 +2804,7 @@ var ozeroKumyar = {
   ],
   "id": "D301",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeroLujyar = {
@@ -2706,6 +2822,7 @@ var ozeroLujyar = {
   ],
   "id": "D302",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeroMolevoe = {
@@ -2722,6 +2839,7 @@ var ozeroMolevoe = {
   ],
   "id": "D303",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeriWamyari = {
@@ -2738,6 +2856,7 @@ var ozeriWamyari = {
   ],
   "id": "D304",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeroMadarskoe = {
@@ -2753,6 +2872,7 @@ var ozeroMadarskoe = {
   ],
   "id": "D305",
   "transport": " ",
+  "dist": "",
 };
 
 var krasnoeOzero = {
@@ -2768,6 +2888,7 @@ var krasnoeOzero = {
   ],
   "id": "D306",
   "transport": " ",
+  "dist": "",
 };
 
 var cerkovNikolaya4udotvorca = {
@@ -2783,6 +2904,7 @@ var cerkovNikolaya4udotvorca = {
   ],
   "id": "D407",
   "transport": " ",
+  "dist": "",
 };
 
 var cerkovNikolaya4udo = {
@@ -2798,6 +2920,7 @@ var cerkovNikolaya4udo = {
   ],
   "id": "D408",
   "transport": " ",
+  "dist": "",
 };
 
 var pustinBogorodice = {
@@ -2814,6 +2937,7 @@ var pustinBogorodice = {
   ],
   "id": "D409",
   "transport": " ",
+  "dist": "",
 };
 
 var razdoleturkompleks = {
@@ -2829,6 +2953,7 @@ var razdoleturkompleks = {
   ],
   "id": "D810",
   "transport": " ",
+  "dist": "",
 };
 
 var usadbaTihieZori = {
@@ -2844,6 +2969,7 @@ var usadbaTihieZori = {
   ],
   "id": "D811",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyKilemarskiyKraeved4eskiy = {
@@ -2859,6 +2985,7 @@ var muzeyKilemarskiyKraeved4eskiy = {
   ],
   "id": "D112",
   "transport": " ",
+  "dist": "",
 };
 
 var zapovednikBolwayaKokwaga = {
@@ -2874,6 +3001,7 @@ var zapovednikBolwayaKokwaga = {
   ],
   "id": "D313",
   "transport": " ",
+  "dist": "",
 };
 
 var ohota12baza = {
@@ -2889,6 +3017,7 @@ var ohota12baza = {
   ],
   "id": "D814",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeAlieParusa = {
@@ -2904,6 +3033,7 @@ var cafeAlieParusa = {
   ],
   "id": "D615",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeMost = {
@@ -2918,6 +3048,7 @@ var cafeMost = {
   ],
   "id": "D616",
   "transport": " ",
+  "dist": "",
 };
 
 var cafe5ozer = {
@@ -2929,6 +3060,7 @@ var cafe5ozer = {
   "photo": ["https://welcometomariel.neocities.org/photo/1080.png"],
   "id": "D617",
   "transport": " ",
+  "dist": "",
 };
 
 var wawli4kaandranik = {
@@ -2944,6 +3076,7 @@ var wawli4kaandranik = {
   ],
   "id": "D618",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -2963,6 +3096,7 @@ var goraAlamner = {
   ],
   "id": "E301",
   "transport": " ",
+  "dist": "",
 };
 
 var pam9tnikakparsu = {
@@ -2979,6 +3113,7 @@ var pam9tnikakparsu = {
   ],
   "id": "E502",
   "transport": " ",
+  "dist": "",
 };
 
 var oszemli = {
@@ -2994,6 +3129,7 @@ var oszemli = {
   ],
   "id": "E503",
   "transport": " ",
+  "dist": "",
 };
 
 var solchasi = {
@@ -3010,6 +3146,7 @@ var solchasi = {
   ],
   "id": "E504",
   "transport": " ",
+  "dist": "",
 };
 
 var pepkinskiykurgan = {
@@ -3025,6 +3162,7 @@ var pepkinskiykurgan = {
   ],
   "id": "E505",
   "transport": " ",
+  "dist": "",
 };
 
 var domremeselGornomariy = {
@@ -3041,6 +3179,7 @@ var domremeselGornomariy = {
   ],
   "id": "E106",
   "transport": " ",
+  "dist": "",
 };
 
 var vekdubrazina = {
@@ -3056,6 +3195,7 @@ var vekdubrazina = {
   ],
   "id": "E507",
   "transport": " ",
+  "dist": "",
 };
 
 var elasovskiyparksemschas = {
@@ -3073,6 +3213,7 @@ var elasovskiyparksemschas = {
   ],
   "id": "E308",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyIgnateevakraeved = {
@@ -3089,6 +3230,7 @@ var muzeyIgnateevakraeved = {
   ],
   "id": "E109",
   "transport": " ",
+  "dist": "",
 };
 
 var ozeroNujyar = {
@@ -3105,6 +3247,7 @@ var ozeroNujyar = {
   ],
   "id": "E310",
   "transport": " ",
+  "dist": "",
 };
 
 var cerkovNikolaya4udotvorcagor = {
@@ -3119,6 +3262,7 @@ var cerkovNikolaya4udotvorcagor = {
   ],
   "id": "E411",
   "transport": " ",
+  "dist": "",
 };
 
 var cerkovNikolaya4udotvorcagor2 = {
@@ -3133,6 +3277,7 @@ var cerkovNikolaya4udotvorcagor2 = {
   ],
   "id": "E412",
   "transport": " ",
+  "dist": "",
 };
 
 var usolcerkovgor = {
@@ -3147,6 +3292,7 @@ var usolcerkovgor = {
   ],
   "id": "E413",
   "transport": " ",
+  "dist": "",
 };
 
 var vozneseniegospodn9 = {
@@ -3162,6 +3308,7 @@ var vozneseniegospodn9 = {
   ],
   "id": "E414",
   "transport": " ",
+  "dist": "",
 };
 
 var hramRojdestvaHristova = {
@@ -3176,6 +3323,7 @@ var hramRojdestvaHristova = {
   ],
   "id": "E415",
   "transport": " ",
+  "dist": "",
 };
 
 var zaimkaNapenkax = {
@@ -3190,6 +3338,7 @@ var zaimkaNapenkax = {
   ],
   "id": "7823",
   "transport": " ",
+  "dist": "",
 };
 
 var ariadagostkompleks = {
@@ -3204,6 +3353,7 @@ var ariadagostkompleks = {
   ],
   "id": "7824",
   "transport": " ",
+  "dist": "",
 };
 
 var ariadarestik = {
@@ -3218,6 +3368,7 @@ var ariadarestik = {
   ],
   "id": "7725",
   "transport": " ",
+  "dist": "",
 };
 
 var p9tnicakafe = {
@@ -3232,6 +3383,7 @@ var p9tnicakafe = {
   ],
   "id": "7626",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeuparka = {
@@ -3246,6 +3398,7 @@ var cafeuparka = {
   ],
   "id": "7627",
   "transport": " ",
+  "dist": "",
 };
 //!
 var fainabar = {
@@ -3260,6 +3413,7 @@ var fainabar = {
   ],
   "id": "7628",
   "transport": " ",
+  "dist": "",
 };
 
 var italmodernissimo = {
@@ -3274,6 +3428,7 @@ var italmodernissimo = {
   ],
   "id": "7629",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -3289,6 +3444,7 @@ var cafeLime2 = {
   ],
   "id": "7630",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -3304,6 +3460,7 @@ var voljMILANOBAR = {
   ],
   "id": "7631",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -3319,6 +3476,7 @@ var bigblin = {
   ],
   "id": "7632",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -3331,6 +3489,7 @@ var cafeZar9 = {
   "photo": ["https://welcometomariel.neocities.org/photo/1080.png"],
   "id": "7633",
   "transport": " ",
+  "dist": "",
 };
 
 var cafeomarhayam = {
@@ -3345,6 +3504,7 @@ var cafeomarhayam = {
   ],
   "id": "7634",
   "transport": " ",
+  "dist": "",
 };
 
 var pekinkafe = {
@@ -3359,6 +3519,7 @@ var pekinkafe = {
   ],
   "id": "7635",
   "transport": " ",
+  "dist": "",
 };
 
 var radugacafe = {
@@ -3373,6 +3534,7 @@ var radugacafe = {
   ],
   "id": "7636",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -3388,6 +3550,7 @@ var novembercafe = {
   ],
   "id": "7637",
   "transport": " ",
+  "dist": "",
 };
 
 //!
@@ -3403,6 +3566,7 @@ var dreamlounge = {
   ],
   "id": "7638",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyImeniGrigoryeva = {
@@ -3418,6 +3582,7 @@ var muzeyImeniGrigoryeva = {
   ],
   "id": "E116",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyOstapaBendera = {
@@ -3434,6 +3599,7 @@ var muzeyOstapaBendera = {
   ],
   "id": "E117",
   "transport": " ",
+  "dist": "",
 };
 
 var streleckaya4asovn9 = {
@@ -3450,6 +3616,7 @@ var streleckaya4asovn9 = {
   ],
   "id": "E518",
   "transport": " ",
+  "dist": "",
 };
 
 var sv9totroickayacerkov = {
@@ -3465,6 +3632,7 @@ var sv9totroickayacerkov = {
   ],
   "id": "E419",
   "transport": " ",
+  "dist": "",
 };
 
 var dvenacatstulyev = {
@@ -3481,6 +3649,7 @@ var dvenacatstulyev = {
   ],
   "id": "E520",
   "transport": " ",
+  "dist": "",
 };
 
 var smolenskiysobor = {
@@ -3496,6 +3665,7 @@ var smolenskiysobor = {
   ],
   "id": "E421",
   "transport": " ",
+  "dist": "",
 };
 
 var muzeyKupe4eskogobita = {
@@ -3513,6 +3683,7 @@ var muzeyKupe4eskogobita = {
   ],
   "id": "E122",
   "transport": " ",
+  "dist": "",
 };
 
 var etnografmuzey = {
@@ -3528,6 +3699,7 @@ var etnografmuzey = {
   ],
   "id": "E123",
   "transport": " ",
+  "dist": "",
 };
 
 var cerkovSpasaPreobrajeniya = {
@@ -3544,6 +3716,7 @@ var cerkovSpasaPreobrajeniya = {
   ],
   "id": "E424",
   "transport": " ",
+  "dist": "",
 };
 
 var cerkovVozneseniyaGospodn9 = {
@@ -3559,6 +3732,7 @@ var cerkovVozneseniyaGospodn9 = {
   ],
   "id": "E425",
   "transport": " ",
+  "dist": "",
 };
 
 var turbazaNargiz = {
@@ -3575,4 +3749,5 @@ var turbazaNargiz = {
   ],
   "id": "E826",
   "transport": " ",
+  "dist": "",
 };

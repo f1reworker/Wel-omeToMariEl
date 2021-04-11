@@ -51,6 +51,7 @@ double calculateDistance(index) {
   var a = 0.5 -
       c((lat2 - lat1) * p) / 2 +
       c(lat1 * p) * c(lat2 * p) * (1 - c((lon2 - lon1) * p)) / 2;
+  place[index]["dist"] = (12742 * asin(sqrt(a))).toStringAsFixed(2);
   return 12742 * asin(sqrt(a));
 }
 
@@ -134,7 +135,7 @@ class PlaceList extends StatelessWidget {
                               Text(
                                 "Расстояние: " +
                                     calculateDistance(index)
-                                        .toStringAsFixed(3) +
+                                        .toStringAsFixed(2) +
                                     " км",
                                 textAlign: TextAlign.left,
                                 style: new TextStyle(

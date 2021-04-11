@@ -127,6 +127,7 @@ class _DropDownListState extends State<DropDownList> {
               onChanged: (String Value) {
                 setState(() {
                   selectedUser = Value;
+                  placeOrSearch.sort((a, b) => a["dist"].compareTo(b["dist"]));
                   SearchListState().initState();
                 });
               },

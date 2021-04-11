@@ -169,7 +169,9 @@ class FavoritePageState extends State<FavoritePage> {
                             ),
                             Text(
                               "Расстояние: " +
-                                  calculateDistance(index).toStringAsFixed(3) +
+                                  calculateDistance(
+                                          place.indexOf(favOrSearch[index]))
+                                      .toStringAsFixed(2) +
                                   " км",
                               textAlign: TextAlign.left,
                               style: new TextStyle(
